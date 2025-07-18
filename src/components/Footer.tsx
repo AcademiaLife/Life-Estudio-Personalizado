@@ -1,0 +1,139 @@
+import { Button } from "@/components/ui/button";
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Instagram, 
+  Facebook, 
+  MessageCircle,
+  Clock,
+  Heart
+} from "lucide-react";
+
+const Footer = () => {
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/5511999999999?text=Olá! Vim através do site do Life Personal Estúdio.", "_blank");
+  };
+
+  return (
+    <footer className="bg-gradient-hero text-white">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Brand */}
+          <div className="lg:col-span-2 space-y-6">
+            <h3 className="text-2xl font-bold text-accent">Life Personal Estúdio</h3>
+            <p className="text-gray-300 leading-relaxed max-w-md">
+              Transformando vidas através do treinamento personalizado de alta performance. 
+              Mais que uma academia, somos seu parceiro na jornada para uma vida mais saudável e plena.
+            </p>
+            
+            <div className="flex space-x-4">
+              <Button 
+                size="icon" 
+                variant="outline"
+                className="border-accent text-accent hover:bg-accent hover:text-primary transition-all"
+                onClick={() => window.open("https://instagram.com/lifepersonalestudio", "_blank")}
+              >
+                <Instagram className="h-5 w-5" />
+              </Button>
+              <Button 
+                size="icon" 
+                variant="outline"
+                className="border-accent text-accent hover:bg-accent hover:text-primary transition-all"
+                onClick={() => window.open("https://facebook.com/lifepersonalestudio", "_blank")}
+              >
+                <Facebook className="h-5 w-5" />
+              </Button>
+              <Button 
+                size="icon" 
+                variant="outline"
+                className="border-green-400 text-green-400 hover:bg-green-400 hover:text-primary transition-all"
+                onClick={handleWhatsApp}
+              >
+                <MessageCircle className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Contato Rápido */}
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold text-accent">Contato</h4>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
+                <span className="text-gray-300">(11) 99999-9999</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
+                <span className="text-gray-300 text-sm">contato@lifepersonalestudio.com.br</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                <div className="text-gray-300 text-sm">
+                  <p>Rua Augusta, 1500 - Consolação</p>
+                  <p>São Paulo - SP, 01304-001</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Horários */}
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold text-accent">Horários</h4>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Clock className="h-5 w-5 text-accent flex-shrink-0" />
+                <div className="text-gray-300 text-sm">
+                  <p className="font-medium">Segunda à Sexta</p>
+                  <p>6h às 22h</p>
+                </div>
+              </div>
+              <div className="text-gray-300 text-sm pl-8">
+                <p className="font-medium">Sábado</p>
+                <p>8h às 18h</p>
+              </div>
+              <div className="text-gray-300 text-sm pl-8">
+                <p className="font-medium">Domingo</p>
+                <p>8h às 16h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="text-center space-y-4">
+            <h4 className="text-xl font-semibold text-accent">
+              Pronto para Transformar sua Vida?
+            </h4>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Agende sua avaliação gratuita hoje mesmo e descubra como podemos ajudar você a alcançar seus objetivos.
+            </p>
+            <Button 
+              size="lg" 
+              onClick={handleWhatsApp}
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-3 shadow-gold hover:shadow-xl"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Agendar Avaliação Gratuita
+            </Button>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <p className="text-gray-400 text-sm">
+            © 2024 Life Personal Estúdio. Todos os direitos reservados.
+          </p>
+          <div className="flex items-center space-x-2 text-gray-400 text-sm">
+            <span>Feito com</span>
+            <Heart className="h-4 w-4 text-accent fill-current" />
+            <span>para sua transformação</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

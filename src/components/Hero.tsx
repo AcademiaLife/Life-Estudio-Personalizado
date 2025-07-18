@@ -1,0 +1,90 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Phone } from "lucide-react";
+import heroImage from "@/assets/hero-image.jpg";
+
+const Hero = () => {
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação gratuita.", "_blank");
+  };
+
+  const handleSchedule = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroImage} 
+          alt="Life Personal Estúdio - Academia Premium" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 text-center text-white">
+        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+          <h1 className="font-hero text-white leading-tight">
+            Transforme Seu Corpo,
+            <br />
+            <span className="bg-gradient-gold bg-clip-text text-transparent">
+              Transforme Sua Vida
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-light">
+            Treinamento personalizado de alta performance em um ambiente exclusivo. 
+            Resultados reais com acompanhamento profissional dedicado.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+            <Button 
+              onClick={handleSchedule}
+              size="lg" 
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group"
+            >
+              Agendar Avaliação Gratuita
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <Button 
+              onClick={handleWhatsApp}
+              variant="outline" 
+              size="lg"
+              className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-8 py-4 text-lg btn-premium"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              WhatsApp
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 text-center">
+            <div className="space-y-2 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-3xl font-bold text-accent">+500</h3>
+              <p className="text-gray-300">Alunos Transformados</p>
+            </div>
+            <div className="space-y-2 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+              <h3 className="text-3xl font-bold text-accent">10+</h3>
+              <p className="text-gray-300">Anos de Experiência</p>
+            </div>
+            <div className="space-y-2 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+              <h3 className="text-3xl font-bold text-accent">100%</h3>
+              <p className="text-gray-300">Dedicação Individual</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
