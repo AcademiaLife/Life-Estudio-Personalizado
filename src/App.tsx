@@ -6,11 +6,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import TestimonialsPage from "./pages/Testimonials";
 import ContactPage from "./pages/Contact";
+import Plans from "./pages/Plans";
+import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,12 +31,15 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/sobre" element={<About />} />
               <Route path="/servicos" element={<Services />} />
+              <Route path="/planos" element={<Plans />} />
+              <Route path="/equipe" element={<Team />} />
               <Route path="/depoimentos" element={<TestimonialsPage />} />
               <Route path="/contato" element={<ContactPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
+          <FloatingWhatsApp />
         </div>
       </BrowserRouter>
     </TooltipProvider>

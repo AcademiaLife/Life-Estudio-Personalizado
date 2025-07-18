@@ -1,5 +1,8 @@
 
 import Hero from "@/components/Hero";
+import PlansSection from "@/components/PlansSection";
+import GallerySection from "@/components/GallerySection";
+import FAQSection from "@/components/FAQSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Trophy, Users, Target } from "lucide-react";
@@ -24,16 +27,16 @@ const Index = () => {
       icon: Trophy
     },
     {
+      title: "Nossa Equipe",
+      description: "Conheça nossos especialistas",
+      link: "/equipe", 
+      icon: Users
+    },
+    {
       title: "Depoimentos",
       description: "Veja histórias de transformação",
       link: "/depoimentos", 
       icon: Star
-    },
-    {
-      title: "Fale Conosco",
-      description: "Agende sua avaliação gratuita",
-      link: "/contato",
-      icon: Users
     }
   ];
 
@@ -81,6 +84,15 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Plans Section */}
+      <PlansSection />
+
+      {/* Gallery Section */}
+      <GallerySection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
       {/* Final CTA */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="container mx-auto px-6 text-center">
@@ -90,7 +102,7 @@ const Index = () => {
             </h2>
             <p className="text-xl text-gray-200 leading-relaxed">
               Não espere mais. Sua transformação começa com o primeiro passo. 
-              Agende sua avaliação gratuita hoje mesmo.
+              Agende sua avaliação gratuita hoje mesmo e descubra o que é possível alcançar.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
@@ -101,13 +113,13 @@ const Index = () => {
                 Agendar Avaliação Gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Link to="/sobre">
+              <Link to="/planos">
                 <Button 
                   variant="outline" 
                   size="lg"
                   className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-8 py-4 text-lg btn-premium"
                 >
-                  Conhecer Nossa História
+                  Ver Nossos Planos
                 </Button>
               </Link>
             </div>
