@@ -3,178 +3,240 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Check, X, Star, ArrowRight, Calculator } from "lucide-react";
-import { useState } from "react";
+import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp, Zap, Target, Music, Dumbbell, Flame, User, Clock } from "lucide-react";
 
 const Plans = () => {
-  const [stickyVisible, setStickyVisible] = useState(false);
-
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação gratuita e conhecer os planos do Life Personal Estúdio.", "_blank");
+    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de conhecer os planos do Life Elite Studio e agendar uma avaliação.", "_blank");
   };
 
   const plans = [
     {
-      name: "Essencial",
+      name: "Meta Personal",
       price: "399",
-      description: "Para quem está começando",
-      popular: false
+      color: "border-green-400",
+      description: "Seu ponto de partida ideal",
+      paymentInfo: "1 entrada de R$ 399 + 11x de R$ 399",
+      features: [
+        "Personal 3x por semana (turmas até 3 alunos)",
+        "Acesso livre para cardio e extras nos demais dias",
+        "Monitoramento cardíaco durante o treino",
+        "Aulas coletivas (pilates, metabolic e mais)"
+      ]
     },
     {
-      name: "Performance",
-      price: "420", 
-      description: "Mais escolhido",
-      popular: true
+      name: "Meta Slim",
+      price: "449",
+      color: "border-blue-400",
+      description: "Equilíbrio perfeito",
+      paymentInfo: "1 entrada de R$ 399 + 11x de R$ 449",
+      features: [
+        "Tudo do Meta Personal",
+        "Nutricionista especializada",
+        "Avaliação física e acompanhamento de resultados"
+      ]
     },
     {
-      name: "Total",
-      price: "549",
+      name: "Meta Full",
+      price: "599",
+      color: "border-accent shadow-gold",
       description: "Experiência completa",
-      popular: false
+      paymentInfo: "1 entrada de R$ 599 + 11x de R$ 599",
+      popular: true,
+      features: [
+        "Tudo dos planos anteriores",
+        "Avaliação de movimento",
+        "Bebidas quentes: chocolate, cappuccino, mocaccino",
+        "Pré e pós-treino inclusos",
+        "Acesso à sala recovery"
+      ]
     }
   ];
 
-  const features = [
+  const highlights = [
     {
-      name: "Personal trainer dedicado",
-      essencial: true,
-      performance: true,
-      total: true
+      icon: Heart,
+      title: "Acompanhamento personalizado",
+      description: "Cada treino é único e pensado especialmente para você"
     },
     {
-      name: "Avaliação física completa",
-      essencial: true,
-      performance: true,
-      total: true
+      icon: Users,
+      title: "Atendimento de qualidade",
+      description: "Profissionais especializados sempre prontos para ajudar"
     },
     {
-      name: "Programa de treino personalizado",
-      essencial: true,
-      performance: true,
-      total: true
+      icon: Smartphone,
+      title: "Check-in fácil via app",
+      description: "Praticidade total na palma da sua mão"
     },
     {
-      name: "Nutricionista especializada",
-      essencial: false,
-      performance: true,
-      total: true
+      icon: Calendar,
+      title: "Aulas coletivas inclusas",
+      description: "Variedade e motivação em grupo"
     },
     {
-      name: "Plano alimentar personalizado",
-      essencial: false,
-      performance: true,
-      total: true
-    },
-    {
-      name: "Acompanhamento quinzenal",
-      essencial: false,
-      performance: true,
-      total: false
-    },
-    {
-      name: "Acompanhamento semanal",
-      essencial: true,
-      performance: false,
-      total: true
-    },
-    {
-      name: "Reavaliações mensais",
-      essencial: false,
-      performance: true,
-      total: false
-    },
-    {
-      name: "Reavaliações quinzenais",
-      essencial: false,
-      performance: false,
-      total: true
-    },
-    {
-      name: "Suporte via WhatsApp",
-      essencial: false,
-      performance: false,
-      total: true
-    },
-    {
-      name: "Consultoria nutricional completa",
-      essencial: false,
-      performance: false,
-      total: true
+      icon: TrendingUp,
+      title: "Resultados reais",
+      description: "Acompanhamento contínuo da sua evolução"
     }
   ];
 
-  useState(() => {
-    const handleScroll = () => {
-      setStickyVisible(window.pageYOffset > 200);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const classes = [
+    {
+      icon: Music,
+      name: "ZUMBA",
+      description: "Aula de fitness com ritmos latinos e coreografias, divertida e queima calorias.",
+      instructor: "Gil",
+      schedule: "Terça e quinta, 16h00"
+    },
+    {
+      icon: Target,
+      name: "D'GYM TRAINING",
+      description: "Mix completo criado pelo Profº Dodô, combinando dança, ginástica calistênica, funcional e relaxamento.",
+      instructor: "Dodô",
+      schedule: "Seg, Qua e Sex, 19h00"
+    },
+    {
+      icon: Flame,
+      name: "METABOLIC TRAINING",
+      description: "Aula intensa para queimar calorias e acelerar metabolismo com exercícios dinâmicos.",
+      instructor: "Evandro",
+      schedule: "Seg, Qua e Sex, 6h00 / Ter, Qui, 19h00"
+    },
+    {
+      icon: Dumbbell,
+      name: "PILATES SOLO",
+      description: "Fortalece postura, equilíbrio e flexibilidade com exercícios controlados e respiração.",
+      instructor: "Ana",
+      schedule: "Ter e Qui, 07h00 e 18h00"
+    },
+    {
+      icon: User,
+      name: "ALONGAMENTO",
+      description: "Melhora flexibilidade, reduz tensões e previne lesões com movimentos guiados.",
+      instructor: "Maicow",
+      schedule: "Ter e Qui, 10h00"
+    }
+  ];
+
+  const comparisonData = [
+    { service: "Personal Trainer 3x/semana", separate: "R$ 600+" },
+    { service: "Nutricionista", separate: "R$ 300" },
+    { service: "Avaliações físicas e suporte", separate: "R$ 150" },
+    { service: "Pilates + Coletivas", separate: "R$ 250+" },
+    { service: "Recovery", separate: "R$ 150" },
+    { service: "Bebidas funcionais", separate: "R$ 100" }
+  ];
 
   return (
     <div className="min-h-screen bg-background pt-16">
-      {/* Sticky CTA */}
-      <div className={`fixed top-16 left-0 right-0 z-40 bg-gradient-gold py-3 transition-all duration-300 ${
-        stickyVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-      }`}>
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <span className="text-primary font-semibold">Pronto para transformar sua vida?</span>
-          <Button onClick={handleWhatsApp} className="bg-primary hover:bg-primary/90 text-white">
-            Agendar Avaliação Gratuita
-          </Button>
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-            <h1 className="font-h1 mb-6">
-              Compare Nossos Planos
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+            <h1 className="font-hero text-primary leading-tight">
+              Seu treino, seu ritmo,
+              <br />
+              <span className="bg-gradient-gold bg-clip-text text-transparent">
+                seu espaço
+              </span>
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
-              Escolha o plano ideal para seus objetivos. Todos incluem acompanhamento profissional 
-              personalizado com muito mais valor do que você imagina.
+            
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              No nosso estúdio personalizado, cada detalhe foi pensado para que você se sinta 
+              acolhido, respeitado e acompanhado em cada etapa da sua jornada.
             </p>
+
+            <Button 
+              onClick={() => document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" })}
+              size="lg" 
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group"
+            >
+              Conheça nossos planos
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Quick Plans Overview */}
+      {/* Highlights Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            {highlights.map((highlight, index) => (
+              <Card 
+                key={highlight.title}
+                className="p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="space-y-4 p-0">
+                  <div className="mx-auto w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center">
+                    <highlight.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-h3 text-primary text-sm">{highlight.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{highlight.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Plans Section */}
+      <section id="plans" className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="font-h1 text-primary mb-6">Escolha Seu Plano Ideal</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Planos anuais com mais vantagens e economia. Invista na sua saúde com inteligência.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (
               <Card 
                 key={plan.name}
-                className={`text-center p-6 hover:shadow-elegant transition-all duration-300 ${
-                  plan.popular ? 'border-accent shadow-gold scale-105' : 'hover:-translate-y-1'
-                }`}
+                className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in`}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {plan.popular && (
-                  <Badge className="mb-4 bg-gradient-gold text-primary">
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
                     <Star className="w-4 h-4 mr-1" />
-                    Mais Popular
+                    Mais Completo
                   </Badge>
                 )}
+
                 <CardHeader className="pb-4">
-                  <CardTitle className="font-h3 text-primary">{plan.name}</CardTitle>
-                  <p className="text-muted-foreground text-sm">{plan.description}</p>
-                  <div className="mt-4">
-                    <span className="font-h2 text-primary">R$ {plan.price}</span>
-                    <span className="text-muted-foreground">/mês</span>
+                  <CardTitle className="font-h2 text-primary mb-2">{plan.name}</CardTitle>
+                  <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
+                  <div className="space-y-2">
+                    <p className="font-h1 text-primary">
+                      <span className="text-lg">R$</span> {plan.price}
+                      <span className="text-base font-normal text-muted-foreground">/mês</span>
+                    </p>
+                    <p className="text-xs text-muted-foreground">{plan.paymentInfo}</p>
                   </div>
                 </CardHeader>
-                <CardContent>
+
+                <CardContent className="space-y-6">
+                  <ul className="space-y-3 text-left">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
                   <Button 
                     onClick={handleWhatsApp}
-                    className={`w-full ${
+                    className={`w-full font-semibold ${
                       plan.popular 
-                        ? 'btn-premium bg-gradient-gold text-primary shadow-gold' 
-                        : 'bg-primary hover:bg-primary/90'
+                        ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' 
+                        : 'bg-primary hover:bg-primary/90 text-white'
                     }`}
                   >
-                    Escolher Plano
+                    {plan.popular ? 'Quero o plano mais completo' : 'Quero este plano'}
                   </Button>
                 </CardContent>
               </Card>
@@ -183,152 +245,120 @@ const Plans = () => {
         </div>
       </section>
 
-      {/* Detailed Comparison Table */}
-      <section className="py-16 bg-gradient-subtle">
+      {/* Classes Section */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="font-h2 text-primary mb-4">Comparação Detalhada</h2>
+            <h2 className="font-h2 text-primary mb-4">Aulas Coletivas Inclusas</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Veja tudo o que está incluso em cada plano e escolha o que melhor se adapta aos seus objetivos.
+              Variedade, motivação e diversão. Todas as modalidades estão incluídas nos seus planos.
             </p>
           </div>
 
-          <div className="bg-background rounded-lg shadow-card overflow-hidden max-w-6xl mx-auto">
-            <Table>
-              <TableHeader>
-                <TableRow className="border-b-2">
-                  <TableHead className="w-1/3 text-left font-semibold text-primary">Benefícios</TableHead>
-                  <TableHead className="text-center font-semibold text-primary">Essencial</TableHead>
-                  <TableHead className="text-center font-semibold text-accent bg-gradient-subtle">
-                    Performance
-                    <Badge className="ml-2 bg-gradient-gold text-primary text-xs">Popular</Badge>
-                  </TableHead>
-                  <TableHead className="text-center font-semibold text-primary">Total</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow className="border-b font-semibold bg-muted/30">
-                  <TableCell className="font-semibold text-primary">Preço mensal</TableCell>
-                  <TableCell className="text-center font-h3 text-primary">R$ 399</TableCell>
-                  <TableCell className="text-center font-h3 text-accent bg-gradient-subtle">R$ 420</TableCell>
-                  <TableCell className="text-center font-h3 text-primary">R$ 549</TableCell>
-                </TableRow>
-                {features.map((feature, index) => (
-                  <TableRow key={index} className="hover:bg-muted/20">
-                    <TableCell className="font-medium">{feature.name}</TableCell>
-                    <TableCell className="text-center">
-                      {feature.essencial ? (
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-gray-400 mx-auto" />
-                      )}
-                    </TableCell>
-                    <TableCell className="text-center bg-gradient-subtle">
-                      {feature.performance ? (
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-gray-400 mx-auto" />
-                      )}
-                    </TableCell>
-                    <TableCell className="text-center">
-                      {feature.total ? (
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-gray-400 mx-auto" />
-                      )}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {classes.map((classItem, index) => (
+              <Card 
+                key={classItem.name}
+                className="p-6 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardHeader className="pb-4">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center">
+                      <classItem.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="font-h3 text-primary">{classItem.name}</CardTitle>
+                  </div>
+                </CardHeader>
+                
+                <CardContent className="space-y-3 p-0">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {classItem.description}
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-sm font-semibold text-primary">
+                      Professor: {classItem.instructor}
+                    </p>
+                    <div className="flex items-center space-x-2">
+                      <Clock className="h-4 w-4 text-accent" />
+                      <p className="text-xs text-muted-foreground">{classItem.schedule}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Value Comparison */}
-      <section className="py-16 bg-background">
+      {/* Financial Comparison */}
+      <section className="py-16 bg-gradient-subtle">
         <div className="container mx-auto px-6">
-          <Card className="max-w-4xl mx-auto p-8 bg-gradient-subtle border-accent shadow-gold">
-            <div className="text-center mb-8">
-              <Calculator className="h-12 w-12 text-accent mx-auto mb-4" />
-              <h3 className="font-h2 text-primary mb-4">Economia Real</h3>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-h2 text-primary mb-4">Veja Quanto Você Economiza</h2>
               <p className="text-muted-foreground">
-                Veja quanto você economiza contratando nossos planos completos:
+                Compare os valores de cada serviço contratado separadamente com nosso plano completo.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <h4 className="font-semibold text-primary mb-4">Contratando Separadamente:</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Personal trainer (2x/semana)</span>
-                    <span className="font-semibold">R$ 480</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Nutricionista consulta mensal</span>
-                    <span className="font-semibold">R$ 200</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Avaliação física mensal</span>
-                    <span className="font-semibold">R$ 150</span>
-                  </div>
-                  <div className="border-t pt-2 flex justify-between font-bold text-primary">
-                    <span>Total Mensal:</span>
-                    <span>R$ 830</span>
-                  </div>
-                </div>
-              </div>
+            <Card className="overflow-hidden shadow-elegant">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/30">
+                    <TableHead className="font-semibold text-primary">Serviço</TableHead>
+                    <TableHead className="text-center font-semibold text-primary">Valor Médio Mensal Separado</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {comparisonData.map((item, index) => (
+                    <TableRow key={index} className="hover:bg-muted/20">
+                      <TableCell className="font-medium">{item.service}</TableCell>
+                      <TableCell className="text-center font-semibold text-primary">{item.separate}</TableCell>
+                    </TableRow>
+                  ))}
+                  <TableRow className="border-t-2 bg-red-50 font-bold">
+                    <TableCell className="font-bold text-primary">Total isolado:</TableCell>
+                    <TableCell className="text-center font-bold text-red-600 text-lg">R$ 1.550+</TableCell>
+                  </TableRow>
+                  <TableRow className="bg-gradient-gold font-bold">
+                    <TableCell className="font-bold text-primary">Plano FULL Life Elite:</TableCell>
+                    <TableCell className="text-center font-bold text-primary text-xl">R$ 599/mês</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Card>
 
-              <div className="space-y-4">
-                <h4 className="font-semibold text-accent mb-4">Com Nosso Plano Performance:</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Personal trainer dedicado</span>
-                    <span>✓ Incluso</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Nutricionista especializada</span>
-                    <span>✓ Incluso</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Avaliações e reavaliações</span>
-                    <span>✓ Incluso</span>
-                  </div>
-                  <div className="border-t pt-2 flex justify-between font-bold text-accent">
-                    <span>Seu Investimento:</span>
-                    <span>R$ 420</span>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-gold text-primary p-4 rounded-lg text-center mt-4">
-                  <p className="font-bold text-lg">Economia de R$ 410/mês!</p>
-                  <p className="text-sm">Quase 50% de desconto</p>
-                </div>
-              </div>
+            <div className="text-center mt-8 p-6 bg-gradient-gold rounded-lg">
+              <p className="font-bold text-primary text-xl mb-2">
+                💰 Economize mais de R$ 950/mês
+              </p>
+              <p className="text-primary">
+                Tenha tudo em um só lugar com conforto, praticidade e resultados reais.
+              </p>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-hero text-white">
+      <section className="py-20 bg-gradient-hero text-white">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="font-h2 text-white mb-6">
-              Pronto Para Começar Sua Transformação?
+              Pronto para dar o próximo passo?
             </h2>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Agende sua avaliação gratuita e conheça nossa metodologia. 
-              Sem compromisso, apenas resultados reais.
+            <p className="text-xl text-gray-200 leading-relaxed mb-8">
+              Comece sua transformação com a gente! Nossa equipe está pronta para 
+              criar o plano perfeito para seus objetivos.
             </p>
             <Button 
               size="lg" 
               onClick={handleWhatsApp}
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group"
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-12 py-6 text-xl shadow-gold hover:shadow-2xl group"
             >
-              Agendar Avaliação Gratuita
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              Falar com um especialista agora
+              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
