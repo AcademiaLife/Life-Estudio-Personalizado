@@ -2,77 +2,189 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { 
   Dumbbell, 
+  Apple,
+  Users, 
+  Activity, 
   Heart, 
-  Brain, 
   Zap, 
-  Target, 
-  UserCheck,
+  Brain, 
+  Smartphone,
+  Target,
+  Leaf,
   ArrowRight, 
   CheckCircle,
   Clock,
-  Users
+  User
 } from "lucide-react";
+import { useState } from "react";
 
 const Services = () => {
+  const [openDialog, setOpenDialog] = useState<string | null>(null);
+
   const handleWhatsApp = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços do Life Personal Estúdio.", "_blank");
   };
 
   const services = [
     {
+      id: "treinamento-personalizado",
       icon: Dumbbell,
       title: "Treinamento Personalizado",
       description: "Programa individual desenvolvido especificamente para seus objetivos, limitações e preferências.",
       features: ["Avaliação física completa", "Programa exclusivo", "Acompanhamento constante", "Ajustes semanais"],
-      process: "Começamos com uma avaliação detalhada, desenvolvemos seu programa único e acompanhamos cada progresso.",
-      duration: "Sessões de 60 minutos",
-      ideal: "Pessoas que buscam resultados específicos e acompanhamento próximo"
+      process: "Você começa com uma avaliação física personalizada, criamos um plano exclusivo que respeita seu ritmo e suas metas, e acompanhamos cada progresso com ajustes semanais para garantir seu máximo desempenho.",
+      duration: "Sessões individuais de 60 minutos.",
+      ideal: "Quem busca atenção total, resultados reais e a certeza de ter um plano pensado especialmente para você.",
+      differentials: [
+        "Turmas reduzidas para máxima atenção",
+        "Profissionais certificados e humanizados",
+        "Acesso prático via app",
+        "Ambiente sofisticado e acolhedor"
+      ]
     },
     {
+      id: "nutricao-funcional",
+      icon: Apple,
+      title: "Nutrição Funcional",
+      description: "Orientação nutricional integrada ao treino para potencializar resultados e melhorar a saúde.",
+      features: ["Avaliação nutricional individual", "Plano alimentar personalizado", "Acompanhamento com nutricionista parceiro", "Sinergia com seus objetivos físicos"],
+      process: "Compreendemos seus hábitos e preferências em uma avaliação nutricional completa, para criar um plano alimentar prático e eficaz. Ajustamos regularmente para que você alcance seus objetivos com tranquilidade e compromisso.",
+      duration: "Consultorias semanais ou mensais.",
+      ideal: "Quem quer transformar hábitos alimentares com suporte real e resultados consistentes.",
+      differentials: [
+        "Plano personalizado e funcional",
+        "Apoio direto de profissionais dedicados",
+        "Integração com seu treino para maior performance"
+      ]
+    },
+    {
+      id: "aulas-coletivas",
+      icon: Users,
+      title: "Aulas Coletivas Exclusivas",
+      description: "Turmas pequenas, focadas e com acompanhamento técnico, promovendo motivação e resultado.",
+      features: ["Variedade de modalidades", "Grupos reduzidos", "Instrutores especializados", "Acompanhamento técnico personalizado"],
+      process: "Participe de aulas como pilates, metabolic training e zumba, em grupos selecionados. Cada aula foi pensada para ser motivadora e eficaz, com apoio constante dos nossos profissionais.",
+      duration: "Programação variada com horários flexíveis.",
+      ideal: "Quem busca treinar com energia, socializar e evoluir em grupo com atenção e segurança.",
+      differentials: [
+        "Grupos pequenos e acolhedores",
+        "Instrutores experientes e atenciosos",
+        "Vibração positiva e foco em resultado"
+      ]
+    },
+    {
+      id: "avaliacao-fisica",
+      icon: Activity,
+      title: "Avaliação Física e de Movimento",
+      description: "Análise completa do seu corpo, mobilidade e limitações para prescrição precisa do treino.",
+      features: ["Testes físicos e posturais", "Análise de composição corporal", "Avaliação de mobilidade articular", "Relatório detalhado"],
+      process: "Realizamos testes completos para entender sua postura, flexibilidade e força. Com esses dados, apresentamos um plano claro para você evoluir com segurança e consciência.",
+      duration: "Avaliações periódicas conforme seu ritmo.",
+      ideal: "Quem valoriza autoconhecimento corporal e deseja treinar com mais consciência.",
+      differentials: [
+        "Tecnologia moderna para avaliação",
+        "Profissionais capacitados",
+        "Relatórios que orientam seu desenvolvimento"
+      ]
+    },
+    {
+      id: "monitoramento-cardiaco",
       icon: Heart,
-      title: "Condicionamento Cardiovascular",
-      description: "Melhore sua capacidade cardiorrespiratória com métodos modernos e eficientes.",
-      features: ["HIIT personalizado", "Treinos funcionais", "Monitoramento cardíaco", "Progressão gradual"],
-      process: "Testamos sua capacidade atual, criamos protocolos específicos e evoluímos gradualmente.",
-      duration: "Sessões de 45-60 minutos",
-      ideal: "Pessoas que querem melhorar condicionamento e queimar gordura"
+      title: "Monitoramento Cardíaco Durante o Treino",
+      description: "Acompanhe sua frequência cardíaca em tempo real para otimizar o desempenho.",
+      features: ["Monitoramento com tecnologia de ponta", "Feedback em tempo real", "Análise pós-treino", "Maior segurança e precisão"],
+      process: "Utilizamos tecnologia avançada para acompanhar sua frequência cardíaca em tempo real. Isso garante segurança e o máximo de eficiência em cada treino.",
+      duration: "Monitoramento ativo durante todas as sessões.",
+      ideal: "Quem busca performance com responsabilidade e com a certeza de estar no seu limite ideal.",
+      differentials: [
+        "Equipamentos de ponta",
+        "Feedback instantâneo da equipe",
+        "Ajustes fiéis a cada batimento"
+      ]
     },
     {
-      icon: Brain,
-      title: "Consultoria Nutricional",
-      description: "Orientação nutricional alinhada aos seus treinos para potencializar os resultados.",
-      features: ["Plano alimentar", "Suplementação", "Acompanhamento nutricional", "Receitas personalizadas"],
-      process: "Analisamos seus hábitos, criamos um plano sustentável e acompanhamos a evolução.",
-      duration: "Consultas mensais + suporte contínuo",
-      ideal: "Pessoas que querem otimizar a alimentação para melhores resultados"
-    },
-    {
+      id: "recuperacao-bem-estar",
       icon: Zap,
-      title: "Treinamento Funcional",
-      description: "Desenvolva força, agilidade e coordenação através de movimentos naturais do corpo.",
-      features: ["Exercícios funcionais", "Melhora da mobilidade", "Prevenção de lesões", "Movimentos naturais"],
-      process: "Avaliamos padrões de movimento, corrigimos desequilíbrios e desenvolvemos capacidades.",
-      duration: "Sessões de 50 minutos",
-      ideal: "Pessoas que buscam movimento natural e prevenção de lesões"
+      title: "Programa de Recuperação e Bem-Estar",
+      description: "Protocolo para relaxamento, recuperação muscular e melhora do sono e da disposição.",
+      features: ["Técnicas de liberação miofascial", "Rotinas de mobilidade", "Estratégias para melhorar o sono", "Redução de estresse"],
+      process: "Relaxe e recupere-se com sessões de alongamento, relaxamento e acesso à nossa sala recovery. Cuide do corpo antes e depois do treino para evitar lesões e aumentar sua performance.",
+      duration: "Conforme recomendação ou após os treinos.",
+      ideal: "Quem entende que a recuperação é parte essencial da evolução física.",
+      differentials: [
+        "Ambiente relaxante",
+        "Técnicas que prolongam seus resultados",
+        "Suporte especializado"
+      ]
     },
     {
+      id: "consultoria-estilo-vida",
+      icon: Brain,
+      title: "Consultoria para Estilo de Vida Saudável",
+      description: "Mudanças práticas para sua rotina: sono, alimentação, produtividade e bem-estar.",
+      features: ["Estratégias personalizadas", "Orientações de rotina saudável", "Acompanhamento comportamental", "Integração corpo-mente"],
+      process: "Criamos um plano de vida que contempla seu corpo, mente e emoções. Com suporte motivacional contínuo, ajudamos você a adotar hábitos positivos de forma duradoura.",
+      duration: "Consultorias adaptáveis conforme seu objetivo.",
+      ideal: "Quem quer mudar de verdade e ser acompanhado em cada passo.",
+      differentials: [
+        "Acompanhamento multidisciplinar",
+        "Estratégias eficazes e personalizadas",
+        "Foco no equilíbrio físico e emocional"
+      ]
+    },
+    {
+      id: "app-exclusivo",
+      icon: Smartphone,
+      title: "Acompanhamento via App Exclusivo",
+      description: "Tenha seu plano de treino, evolução e feedbacks na palma da mão, com suporte contínuo.",
+      features: ["App com login pessoal", "Treinos atualizados", "Registro de evolução", "Suporte direto ao profissional"],
+      process: "Tenha todo o controle do seu treino na palma da mão. Nosso app permite check-in rápido, registro de sessões, metas e comunicação direta com os profissionais.",
+      duration: "Acesso completo durante seu contrato.",
+      ideal: "Quem busca praticidade aliada a suporte constante.",
+      differentials: [
+        "Interface intuitiva",
+        "Feedback e acompanhamento automático",
+        "Interação ágil com a equipe"
+      ]
+    },
+    {
+      id: "funcional-metabolic",
       icon: Target,
-      title: "Reabilitação e Reforço",
-      description: "Programas específicos para recuperação de lesões e fortalecimento preventivo.",
-      features: ["Fisioterapia esportiva", "Fortalecimento", "Prevenção de lesões", "Recuperação ativa"],
-      process: "Avaliamos a condição, desenvolvemos protocolo de recuperação e fortalecemos pontos fracos.",
-      duration: "Sessões de 60 minutos",
-      ideal: "Pessoas em recuperação ou que querem prevenir lesões"
+      title: "Treinamento Funcional e Metabolic Training",
+      description: "Treinos dinâmicos e de alta intensidade que trabalham força, agilidade e resistência.",
+      features: ["Circuitos de força e cardio", "Exercícios com peso corporal e acessórios", "Evolução progressiva", "Gasto calórico elevado"],
+      process: "Participe de sessões intensas, com séries diversas e em grupos reduzidos. A metodologia combina funcionalidade e queima calórica para resultados rápidos e duradouros.",
+      duration: "Aulas dinâmicas com programação variada.",
+      ideal: "Quem busca treinos divertidos, motivadores e eficientes.",
+      differentials: [
+        "Instrutores especializados",
+        "Programação embasada em ciência",
+        "Ambiente de pura energia"
+      ]
     },
     {
-      icon: UserCheck,
-      title: "Acompanhamento Premium",
-      description: "Suporte total com avaliações regulares, ajustes de treino e motivação constante.",
-      features: ["Avaliações mensais", "Ajustes contínuos", "Suporte 24/7", "Relatórios de progresso"],
-      process: "Monitoramento constante, avaliações regulares e ajustes para garantir progresso contínuo.",
-      duration: "Acompanhamento contínuo",
-      ideal: "Pessoas que querem máximo suporte e resultados acelerados"
+      id: "pilates-alongamento",
+      icon: Leaf,
+      title: "Pilates Solo e Alongamento",
+      description: "Desenvolva consciência corporal, postura e flexibilidade com práticas suaves e eficazes.",
+      features: ["Sessões focadas em mobilidade e postura", "Técnicas de respiração e concentração", "Alongamentos ativos e passivos", "Prevenção de dores e lesões"],
+      process: "Aposte em aulas focadas em postura, mobilidade e força do core. Técnicas que ajudam a prevenir lesões e proporcionar bem-estar desde o primeiro movimento.",
+      duration: "Sessões regulares ou sugeridas conforme sua necessidade.",
+      ideal: "Quem busca equilíbrio, consciência corporal e qualidade de vida.",
+      differentials: [
+        "Instrutores com formação e sensibilidade",
+        "Ambiente calmo e acolhedor",
+        "Abordagem individualizada"
+      ]
     }
   ];
 
@@ -97,76 +209,115 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid gap-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card 
-                key={index} 
-                className="p-8 md:p-12 shadow-card hover:shadow-elegant transition-all duration-300 animate-scale-in"
+                key={service.id} 
+                className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-2xl">
-                        <service.icon className="h-8 w-8 text-primary" />
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-gold rounded-xl">
+                      <service.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-primary text-lg">{service.title}</h3>
+                  </div>
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-primary text-sm">O que está incluído:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-muted-foreground text-sm">
+                          <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Dialog open={openDialog === service.id} onOpenChange={(open) => setOpenDialog(open ? service.id : null)}>
+                    <DialogTrigger asChild>
+                      <Button 
+                        className="w-full bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl group"
+                      >
+                        Saiba Mais
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center space-x-3">
+                          <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-gold rounded-lg">
+                            <service.icon className="h-5 w-5 text-primary" />
+                          </div>
+                          <span>{service.title}</span>
+                        </DialogTitle>
+                        <DialogDescription>
+                          {service.description}
+                        </DialogDescription>
+                      </DialogHeader>
+                      
+                      <div className="space-y-6 mt-6">
+                        <div>
+                          <h4 className="font-semibold text-primary mb-3 flex items-center">
+                            <Target className="h-5 w-5 mr-2" />
+                            Como Funciona
+                          </h4>
+                          <p className="text-muted-foreground leading-relaxed">
+                            {service.process}
+                          </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div>
+                            <h5 className="font-semibold text-primary mb-2 flex items-center">
+                              <Clock className="h-4 w-4 mr-2" />
+                              Duração
+                            </h5>
+                            <p className="text-muted-foreground text-sm">{service.duration}</p>
+                          </div>
+
+                          <div>
+                            <h5 className="font-semibold text-primary mb-2 flex items-center">
+                              <User className="h-4 w-4 mr-2" />
+                              Ideal Para
+                            </h5>
+                            <p className="text-muted-foreground text-sm">{service.ideal}</p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h4 className="font-semibold text-primary mb-3">
+                            Diferenciais do Life Estúdio
+                          </h4>
+                          <ul className="space-y-2">
+                            {service.differentials.map((differential, index) => (
+                              <li key={index} className="flex items-center text-muted-foreground text-sm">
+                                <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
+                                {differential}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="pt-4 border-t">
+                          <Button 
+                            onClick={handleWhatsApp}
+                            className="w-full bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl group"
+                            size="lg"
+                          >
+                            Saber Mais Sobre Este Serviço
+                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                          </Button>
+                        </div>
                       </div>
-                      <h2 className="font-h2 text-primary">{service.title}</h2>
-                    </div>
-                    
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-
-                    <div className="space-y-4">
-                      <h3 className="font-semibold text-primary">O que está incluído:</h3>
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-muted-foreground">
-                            <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <Button 
-                      onClick={handleWhatsApp}
-                      className="btn-premium bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl group"
-                    >
-                      Saber Mais Sobre Este Serviço
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </div>
-
-                  <div className="space-y-6">
-                    <Card className="p-6 bg-gradient-subtle">
-                      <h4 className="font-semibold text-primary mb-3 flex items-center">
-                        <Target className="h-5 w-5 mr-2" />
-                        Como Funciona
-                      </h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {service.process}
-                      </p>
-                    </Card>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <Card className="p-4 bg-gradient-subtle">
-                        <h5 className="font-semibold text-primary mb-2 flex items-center text-sm">
-                          <Clock className="h-4 w-4 mr-2" />
-                          Duração
-                        </h5>
-                        <p className="text-muted-foreground text-sm">{service.duration}</p>
-                      </Card>
-
-                      <Card className="p-4 bg-gradient-subtle">
-                        <h5 className="font-semibold text-primary mb-2 flex items-center text-sm">
-                          <Users className="h-4 w-4 mr-2" />
-                          Ideal Para
-                        </h5>
-                        <p className="text-muted-foreground text-sm">{service.ideal}</p>
-                      </Card>
-                    </div>
-                  </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </Card>
             ))}
