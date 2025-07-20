@@ -4,11 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import PlanValuePopup from "./PlanValuePopup";
 
 const PlansSection = () => {
+  const [showValuePopup, setShowValuePopup] = useState(false);
+
   const plans = [
     {
-      name: "Plano Essencial",
+      name: "Meta Personal",
       price: "399",
       description: "Ideal para quem está começando",
       benefits: [
@@ -22,8 +26,8 @@ const PlansSection = () => {
       color: "border-border"
     },
     {
-      name: "Plano Performance",
-      price: "420",
+      name: "Meta Slim",
+      price: "449",
       description: "Nosso plano mais popular",
       benefits: [
         "Personal trainer dedicado",
@@ -38,8 +42,8 @@ const PlansSection = () => {
       color: "border-accent shadow-gold"
     },
     {
-      name: "Plano Total",
-      price: "549",
+      name: "Meta Full",
+      price: "599",
       description: "Experiência premium completa",
       benefits: [
         "Personal trainer VIP",
@@ -61,92 +65,106 @@ const PlansSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-h1 text-primary mb-6">Escolha Seu Plano</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Planos completos com personal trainer, nutricionista e avaliações inclusas. 
-            Investimento que cabe no seu orçamento com resultados garantidos.
-          </p>
-        </div>
+    <>
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="font-h1 text-primary mb-6">Escolha o plano ideal para você</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Investir em seu bem-estar nunca foi tão acessível. Conheça nossos planos feitos para transformar sua vida, não só seu corpo.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <Card 
-              key={plan.name} 
-              className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
-                  <Star className="w-4 h-4 mr-1" />
-                  Mais Popular
-                </Badge>
-              )}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+            {plans.map((plan, index) => (
+              <Card 
+                key={plan.name} 
+                className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {plan.popular && (
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
+                    <Star className="w-4 h-4 mr-1" />
+                    Mais Popular
+                  </Badge>
+                )}
 
-              <CardHeader className="pb-4">
-                <CardTitle className="font-h3 text-primary mb-2">{plan.name}</CardTitle>
-                <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
-                <div className="space-y-1">
-                  <p className="text-sm text-muted-foreground">A partir de</p>
-                  <p className="font-h2 text-primary">
-                    <span className="text-lg">R$</span> {plan.price}
-                    <span className="text-base font-normal text-muted-foreground">/mês</span>
-                  </p>
-                </div>
-              </CardHeader>
+                <CardHeader className="pb-4">
+                  <CardTitle className="font-h3 text-primary mb-2">{plan.name}</CardTitle>
+                  <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
+                  <div className="space-y-1">
+                    <p className="text-sm text-muted-foreground">A partir de</p>
+                    <p className="font-h2 text-primary">
+                      <span className="text-lg">R$</span> {plan.price}
+                      <span className="text-base font-normal text-muted-foreground">/mês</span>
+                    </p>
+                  </div>
+                </CardHeader>
 
-              <CardContent className="space-y-6">
-                <ul className="space-y-3 text-left">
-                  {plan.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
+                <CardContent className="space-y-6">
+                  <ul className="space-y-3 text-left">
+                    {plan.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-muted-foreground">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                <div className="space-y-3 pt-4">
-                  <Link to="/planos">
+                  <div className="space-y-3 pt-4">
+                    <Link to="/planos">
+                      <Button 
+                        variant="outline" 
+                        className="w-full group hover:bg-accent hover:text-primary transition-all"
+                      >
+                        Ver Detalhes
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                    
                     <Button 
-                      variant="outline" 
-                      className="w-full group hover:bg-accent hover:text-primary transition-all"
+                      onClick={handleWhatsApp}
+                      className={`w-full font-semibold ${
+                        plan.popular 
+                          ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' 
+                          : 'bg-primary hover:bg-primary/90'
+                      }`}
                     >
-                      Ver Detalhes
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      Comece sua transformação hoje
                     </Button>
-                  </Link>
-                  
-                  <Button 
-                    onClick={handleWhatsApp}
-                    className={`w-full font-semibold ${
-                      plan.popular 
-                        ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' 
-                        : 'bg-primary hover:bg-primary/90'
-                    }`}
-                  >
-                    Agendar Avaliação
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
-        <div className="text-center mt-12 animate-fade-in">
-          <p className="text-muted-foreground mb-4">
-            💡 <strong>Você sabia?</strong> Contratando esses serviços separadamente, você pagaria mais de R$ 800/mês
-          </p>
-          <Link to="/planos">
-            <Button variant="outline" size="lg" className="btn-premium">
-              Comparar Todos os Planos
-              <ArrowRight className="ml-2 h-5 w-5" />
+          {/* Percepção de Valor */}
+          <div className="text-center bg-gradient-hero rounded-3xl p-12 shadow-elegant animate-fade-in">
+            <h3 className="font-h2 text-white mb-4">
+              Invista no seu bem-estar com um plano que oferece muito mais por menos
+            </h3>
+            <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Ao contratar o Life Estúdio Personalizado, você tem acesso a treinamento exclusivo, nutrição personalizada, 
+              monitoramento cardíaco e acompanhamento contínuo, tudo isso por um preço muito mais acessível do que 
+              contratar esses serviços individualmente.
+            </p>
+            <Button 
+              size="lg" 
+              onClick={() => setShowValuePopup(true)}
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group"
+            >
+              Escolha qualidade, economia e resultados
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <PlanValuePopup 
+        open={showValuePopup} 
+        onOpenChange={setShowValuePopup} 
+      />
+    </>
   );
 };
 

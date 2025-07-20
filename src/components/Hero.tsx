@@ -28,16 +28,15 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="font-hero text-white leading-tight">
-            Alta performance e estética em um
+            Transforme sua jornada fitness no
             <br />
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              estúdio exclusivo para você
+              Life Estúdio Personalizado
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
-            Personal trainer, nutricionista e avaliações físicas inclusas. 
-            Transforme seu corpo com acompanhamento completo e personalizado em um ambiente premium.
+            Transforme sua vida com acompanhamento próximo, resultados reais e um treinamento que respeita o seu ritmo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
@@ -46,7 +45,7 @@ const Hero = () => {
               size="lg" 
               className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group"
             >
-              Agendar Avaliação Gratuita
+              Transforme sua vida agora
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
@@ -71,8 +70,8 @@ const Hero = () => {
               <p className="text-gray-300">Anos de Experiência</p>
             </div>
             <div className="space-y-2 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              <h3 className="text-3xl font-bold text-accent">R$ 420</h3>
-              <p className="text-gray-300">Mensalidade Média</p>
+              <h3 className="text-3xl font-bold text-accent">R$ 399</h3>
+              <p className="text-gray-300">A partir de</p>
             </div>
           </div>
         </div>
