@@ -197,35 +197,32 @@ const About = () => {
       {/* Nossos Valores */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
-          <Card className="p-8 shadow-card hover:shadow-elegant transition-all duration-300 border-2 border-accent/20 animate-fade-in max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-gold rounded-full mb-6">
-                <Heart className="h-10 w-10 text-primary" />
-              </div>
-              <h2 className="font-h2 text-primary mb-6">Nossos Valores</h2>
-            </div>
-            <p className="text-lg text-muted-foreground leading-relaxed text-center mb-8">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="font-h1 text-primary mb-6">Nossos Valores</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Os princípios que orientam cada decisão e cada relacionamento que construímos no nosso estúdio.
             </p>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              {valores.map((valor, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start space-x-4 p-4 rounded-lg hover:bg-accent/5 transition-colors group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {valores.map((valor, index) => (
+              <Card 
+                key={index} 
+                className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in bg-white/80 backdrop-blur-sm"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start space-x-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-gold rounded-full group-hover:scale-110 transition-transform flex-shrink-0">
                     <valor.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-h3 text-primary mb-2 text-base">{valor.title}</h3>
+                    <h3 className="font-h3 text-primary mb-3 text-base">{valor.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{valor.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </Card>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
