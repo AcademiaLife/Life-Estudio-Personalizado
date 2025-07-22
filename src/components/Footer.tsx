@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { 
   Phone, 
@@ -9,6 +10,7 @@ import {
   Clock,
   Heart
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleWhatsApp = () => {
@@ -120,8 +122,37 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Legal Information Section */}
+        <div className="border-t border-gray-700 mt-8 pt-6">
+          <div className="text-center">
+            <h5 className="text-sm font-medium text-accent mb-3">Informações Legais</h5>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <Link 
+                to="/termos-de-servico" 
+                className="text-gray-400 hover:text-accent transition-colors hover:underline"
+              >
+                Termos de Serviço
+              </Link>
+              <span className="text-gray-600">•</span>
+              <Link 
+                to="/politica-de-privacidade" 
+                className="text-gray-400 hover:text-accent transition-colors hover:underline"
+              >
+                Política de Privacidade
+              </Link>
+              <span className="text-gray-600">•</span>
+              <Link 
+                to="/politica-de-cookies" 
+                className="text-gray-400 hover:text-accent transition-colors hover:underline"
+              >
+                Política de Cookies
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="border-t border-gray-700 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
             © 2024 Life Personal Estúdio. Todos os direitos reservados.
           </p>
