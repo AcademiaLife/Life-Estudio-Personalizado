@@ -151,10 +151,10 @@ const PlansSection = () => {
             <Button 
               size="lg" 
               onClick={() => setShowValuePopup(true)}
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-4 py-3 md:px-8 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-3 py-2 md:px-8 md:py-4 text-sm md:text-lg shadow-gold hover:shadow-xl group w-full max-w-full"
             >
-              Escolha qualidade, economia e resultados
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <span className="text-center break-words">Escolha qualidade, economia e resultados</span>
+              <ArrowRight className="ml-1 md:ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
         </div>
