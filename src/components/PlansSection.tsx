@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -6,66 +5,34 @@ import { Check, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import PlanValuePopup from "./PlanValuePopup";
-
 const PlansSection = () => {
   const [showValuePopup, setShowValuePopup] = useState(false);
-
-  const plans = [
-    {
-      name: "Meta Personal",
-      price: "399",
-      description: "Ideal para quem está começando",
-      benefits: [
-        "Personal trainer dedicado",
-        "Avaliação física completa",
-        "Programa de treino personalizado",
-        "Acompanhamento semanal",
-        "Acesso total aos equipamentos"
-      ],
-      popular: false,
-      color: "border-border"
-    },
-    {
-      name: "Meta Slim",
-      price: "449",
-      description: "Nosso plano mais popular",
-      benefits: [
-        "Personal trainer dedicado",
-        "Nutricionista especializada",
-        "Avaliação física detalhada",
-        "Programa completo de treino",
-        "Plano alimentar personalizado",
-        "Acompanhamento quinzenal",
-        "Reavaliações mensais"
-      ],
-      popular: true,
-      color: "border-accent shadow-gold"
-    },
-    {
-      name: "Meta Full",
-      price: "599",
-      description: "Experiência premium completa",
-      benefits: [
-        "Personal trainer VIP",
-        "Nutricionista especializada",
-        "Avaliação física avançada",
-        "Programa premium de treino",
-        "Consultoria nutricional completa",
-        "Acompanhamento semanal",
-        "Reavaliações quinzenais",
-        "Suporte via WhatsApp"
-      ],
-      popular: false,
-      color: "border-border"
-    }
-  ];
-
+  const plans = [{
+    name: "Meta Personal",
+    price: "399",
+    description: "Ideal para quem está começando",
+    benefits: ["Personal trainer dedicado", "Avaliação física completa", "Programa de treino personalizado", "Acompanhamento semanal", "Acesso total aos equipamentos"],
+    popular: false,
+    color: "border-border"
+  }, {
+    name: "Meta Slim",
+    price: "449",
+    description: "Nosso plano mais popular",
+    benefits: ["Personal trainer dedicado", "Nutricionista especializada", "Avaliação física detalhada", "Programa completo de treino", "Plano alimentar personalizado", "Acompanhamento quinzenal", "Reavaliações mensais"],
+    popular: true,
+    color: "border-accent shadow-gold"
+  }, {
+    name: "Meta Full",
+    price: "599",
+    description: "Experiência premium completa",
+    benefits: ["Personal trainer VIP", "Nutricionista especializada", "Avaliação física avançada", "Programa premium de treino", "Consultoria nutricional completa", "Acompanhamento semanal", "Reavaliações quinzenais", "Suporte via WhatsApp"],
+    popular: false,
+    color: "border-border"
+  }];
   const handleWhatsApp = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os planos do Life Personal Estúdio.", "_blank");
   };
-
-  return (
-    <>
+  return <>
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
@@ -76,18 +43,13 @@ const PlansSection = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            {plans.map((plan, index) => (
-              <Card 
-                key={plan.name} 
-                className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
+            {plans.map((plan, index) => <Card key={plan.name} className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in`} style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
+                {plan.popular && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
                     <Star className="w-4 h-4 mr-1" />
                     Mais Popular
-                  </Badge>
-                )}
+                  </Badge>}
 
                 <CardHeader className="pb-4">
                   <CardTitle className="font-h3 text-primary mb-2">{plan.name}</CardTitle>
@@ -103,39 +65,26 @@ const PlansSection = () => {
 
                 <CardContent className="space-y-6">
                   <ul className="space-y-3 text-left">
-                    {plan.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
+                    {plan.benefits.map((benefit, idx) => <li key={idx} className="flex items-start space-x-3">
                         <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
 
-                  <div className="space-y-3 pt-4">
+                  <div className="space-y-3 pt-4 py-px">
                     <Link to="/planos">
-                      <Button 
-                        variant="outline" 
-                        className="w-full group hover:bg-accent hover:text-primary transition-all"
-                      >
+                      <Button variant="outline" className="w-full group hover:bg-accent hover:text-primary transition-all">
                         Ver Detalhes
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
                     
-                    <Button 
-                      onClick={handleWhatsApp}
-                      className={`w-full font-semibold ${
-                        plan.popular 
-                          ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' 
-                          : 'bg-primary hover:bg-primary/90'
-                      }`}
-                    >
+                    <Button onClick={handleWhatsApp} className={`w-full font-semibold ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
                       Comece sua transformação hoje
                     </Button>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Percepção de Valor */}
@@ -148,24 +97,16 @@ const PlansSection = () => {
               monitoramento cardíaco e acompanhamento contínuo, tudo isso por um preço muito mais acessível do que 
               contratar esses serviços individualmente.
             </p>
-            <Button 
-              size="lg" 
-              onClick={() => setShowValuePopup(true)}
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-3 py-2 md:px-8 md:py-4 text-sm md:text-lg shadow-gold hover:shadow-xl group w-full max-w-full"
-            >
-              <span className="text-center break-words">Escolha qualidade, economia e resultados</span>
+            <Button size="lg" onClick={() => setShowValuePopup(true)} className="btn-premium bg-gradient-gold text-primary font-semibold px-3 py-2 md:px-8 md:py-4 text-sm md:text-lg shadow-gold hover:shadow-xl group w-full max-w-full">
+              <span className="text-center break-words">Qualidade, economia e
+resultados</span>
               <ArrowRight className="ml-1 md:ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
         </div>
       </section>
 
-      <PlanValuePopup 
-        open={showValuePopup} 
-        onOpenChange={setShowValuePopup} 
-      />
-    </>
-  );
+      <PlanValuePopup open={showValuePopup} onOpenChange={setShowValuePopup} />
+    </>;
 };
-
 export default PlansSection;
