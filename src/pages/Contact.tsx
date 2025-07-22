@@ -1,26 +1,15 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageCircle,
-  Calendar,
-  ArrowRight,
-  Instagram,
-  Facebook,
-  CheckCircle
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar, ArrowRight, Instagram, Facebook, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
 const ContactPage = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,17 +17,14 @@ const ContactPage = () => {
     interest: "",
     message: ""
   });
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     const message = `Olá! Vim através do site do Life Personal Estúdio.
     
 Nome: ${formData.name}
@@ -47,44 +33,29 @@ Telefone: ${formData.phone}
 Interesse: ${formData.interest}
 
 Mensagem: ${formData.message}`;
-
     const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
-
     toast({
       title: "Mensagem enviada!",
-      description: "Você será redirecionado para o WhatsApp. Aguarde nosso contato!",
+      description: "Você será redirecionado para o WhatsApp. Aguarde nosso contato!"
     });
-
-    setFormData({ name: "", email: "", phone: "", interest: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      interest: "",
+      message: ""
+    });
   };
-
   const handleWhatsApp = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação gratuita no Life Personal Estúdio.", "_blank");
   };
-
   const handleSchedule = () => {
     window.open("https://calendly.com/lifepersonalestudio", "_blank");
   };
-
-  const contactReasons = [
-    "Avaliação Gratuita",
-    "Treinamento Personalizado", 
-    "Consultoria Nutricional",
-    "Reabilitação",
-    "Informações sobre Planos",
-    "Outro"
-  ];
-
-  const benefits = [
-    "Resposta em até 2 horas",
-    "Avaliação gratuita garantida", 
-    "Sem compromisso inicial",
-    "Atendimento personalizado"
-  ];
-
-  return (
-    <div className="min-h-screen bg-background pt-16">
+  const contactReasons = ["Avaliação Gratuita", "Treinamento Personalizado", "Consultoria Nutricional", "Reabilitação", "Informações sobre Planos", "Outro"];
+  const benefits = ["Resposta em até 2 horas", "Avaliação gratuita garantida", "Sem compromisso inicial", "Atendimento personalizado"];
+  return <div className="min-h-screen bg-background pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="container mx-auto px-6 text-center">
@@ -114,10 +85,7 @@ Mensagem: ${formData.message}`;
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Resposta imediata no WhatsApp. Tire suas dúvidas e agende sua visita em poucos minutos.
               </p>
-              <Button 
-                onClick={handleWhatsApp}
-                className="w-full btn-premium bg-green-600 hover:bg-green-700 text-white shadow-elegant group"
-              >
+              <Button onClick={handleWhatsApp} className="w-full btn-premium bg-green-600 hover:bg-green-700 text-white shadow-elegant group">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Chamar no WhatsApp
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -133,11 +101,7 @@ Mensagem: ${formData.message}`;
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Escolha o melhor horário para sua avaliação gratuita através da nossa agenda online.
               </p>
-              <Button 
-                onClick={handleSchedule}
-                variant="outline"
-                className="w-full btn-premium border-2 border-accent text-accent hover:bg-accent hover:text-primary group"
-              >
+              <Button onClick={handleSchedule} variant="outline" className="w-full btn-premium border-2 border-accent text-accent hover:bg-accent hover:text-primary group">
                 <Calendar className="mr-2 h-5 w-5" />
                 Agendar Horário
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -163,12 +127,10 @@ Mensagem: ${formData.message}`;
 
               {/* Benefits */}
               <div className="mb-8 grid grid-cols-2 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center text-sm text-muted-foreground">
+                {benefits.map((benefit, index) => <div key={index} className="flex items-center text-sm text-muted-foreground">
                     <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
                     {benefit}
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               <Card className="p-8 shadow-card">
@@ -176,78 +138,33 @@ Mensagem: ${formData.message}`;
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Nome Completo *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Seu nome completo"
-                        required
-                        className="transition-all duration-300 focus:shadow-gold"
-                      />
+                      <Input id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder="Seu nome completo" required className="transition-all duration-300 focus:shadow-gold" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">Telefone *</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="(11) 99999-9999"
-                        required
-                        className="transition-all duration-300 focus:shadow-gold"
-                      />
+                      <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="(11) 99999-9999" required className="transition-all duration-300 focus:shadow-gold" />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
                     <Label htmlFor="email">E-mail *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="seu@email.com"
-                      required
-                      className="transition-all duration-300 focus:shadow-gold"
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder="seu@email.com" required className="transition-all duration-300 focus:shadow-gold" />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="interest">Principal Interesse</Label>
-                    <select
-                      id="interest"
-                      name="interest"
-                      value={formData.interest}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent"
-                    >
+                    <select id="interest" name="interest" value={formData.interest} onChange={handleInputChange} className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent">
                       <option value="">Selecione uma opção</option>
-                      {contactReasons.map((reason, index) => (
-                        <option key={index} value={reason}>{reason}</option>
-                      ))}
+                      {contactReasons.map((reason, index) => <option key={index} value={reason}>{reason}</option>)}
                     </select>
                   </div>
                   
                   <div className="space-y-2">
                     <Label htmlFor="message">Mensagem</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Conte-nos sobre seus objetivos, dúvidas ou como podemos ajudar..."
-                      rows={4}
-                      className="transition-all duration-300 focus:shadow-gold"
-                    />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Conte-nos sobre seus objetivos, dúvidas ou como podemos ajudar..." rows={4} className="transition-all duration-300 focus:shadow-gold" />
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full btn-premium bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl"
-                  >
+                  <Button type="submit" size="lg" className="w-full btn-premium bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl">
                     Enviar Mensagem
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -274,8 +191,8 @@ Mensagem: ${formData.message}`;
                     </div>
                     <div>
                       <h4 className="font-semibold text-primary">Telefone</h4>
-                      <p className="text-muted-foreground">(11) 99999-9999</p>
-                      <p className="text-xs text-muted-foreground">Atendemos de seg. à sáb., 8h às 20h</p>
+                      <p className="text-muted-foreground">(41) 3679-0618</p>
+                      <p className="text-xs text-muted-foreground">Atendemos de seg à sex, 6h às 21h sáb, 8h às 12h </p>
                     </div>
                   </div>
                 </Card>
@@ -287,7 +204,7 @@ Mensagem: ${formData.message}`;
                     </div>
                     <div>
                       <h4 className="font-semibold text-primary">E-mail</h4>
-                      <p className="text-muted-foreground">contato@lifepersonalestudio.com.br</p>
+                      <p className="text-muted-foreground">academia-life@hotmail.com</p>
                       <p className="text-xs text-muted-foreground">Resposta em até 2 horas úteis</p>
                     </div>
                   </div>
@@ -330,20 +247,10 @@ Mensagem: ${formData.message}`;
               <Card className="p-6 shadow-card">
                 <h4 className="font-semibold text-primary mb-4">Siga-nos nas Redes Sociais</h4>
                 <div className="flex space-x-4">
-                  <Button 
-                    size="icon" 
-                    variant="outline"
-                    className="hover:bg-accent hover:text-primary transition-all"
-                    onClick={() => window.open("https://instagram.com/lifepersonalestudio", "_blank")}
-                  >
+                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://instagram.com/lifepersonalestudio", "_blank")}>
                     <Instagram className="h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="icon" 
-                    variant="outline"
-                    className="hover:bg-accent hover:text-primary transition-all"
-                    onClick={() => window.open("https://facebook.com/lifepersonalestudio", "_blank")}
-                  >
+                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://facebook.com/lifepersonalestudio", "_blank")}>
                     <Facebook className="h-5 w-5" />
                   </Button>
                 </div>
@@ -352,8 +259,6 @@ Mensagem: ${formData.message}`;
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default ContactPage;
