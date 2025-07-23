@@ -1,11 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
-
 const FloatingWhatsApp = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
@@ -14,34 +11,19 @@ const FloatingWhatsApp = () => {
         setIsVisible(false);
       }
     };
-
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
-
   const handleWhatsApp = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Vim através do site do Life Personal Estúdio e gostaria de agendar uma avaliação gratuita.", "_blank");
   };
-
-  return (
-    <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-    }`}>
-      <Button
-        onClick={handleWhatsApp}
-        size="lg"
-        className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group animate-float"
-      >
-        <MessageCircle className="h-6 w-6 group-hover:scale-110 transition-transform" />
-        <span className="sr-only">WhatsApp</span>
-      </Button>
+  return <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+      
       
       <div className="absolute bottom-16 right-0 bg-primary text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
         Fale conosco no WhatsApp
         <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-primary"></div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default FloatingWhatsApp;
