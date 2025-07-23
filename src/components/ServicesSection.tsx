@@ -73,15 +73,15 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in"
+              className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in h-full flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4">
+              <div className="mb-4 flex flex-col h-full">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-gold rounded-2xl mb-4 group-hover:scale-110 transition-transform">
                   <service.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-h3 text-primary mb-3 text-lg">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <h3 className="font-h3 text-primary mb-3 text-lg min-h-[3.5rem] flex items-center">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
                   {service.description}
                 </p>
               </div>
