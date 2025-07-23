@@ -196,7 +196,7 @@ const Plans = () => {
             {plans.map((plan, index) => (
               <Card 
                 key={plan.name}
-                className={`relative p-4 md:p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in`}
+                className={`relative p-4 md:p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in flex flex-col h-full`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {plan.popular && (
@@ -218,8 +218,8 @@ const Plans = () => {
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-6">
-                  <ul className="space-y-3 text-left">
+                <CardContent className="space-y-6 flex-grow flex flex-col">
+                  <ul className="space-y-3 text-left flex-grow">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start space-x-3">
                         <Check className="h-4 md:h-5 w-4 md:w-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -230,7 +230,7 @@ const Plans = () => {
 
                   <Button 
                     onClick={handleWhatsApp}
-                    className={`w-full font-semibold text-sm md:text-base ${
+                    className={`w-full font-semibold text-sm md:text-base mt-auto ${
                       plan.popular 
                         ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' 
                         : 'bg-primary hover:bg-primary/90 text-white'
