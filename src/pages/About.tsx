@@ -240,14 +240,14 @@ const About = () => {
             {pilares.map((pilar, index) => (
               <Card 
                 key={index} 
-                className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in"
+                className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in h-full flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-6 group-hover:scale-110 transition-transform">
                   <pilar.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-h3 text-primary mb-4">{pilar.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{pilar.description}</p>
+                <h3 className="font-h3 text-primary mb-4 min-h-[3.5rem] flex items-center justify-center">{pilar.title}</h3>
+                <p className="text-muted-foreground leading-relaxed flex-grow">{pilar.description}</p>
               </Card>
             ))}
           </div>
