@@ -166,15 +166,15 @@ const Plans = () => {
             {highlights.map((highlight, index) => (
               <Card 
                 key={highlight.title}
-                className="p-4 md:p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                className="p-4 md:p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in h-full flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="space-y-3 md:space-y-4 p-0">
+                <CardContent className="space-y-3 md:space-y-4 p-0 flex flex-col h-full">
                   <div className="mx-auto w-12 md:w-16 h-12 md:h-16 bg-gradient-gold rounded-full flex items-center justify-center">
                     <highlight.icon className="h-6 md:h-8 w-6 md:w-8 text-primary" />
                   </div>
-                  <h3 className="font-h3 text-primary text-xs md:text-sm font-semibold">{highlight.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{highlight.description}</p>
+                  <h3 className="font-h3 text-primary text-xs md:text-sm font-semibold min-h-[2.5rem] flex items-center justify-center">{highlight.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed flex-grow flex items-center justify-center text-center">{highlight.description}</p>
                 </CardContent>
               </Card>
             ))}
