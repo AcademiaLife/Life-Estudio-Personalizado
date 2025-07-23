@@ -43,7 +43,7 @@ const PlansSection = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            {plans.map((plan, index) => <Card key={plan.name} className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in`} style={{
+            {plans.map((plan, index) => <Card key={plan.name} className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in flex flex-col h-full`} style={{
             animationDelay: `${index * 0.1}s`
           }}>
                 {plan.popular && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
@@ -63,15 +63,15 @@ const PlansSection = () => {
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-6">
-                  <ul className="space-y-3 text-left">
+                <CardContent className="space-y-6 flex-grow flex flex-col">
+                  <ul className="space-y-3 text-left flex-grow">
                     {plan.benefits.map((benefit, idx) => <li key={idx} className="flex items-start space-x-3">
                         <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>)}
                   </ul>
 
-                  <div className="space-y-3 pt-4 py-px">
+                  <div className="space-y-3 pt-4 py-px mt-auto">
                     <Link to="/planos">
                       <Button variant="outline" className="w-full group hover:bg-accent hover:text-primary transition-all">
                         Ver Detalhes
