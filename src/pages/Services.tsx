@@ -213,28 +213,28 @@ const Services = () => {
             {services.map((service, index) => (
               <Card 
                 key={service.id} 
-                className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 animate-scale-in"
+                className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 animate-scale-in h-full flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-gold rounded-xl">
+                <div className="space-y-6 flex flex-col h-full">
+                  <div className="flex items-start space-x-4 flex-shrink-0">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-gold rounded-xl flex-shrink-0">
                       <service.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-primary text-lg">{service.title}</h3>
+                    <h3 className="font-semibold text-primary text-lg leading-tight min-h-[3rem] flex items-center">{service.title}</h3>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed flex-grow min-h-[4.5rem] flex items-start">
                     {service.description}
                   </p>
 
-                  <div className="space-y-3">
+                  <div className="space-y-3 flex-shrink-0">
                     <h4 className="font-semibold text-primary text-sm">O que está incluído:</h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 min-h-[8rem] flex flex-col justify-start">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-muted-foreground text-sm">
-                          <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
-                          {feature}
+                        <li key={featureIndex} className="flex items-start text-muted-foreground text-sm">
+                          <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -243,7 +243,7 @@ const Services = () => {
                   <Dialog open={openDialog === service.id} onOpenChange={(open) => setOpenDialog(open ? service.id : null)}>
                     <DialogTrigger asChild>
                       <Button 
-                        className="w-full bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl group"
+                        className="w-full bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl group mt-auto"
                       >
                         Saiba Mais
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
