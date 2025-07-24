@@ -259,28 +259,28 @@ const Plans = () => {
             {classes.map((classItem, index) => (
               <Card 
                 key={classItem.name}
-                className="p-4 md:p-6 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                className="p-4 md:p-6 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in h-full flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardHeader className="pb-4">
+                <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-gold rounded-full flex items-center justify-center">
+                    <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-gold rounded-full flex items-center justify-center flex-shrink-0">
                       <classItem.icon className="h-5 md:h-6 w-5 md:w-6 text-primary" />
                     </div>
-                    <CardTitle className="text-base md:text-lg font-h3 text-primary">{classItem.name}</CardTitle>
+                    <CardTitle className="text-base md:text-lg font-h3 text-primary min-h-[2.5rem] flex items-center">{classItem.name}</CardTitle>
                   </div>
                 </CardHeader>
                 
-                <CardContent className="space-y-3 p-0">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                <CardContent className="space-y-3 p-0 flex-grow flex flex-col">
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow min-h-[4rem] flex items-start">
                     {classItem.description}
                   </p>
-                  <div className="space-y-1">
+                  <div className="space-y-1 flex-shrink-0 mt-auto">
                     <p className="text-sm font-semibold text-primary">
                       Professor: {classItem.instructor}
                     </p>
                     <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4 text-accent" />
+                      <Clock className="h-4 w-4 text-accent flex-shrink-0" />
                       <p className="text-xs text-muted-foreground">{classItem.schedule}</p>
                     </div>
                   </div>
