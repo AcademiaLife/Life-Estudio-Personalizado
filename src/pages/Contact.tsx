@@ -247,10 +247,10 @@ Mensagem: ${formData.message}`;
               <Card className="p-6 shadow-card">
                 <h4 className="font-semibold text-primary mb-4">Siga-nos nas Redes Sociais</h4>
                 <div className="flex space-x-4">
-                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://instagram.com/lifepersonalestudio", "_blank")}>
+                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.instagram.com/lifeestudiopersonalizado", "_blank")}>
                     <Instagram className="h-5 w-5" />
                   </Button>
-                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://facebook.com/lifepersonalestudio", "_blank")}>
+                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.facebook.com/academialifenaweb?mibextid=wwXIfr&rdid=jNh4ZcsIXIcubgKN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uMXmvJEP%2F%3Fmibextid%3DwwXIfr", "_blank")}>
                     <Facebook className="h-5 w-5" />
                   </Button>
                 </div>
