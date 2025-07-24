@@ -37,14 +37,14 @@ const ChooseUsSection = () => {
           {differentiators.map((item, index) => (
             <Card 
               key={index} 
-              className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in h-full flex flex-col"
+              className="p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in h-full flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-6 group-hover:scale-110 transition-transform flex-shrink-0">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-6 group-hover:scale-110 transition-transform flex-shrink-0 mx-auto">
                 <item.icon className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="font-h3 text-primary mb-3 min-h-[4rem] flex items-center justify-center text-center">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed flex-grow flex items-start justify-center text-center">
+              <h3 className="font-h3 text-primary mb-3 min-h-[4rem] flex items-center text-center">{item.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow text-left">
                 {item.description}
               </p>
             </Card>
