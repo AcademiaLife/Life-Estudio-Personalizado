@@ -5,7 +5,7 @@ import { Star, Quote, ArrowRight, TrendingUp, Award, Heart } from "lucide-react"
 
 const TestimonialsPage = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o Life Personal Estúdio.", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de saber mais sobre o Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
 
   const testimonials = [

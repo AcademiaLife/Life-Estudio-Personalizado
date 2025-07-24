@@ -45,7 +45,7 @@ Telefone: ${formData.phone}
 
 Mensagem: ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=554136790618&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
     window.open(whatsappUrl, "_blank");
 
     toast({
@@ -58,7 +58,7 @@ Mensagem: ${formData.message}`;
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação gratuita no Life Personal Estúdio.", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de agendar uma avaliação gratuita no Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
 
   const handleSchedule = () => {

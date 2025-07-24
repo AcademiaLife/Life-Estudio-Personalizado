@@ -26,7 +26,7 @@ import studioImage from "@/assets/studio-interior.jpg";
 
 const About = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de conhecer mais sobre o Life Estúdio Personalizado e agendar minha avaliação gratuita.", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer mais sobre o Life Estúdio Personalizado e agendar minha avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
   };
 
   const valores = [

@@ -6,7 +6,7 @@ import { ArrowRight, Award, Users, Heart } from "lucide-react";
 
 const Team = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de conhecer melhor a equipe do Life Personal Estúdio.", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer melhor a equipe do Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
 
   const personalTrainers = [

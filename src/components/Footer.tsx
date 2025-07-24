@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle, Clock, Heart }
 import { Link } from "react-router-dom";
 const Footer = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Vim através do site do Life Personal Estúdio.", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Vim através do site do Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
   return <footer className="bg-gradient-hero text-white">
       <div className="container mx-auto px-6 py-16">

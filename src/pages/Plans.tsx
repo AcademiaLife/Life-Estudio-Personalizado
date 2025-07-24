@@ -7,7 +7,7 @@ import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp
 
 const Plans = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de conhecer os planos do Life Elite Studio e agendar uma avaliação.", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer os planos do Life Elite Studio e agendar uma avaliação.&type=phone_number&app_absent=0", "_blank");
   };
 
   const plans = [
