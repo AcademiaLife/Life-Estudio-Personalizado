@@ -208,8 +208,8 @@ Mensagem: ${formData.message}`;
                   <div>
                     <h4 className="font-semibold text-primary">Endereço</h4>
                     <p className="text-muted-foreground">
-                      Rua Augusta, 1500 - Consolação<br />
-                      São Paulo - SP, 01304-001
+                      R. Pedro Pasa, 1158 - Jardim Paulista<br />
+                      Campina Grande do Sul - PR, 83430-282
                     </p>
                   </div>
                 </div>

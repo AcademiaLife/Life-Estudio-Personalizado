@@ -32,7 +32,7 @@ const TermsOfService = () => {
           <p>
             Estes Termos de Serviço ("Termos") regulam a prestação de serviços de treinamento físico personalizado, 
             consultoria nutricional, aulas coletivas e demais atividades oferecidas pelo <strong>Life Personal Estúdio</strong>, 
-            localizado na Rua Augusta, 1500 - Consolação, São Paulo - SP.
+            localizado na R. Pedro Pasa, 1158 - Jardim Paulista, Campina Grande do Sul - PR, 83430-282.
           </p>
           <p>
             Os serviços incluem, mas não se limitam a:
@@ -194,7 +194,7 @@ const TermsOfService = () => {
             <li>Lei Geral de Proteção de Dados (Lei 13.709/18)</li>
           </ul>
           <p>
-            Fica eleito o foro da Comarca de São Paulo - SP para dirimir quaisquer controvérsias 
+            Fica eleito o foro da Comarca de Campina Grande do Sul - PR para dirimir quaisquer controvérsias 
             decorrentes da prestação dos serviços, renunciando as partes a qualquer outro, 
             por mais privilegiado que seja.
           </p>

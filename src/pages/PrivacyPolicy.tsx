@@ -260,7 +260,7 @@ const PrivacyPolicy = () => {
           <div className="bg-muted/50 p-4 rounded-lg space-y-2">
             <p><strong>E-mail:</strong> privacidade@lifepersonalestudio.com.br</p>
             <p><strong>Telefone:</strong> (11) 99999-9999</p>
-            <p><strong>Endereço:</strong> Rua Augusta, 1500 - Consolação, São Paulo - SP, 01304-001</p>
+            <p><strong>Endereço:</strong> R. Pedro Pasa, 1158 - Jardim Paulista, Campina Grande do Sul - PR, 83430-282</p>
           </div>
 
           <h3 className="text-lg font-medium text-foreground">9.2 Autoridade Supervisora</h3>

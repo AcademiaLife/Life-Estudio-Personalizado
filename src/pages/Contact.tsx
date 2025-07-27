@@ -177,7 +177,7 @@ Mensagem: ${formData.message}`;
               <div>
                 <h2 className="font-h2 text-primary mb-6">Informações de Contato</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Estamos localizados no coração de São Paulo, em um espaço exclusivo 
+                  Estamos localizados em Campina Grande do Sul - PR, em um espaço exclusivo 
                   projetado para sua comodidade e bem-estar.
                 </p>
               </div>
