@@ -80,7 +80,7 @@ const TermsOfService = () => {
           <ul className="list-disc pl-6 space-y-2">
             <li>Mensalidades com vencimento todo dia 10 do mês</li>
             <li>Primeira mensalidade paga no ato da contratação</li>
-            <li>Multa de 2% sobre o valor em atraso após 10 dias do vencimento</li>
+            
             <li>Juros de 1% ao mês sobre o valor em atraso</li>
             <li>Reajuste anual conforme IPCA ou índice que vier a substituí-lo</li>
           </ul>
