@@ -1,24 +1,31 @@
-
 import LegalPageLayout from "@/components/LegalPageLayout";
-
 const TermsOfService = () => {
-  const sections = [
-    { id: "definicoes", title: "1. Definições e Escopo" },
-    { id: "responsabilidades", title: "2. Responsabilidades" },
-    { id: "pagamentos", title: "3. Pagamentos e Planos" },
-    { id: "cancelamentos", title: "4. Cancelamentos e Rescisão" },
-    { id: "alteracoes", title: "5. Alterações nos Termos" },
-    { id: "limitacoes", title: "6. Limitações de Responsabilidade" },
-    { id: "propriedade", title: "7. Propriedade Intelectual" },
-    { id: "foro", title: "8. Foro e Legislação" },
-  ];
-
-  return (
-    <LegalPageLayout
-      title="Termos de Serviço"
-      lastUpdated="22 de julho de 2024"
-      sections={sections}
-    >
+  const sections = [{
+    id: "definicoes",
+    title: "1. Definições e Escopo"
+  }, {
+    id: "responsabilidades",
+    title: "2. Responsabilidades"
+  }, {
+    id: "pagamentos",
+    title: "3. Pagamentos e Planos"
+  }, {
+    id: "cancelamentos",
+    title: "4. Cancelamentos e Rescisão"
+  }, {
+    id: "alteracoes",
+    title: "5. Alterações nos Termos"
+  }, {
+    id: "limitacoes",
+    title: "6. Limitações de Responsabilidade"
+  }, {
+    id: "propriedade",
+    title: "7. Propriedade Intelectual"
+  }, {
+    id: "foro",
+    title: "8. Foro e Legislação"
+  }];
+  return <LegalPageLayout title="Termos de Serviço" lastUpdated="22 de julho de 2024" sections={sections}>
       <section id="definicoes">
         <h2 className="text-2xl font-semibold mb-4">1. Definições e Escopo</h2>
         <div className="space-y-4 text-muted-foreground">
@@ -81,14 +88,14 @@ const TermsOfService = () => {
             <li>Mensalidades com vencimento todo dia 10 do mês</li>
             <li>Primeira mensalidade paga no ato da contratação</li>
             
-            <li>Juros de 1% ao mês sobre o valor em atraso</li>
-            <li>Reajuste anual conforme IPCA ou índice que vier a substituí-lo</li>
+            <li>
+          </li>
+            <li>
+          </li>
           </ul>
 
           <h3 className="text-lg font-medium text-foreground">3.3 Formas de Pagamento</h3>
-          <p>
-            Aceitamos pagamentos via PIX, cartão de crédito, débito automático e transferência bancária.
-          </p>
+          <p>Aceitamos pagamentos via PIX, cartão de crédito, débito automático e transferência bancária, pagamento por recorrência.</p>
         </div>
       </section>
 
@@ -200,8 +207,6 @@ const TermsOfService = () => {
           </p>
         </div>
       </section>
-    </LegalPageLayout>
-  );
+    </LegalPageLayout>;
 };
-
 export default TermsOfService;
