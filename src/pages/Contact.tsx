@@ -234,7 +234,7 @@ Mensagem: ${formData.message}`;
                         R. Pedro Pasa, 1158 - Jardim Paulista<br />
                         Campina Grande do Sul - PR, 83430-282
                        </p>
-                      <p className="text-xs text-muted-foreground">Estacionamento gratuito disponível</p>
+                      
                     </div>
                   </div>
                 </Card>
