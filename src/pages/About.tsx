@@ -92,37 +92,38 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background pt-16">
-      {/* Cabeçalho Principal */}
-      <section className="py-20 bg-gradient-hero text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={studioImage} 
-            alt="Interior do Life Estúdio Personalizado" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
-        </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-hero text-white mb-8 animate-fade-in">
+      {/* Hero Section */}
+      <section className="py-12 md:py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8 animate-fade-in">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-hero text-primary leading-tight">
               Sobre o 
               <br />
               <span className="bg-gradient-gold bg-clip-text text-transparent">
-                Life Estúdio Personalizado
+                Life Personal Estúdio
               </span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
-            <p className="text-xl text-gray-200 leading-relaxed animate-fade-in max-w-3xl mx-auto">
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               Onde cada treino é uma experiência única, pensada especialmente para você. 
               Descubra um novo conceito de bem-estar e transformação pessoal.
             </p>
+
+            <Button 
+              onClick={() => document.getElementById("about-content")?.scrollIntoView({ behavior: "smooth" })}
+              size="lg" 
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
+            >
+              Conheça Nossa História
+              <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Nossa História */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="container mx-auto px-6">
+      <section id="about-content" className="py-12 md:py-20 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-fade-in">
               <h2 className="font-h1 text-primary mb-6">Nossa História</h2>
@@ -327,25 +328,24 @@ const About = () => {
         </div>
       </section>
 
-      {/* Slogan Final */}
-      <section className="py-16 bg-gradient-hero text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={trainingImage} 
-            alt="Life Estúdio Personalizado" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/60"></div>
-        </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h3 className="font-h1 text-white leading-tight mb-4">
-              Seu treino. Seu ritmo. Seu espaço.
-            </h3>
-            <p className="text-2xl text-accent font-medium">
-              Bem-vindo ao Life Estúdio Personalizado.
+      {/* Final CTA */}
+      <section className="py-12 md:py-20 bg-gradient-hero text-white">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-h2 text-white mb-4 md:mb-6 leading-tight">
+              Transforme sua vida com quem realmente entende do assunto
+            </h2>
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8 px-4">
+              Venha conhecer nosso espaço e descobrir como podemos ajudar você a alcançar seus objetivos de forma sustentável e prazerosa.
             </p>
-            <div className="w-32 h-1 bg-gradient-gold mx-auto mt-8"></div>
+            <Button 
+              size="lg" 
+              onClick={handleWhatsApp}
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto"
+            >
+              <span className="whitespace-nowrap">Agendar Visita</span>
+              <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+            </Button>
           </div>
         </div>
       </section>
