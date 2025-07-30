@@ -203,7 +203,7 @@ const Services = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              Cada serviço foi desenvolvido para atender suas necessidades específicas, 
+              Cada serviço foi cuidadosamente desenvolvido para atender suas necessidades específicas, 
               garantindo resultados sustentáveis e uma experiência única de transformação.
             </p>
 
