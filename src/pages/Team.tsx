@@ -120,26 +120,42 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-background pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-            <h1 className="font-h1 mb-6">
-              Nossa Equipe de <span className="bg-gradient-gold bg-clip-text text-transparent">Especialistas</span>
+      <section className="py-12 md:py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8 animate-fade-in">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-hero text-primary leading-tight">
+              Nossa Equipe de 
+              <br />
+              <span className="bg-gradient-gold bg-clip-text text-transparent">
+                Especialistas
+              </span>
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               Profissionais altamente qualificados e dedicados à sua transformação. 
               Cada membro da nossa equipe é selecionado pela expertise e paixão em entregar resultados excepcionais.
             </p>
+
+            <Button 
+              onClick={() => document.getElementById("team")?.scrollIntoView({ behavior: "smooth" })}
+              size="lg" 
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
+            >
+              Conheça nossa equipe
+              <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Personal Trainers */}
-      <TeamSection 
-        title="Personal Trainers" 
-        icon={Users}
-        members={personalTrainers}
-      />
+      <div id="team">
+        <TeamSection 
+          title="Personal Trainers" 
+          icon={Users}
+          members={personalTrainers}
+        />
+      </div>
 
       {/* Nutritionists */}
       <TeamSection 
@@ -211,23 +227,23 @@ const Team = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="font-h2 text-white mb-6">
+      <section className="py-12 md:py-20 bg-gradient-hero text-white">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-h2 text-white mb-4 md:mb-6 leading-tight">
               Conheça Nossa Equipe Pessoalmente
             </h2>
-            <p className="text-xl text-gray-200 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8 px-4">
               Agende uma visita e converse com nossos profissionais. 
               Queremos entender seus objetivos e mostrar como podemos ajudar.
             </p>
             <Button 
               size="lg" 
               onClick={handleWhatsApp}
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group"
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto"
             >
-              Agendar Visita
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <span className="whitespace-nowrap">Agendar Visita</span>
+              <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
         </div>

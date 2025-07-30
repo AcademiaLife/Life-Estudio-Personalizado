@@ -57,24 +57,37 @@ Mensagem: ${formData.message}`;
   const benefits = ["Resposta em até 2 horas", "Avaliação gratuita garantida", "Sem compromisso inicial", "Atendimento personalizado"];
   return <div className="min-h-screen bg-background pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="font-hero text-white mb-6">
+      <section className="py-12 md:py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8 animate-fade-in">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-hero text-primary leading-tight">
               Vamos Conversar Sobre 
-              <span className="bg-gradient-gold bg-clip-text text-transparent"> Sua Transformação</span>
+              <br />
+              <span className="bg-gradient-gold bg-clip-text text-transparent">
+                Sua Transformação
+              </span>
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               Estamos aqui para responder suas dúvidas, conhecer seus objetivos e 
               criar o caminho perfeito para sua jornada de transformação.
             </p>
+
+            <Button 
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              size="lg" 
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
+            >
+              Entrar em contato
+              <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Contact Options */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="container mx-auto px-6">
+      <section id="contact" className="py-12 md:py-20 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* WhatsApp CTA */}
             <Card className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 group">
@@ -112,8 +125,8 @@ Mensagem: ${formData.message}`;
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div className="animate-scale-in">
