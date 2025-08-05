@@ -53,7 +53,7 @@ Mensagem: ${formData.message}`;
   const handleSchedule = () => {
     window.open("https://calendly.com/lifepersonalestudio", "_blank");
   };
-  const contactReasons = ["Avaliação", "Aula Experimental", "Treino com Personal", "Indicação Médica", "Informação sobre planos", "Outros"];
+  const contactReasons = ["Melhorar a Performance e Condicionamento", "Ganho de Massa e Emagrecimento", "Saúde e Bem-Estar", "Indicação Médica", "Informação sobre planos", "Outros"];
   const benefits = ["Resposta em até 2 horas", "Avaliação gratuita garantida", "Sem compromisso inicial", "Atendimento personalizado"];
   return <div className="min-h-screen bg-background pt-16">
       {/* Hero Section */}
