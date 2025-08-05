@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar, ArrowRight, Instagram, Facebook, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, ArrowRight, Instagram, Facebook, CheckCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 const ContactPage = () => {
@@ -92,14 +93,14 @@ Mensagem: ${formData.message}`;
             {/* WhatsApp CTA */}
             <Card className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-6 group-hover:scale-110 transition-transform">
-                <MessageCircle className="h-8 w-8 text-white" />
+                <WhatsAppIcon className="h-8 w-8 text-white" />
               </div>
               <h3 className="font-h3 text-primary mb-4">Fale Conosco Agora</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Resposta imediata no WhatsApp. Tire suas dúvidas e agende sua visita em poucos minutos.
               </p>
               <Button onClick={handleWhatsApp} className="w-full btn-premium bg-green-600 hover:bg-green-700 text-white shadow-elegant group">
-                <MessageCircle className="mr-2 h-5 w-5" />
+                <WhatsAppIcon className="mr-2 h-5 w-5" />
                 Chamar no WhatsApp
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
