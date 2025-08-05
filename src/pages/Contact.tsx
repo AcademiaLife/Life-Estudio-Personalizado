@@ -71,11 +71,9 @@ Mensagem: ${formData.message}`;
               criar o caminho perfeito para sua jornada de transformação.
             </p>
 
-            <Button 
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              size="lg" 
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
-            >
+            <Button onClick={() => document.getElementById("contact")?.scrollIntoView({
+            behavior: "smooth"
+          })} size="lg" className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group">
               Entrar em contato
               <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -188,7 +186,7 @@ Mensagem: ${formData.message}`;
                     <div>
                       <h4 className="font-semibold text-primary">Telefone</h4>
                       <p className="text-muted-foreground">(41) 3679-0618</p>
-                      <p className="text-xs text-muted-foreground">Atendemos de seg à sex, 6h às 21h sáb, 8h às 12h </p>
+                      <p className="text-xs text-muted-foreground">Atendemos de seg à sex, 6h às 12 | 13h às 21h sáb, 8h às 12h </p>
                     </div>
                   </div>
                 </Card>
