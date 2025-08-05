@@ -34,7 +34,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-accent">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <MessageCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+                <MessageCircle className="h-5 w-5 text-accent flex-shrink-0" />
                 <span className="text-gray-300">(41) 3679-0618</span>
               </div>
               <div className="flex items-center space-x-3">
@@ -59,7 +59,7 @@ const Footer = () => {
                 <Clock className="h-5 w-5 text-accent flex-shrink-0" />
                 <div className="text-gray-300 text-sm">
                   <p className="font-medium">Segunda à Sexta</p>
-                  <p>6h às 21h</p>
+                  <p>6h às 12h | 13h às 21h</p>
                 </div>
               </div>
               <div className="text-gray-300 text-sm pl-8">
