@@ -10,22 +10,62 @@ const PlansSection = () => {
   const plans = [{
     name: "Meta Personal",
     price: "399",
-    description: "Ideal para quem está começando",
-    benefits: ["Personal trainer dedicado", "Avaliação física completa", "Programa de treino personalizado", "Acompanhamento semanal", "Acesso total aos equipamentos"],
+    description: "Seu ponto de partida ideal",
+    benefits: [
+      "Personal trainer dedicado 3x por semana (turmas até 3 alunos)",
+      "Acesso livre para cardio e extras nos demais dias",
+      "Monitoramento cardíaco durante o treino",
+      "Aulas coletivas (pilates, metabolic e mais)",
+      "Avaliação física completa",
+      "Programa de treino personalizado",
+      "Acompanhamento semanal",
+      "Acesso total aos equipamentos"
+    ],
     popular: false,
     color: "border-border"
   }, {
     name: "Meta Slim",
     price: "449",
-    description: "Nosso plano mais popular",
-    benefits: ["Personal trainer dedicado", "Nutricionista especializada", "Avaliação física detalhada", "Programa completo de treino", "Plano alimentar personalizado", "Acompanhamento quinzenal", "Reavaliações mensais"],
+    description: "Equilíbrio perfeito",
+    benefits: [
+      "Personal trainer dedicado 3x por semana (turmas até 3 alunos)",
+      "Acesso livre para cardio e extras nos demais dias",
+      "Monitoramento cardíaco durante o treino",
+      "Aulas coletivas (pilates, metabolic e mais)",
+      "Avaliação física completa",
+      "Programa de treino personalizado",
+      "Acompanhamento semanal",
+      "Acesso total aos equipamentos",
+      "Nutricionista especializada",
+      "Avaliação física e acompanhamento de resultados",
+      "Plano alimentar personalizado",
+      "Reavaliações mensais"
+    ],
     popular: true,
     color: "border-accent shadow-gold"
   }, {
     name: "Meta Full",
     price: "599",
     description: "Experiência premium completa",
-    benefits: ["Personal trainer VIP", "Nutricionista especializada", "Avaliação física avançada", "Programa premium de treino", "Consultoria nutricional completa", "Acompanhamento semanal", "Reavaliações quinzenais", "Suporte via WhatsApp"],
+    benefits: [
+      "Personal trainer dedicado 3x por semana (turmas até 3 alunos)",
+      "Acesso livre para cardio e extras nos demais dias",
+      "Monitoramento cardíaco durante o treino",
+      "Aulas coletivas (pilates, metabolic e mais)",
+      "Avaliação física completa",
+      "Programa de treino personalizado",
+      "Acompanhamento semanal",
+      "Acesso total aos equipamentos",
+      "Nutricionista especializada",
+      "Avaliação física e acompanhamento de resultados",
+      "Plano alimentar personalizado",
+      "Reavaliações mensais",
+      "Avaliação de movimento",
+      "Bebidas quentes: chocolate, cappuccino, mocaccino",
+      "Pré e pós-treino inclusos",
+      "Acesso à sala recovery",
+      "Suporte via WhatsApp"
+    ],
     popular: false,
     color: "border-border"
   }];
