@@ -5,7 +5,7 @@ import {
   Dumbbell, 
   Apple, 
   Users, 
-  Leaf,
+  Activity,
   Heart, 
   Smartphone,
   Zap, 
@@ -32,9 +32,9 @@ const ServicesSection = () => {
       description: "Turmas pequenas, focadas e com acompanhamento técnico personalizado."
     },
     {
-      icon: Leaf,
-      title: "Pilates e Alongamento",
-      description: "Desenvolva consciência corporal, postura e flexibilidade com práticas suaves."
+      icon: Activity,
+      title: "Avaliação Física Completa",
+      description: "Análise detalhada da composição corporal, capacidade física e planejamento de metas."
     },
     {
       icon: Heart,
