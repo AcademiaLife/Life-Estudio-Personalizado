@@ -383,7 +383,7 @@ const Services = () => {
               onClick={handleWhatsApp}
               className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto"
             >
-              <span className="whitespace-nowrap">Agendar Avaliação Gratuita</span>
+              <span className="whitespace-nowrap">Agenda Sua Aula Experimental</span>
               <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>

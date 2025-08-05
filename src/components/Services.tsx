@@ -116,7 +116,7 @@ const Services = () => {
             className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl"
             onClick={handleWhatsApp}
           >
-            Agendar Avaliação Gratuita
+            Agenda Sua Aula Experimental
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
