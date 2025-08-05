@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import { 
   Dumbbell, 
   Heart, 
@@ -116,6 +117,7 @@ const Services = () => {
             className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl"
             onClick={handleWhatsApp}
           >
+            <WhatsAppIcon className="mr-2 h-5 w-5" />
             Agenda Sua Aula Experimental
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, ArrowRight } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import PlanValuePopup from "./PlanValuePopup";
@@ -95,6 +96,7 @@ const PlansSection = () => {
                     </Link>
                     
                     <Button onClick={handleWhatsApp} className={`w-full font-semibold ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
+                      <WhatsAppIcon className="mr-2 h-4 w-4" />
                       Comece sua transformação hoje
                     </Button>
                   </div>

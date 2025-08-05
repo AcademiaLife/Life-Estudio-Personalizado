@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle, Clock, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook, Clock, Heart } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import { Link } from "react-router-dom";
 const Footer = () => {
   const handleWhatsApp = () => {
@@ -24,7 +25,7 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </Button>
               <Button size="icon" variant="outline" className="border-green-400 text-green-400 hover:bg-green-400 hover:text-primary transition-all" onClick={handleWhatsApp}>
-                <MessageCircle className="h-5 w-5" />
+                <WhatsAppIcon className="h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -34,7 +35,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-accent">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <MessageCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                <WhatsAppIcon className="h-5 w-5 text-accent flex-shrink-0" />
                 <span className="text-gray-300">(41) 3679-0618</span>
               </div>
               <div className="flex items-center space-x-3">
@@ -84,7 +85,7 @@ const Footer = () => {
               Agende sua avaliação gratuita hoje mesmo e descubra como podemos ajudar você a alcançar seus objetivos.
             </p>
             <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-3 shadow-gold hover:shadow-xl">
-              <MessageCircle className="mr-2 h-5 w-5" />
+              <WhatsAppIcon className="mr-2 h-5 w-5" />
               Agenda Sua Aula Experimental
             </Button>
           </div>
