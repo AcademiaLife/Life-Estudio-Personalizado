@@ -142,33 +142,78 @@ const Services = () => {
       ]
     },
     {
-      id: "funcional-metabolic",
-      icon: Target,
-      title: "Treinamento Funcional e Metabolic Training",
-      description: "Treinos dinâmicos e de alta intensidade que trabalham força, agilidade e resistência.",
-      features: ["Circuitos de força e cardio", "Exercícios com peso corporal e acessórios", "Evolução progressiva", "Gasto calórico elevado"],
-      process: "Participe de sessões intensas, com séries diversas e em grupos reduzidos. A metodologia combina funcionalidade e queima calórica para resultados rápidos e duradouros.",
-      duration: "Aulas dinâmicas com programação variada.",
-      ideal: "Quem busca treinos divertidos, motivadores e eficientes.",
+      id: "zumba-fitness",
+      icon: Heart,
+      title: "Zumba Fitness",
+      description: "Dança fitness envolvente que combina movimentos latinos com exercícios cardiovasculares dinâmicos.",
+      features: ["Coreografias variadas", "Queima calórica elevada", "Ambiente divertido e motivador", "Instrutores especializados"],
+      process: "Mergulhe em uma experiência única de dança fitness com ritmos latinos contagiantes. Cada aula é uma festa que fortalece o corpo e libera endorfinas.",
+      duration: "Aulas de 50 minutos com programação regular.",
+      ideal: "Quem busca diversão, socialização e um treino cardiovascular completo.",
       differentials: [
-        "Instrutores especializados",
-        "Programação embasada em ciência",
-        "Ambiente de pura energia"
+        "Ambiente festivo e acolhedor",
+        "Instrutores com formação específica",
+        "Coreografias renovadas constantemente"
       ]
     },
     {
-      id: "pilates-alongamento",
-      icon: Leaf,
-      title: "Pilates Solo e Alongamento",
-      description: "Desenvolva consciência corporal, postura e flexibilidade com práticas suaves e eficazes.",
-      features: ["Sessões focadas em mobilidade e postura", "Técnicas de respiração e concentração", "Alongamentos ativos e passivos", "Prevenção de dores e lesões"],
-      process: "Aposte em aulas focadas em postura, mobilidade e força do core. Técnicas que ajudam a prevenir lesões e proporcionar bem-estar desde o primeiro movimento.",
-      duration: "Sessões regulares ou sugeridas conforme sua necessidade.",
-      ideal: "Quem busca equilíbrio, consciência corporal e qualidade de vida.",
+      id: "dgym-training",
+      icon: Zap,
+      title: "D'Gym Training",
+      description: "Treinamento funcional intensivo que combina força, resistência e agilidade em circuitos dinâmicos.",
+      features: ["Circuitos funcionais", "Trabalho de força e resistência", "Exercícios com equipamentos variados", "Turmas reduzidas"],
+      process: "Experimente treinos funcionais de alta intensidade em grupos pequenos, com exercícios que desafiam todo o corpo e promovem resultados rápidos.",
+      duration: "Sessões de 45 minutos com intensidade controlada.",
+      ideal: "Quem busca resultados rápidos com treinos desafiadores e motivadores.",
       differentials: [
-        "Instrutores com formação e sensibilidade",
-        "Ambiente calmo e acolhedor",
-        "Abordagem individualizada"
+        "Metodologia exclusiva D'Gym",
+        "Equipamentos modernos e variados",
+        "Acompanhamento técnico personalizado"
+      ]
+    },
+    {
+      id: "metabolic-training",
+      icon: Target,
+      title: "Metabolic Training",
+      description: "Treino metabólico de alta intensidade focado na queima de gordura e condicionamento cardiovascular.",
+      features: ["HIIT personalizado", "Treinos intervalados", "Máxima queima calórica", "Melhora do condicionamento"],
+      process: "Acelere seu metabolismo com treinos intervalados de alta intensidade. Sessões que maximizam a queima de calorias durante e após o exercício.",
+      duration: "Sessões intensas de 30-40 minutos.",
+      ideal: "Quem busca queima de gordura eficiente e melhora do condicionamento físico.",
+      differentials: [
+        "Protocolo científico comprovado",
+        "Monitoramento de intensidade",
+        "Resultados em tempo otimizado"
+      ]
+    },
+    {
+      id: "pilates-solo",
+      icon: Leaf,
+      title: "Pilates Solo",
+      description: "Método Pilates clássico focado no fortalecimento do core, postura e consciência corporal.",
+      features: ["Fortalecimento do core", "Melhora da postura", "Exercícios de precisão", "Consciência corporal"],
+      process: "Desenvolva força interior, flexibilidade e postura através dos princípios fundamentais do Pilates. Aulas focadas na qualidade de movimento e respiração.",
+      duration: "Aulas de 50 minutos com atenção individualizada.",
+      ideal: "Quem busca fortalecimento profundo, postura e bem-estar integral.",
+      differentials: [
+        "Método clássico respeitado",
+        "Instrutores certificados",
+        "Ambiente tranquilo e focado"
+      ]
+    },
+    {
+      id: "alongamento-terapeutico",
+      icon: Brain,
+      title: "Alongamento Terapêutico",
+      description: "Sessões de alongamento e mobilidade para alívio de tensões, melhora da flexibilidade e bem-estar.",
+      features: ["Técnicas de liberação muscular", "Melhora da flexibilidade", "Alívio de tensões", "Relaxamento profundo"],
+      process: "Relaxe e restaure seu corpo com técnicas de alongamento terapêutico. Sessões que promovem alívio de tensões e maior amplitude de movimento.",
+      duration: "Sessões de 45 minutos para relaxamento completo.",
+      ideal: "Quem busca alívio de tensões musculares e melhora da qualidade de vida.",
+      differentials: [
+        "Abordagem terapêutica personalizada",
+        "Técnicas de relaxamento profundo",
+        "Ambiente sereno e restaurador"
       ]
     }
   ];
