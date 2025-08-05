@@ -112,48 +112,33 @@ const Services = () => {
       ]
     },
     {
-      id: "recuperacao-bem-estar",
+      id: "sala-recovery",
       icon: Zap,
-      title: "Programa de Recuperação e Bem-Estar",
-      description: "Protocolo para relaxamento, recuperação muscular e melhora do sono e da disposição.",
+      title: "Sala Recovery",
+      description: "Espaço dedicado para relaxamento, recuperação muscular e melhora do sono e disposição.",
       features: ["Técnicas de liberação miofascial", "Rotinas de mobilidade", "Estratégias para melhorar o sono", "Redução de estresse"],
       process: "Relaxe e recupere-se com sessões de alongamento, relaxamento e acesso à nossa sala recovery. Cuide do corpo antes e depois do treino para evitar lesões e aumentar sua performance.",
       duration: "Conforme recomendação ou após os treinos.",
       ideal: "Quem entende que a recuperação é parte essencial da evolução física.",
       differentials: [
-        "Ambiente relaxante",
+        "Ambiente relaxante e equipado",
         "Técnicas que prolongam seus resultados",
-        "Suporte especializado"
+        "Suporte especializado em recuperação"
       ]
     },
     {
-      id: "consultoria-estilo-vida",
-      icon: Brain,
-      title: "Consultoria para Estilo de Vida Saudável",
-      description: "Mudanças práticas para sua rotina: sono, alimentação, produtividade e bem-estar.",
-      features: ["Estratégias personalizadas", "Orientações de rotina saudável", "Acompanhamento comportamental", "Integração corpo-mente"],
-      process: "Criamos um plano de vida que contempla seu corpo, mente e emoções. Com suporte motivacional contínuo, ajudamos você a adotar hábitos positivos de forma duradoura.",
-      duration: "Consultorias adaptáveis conforme seu objetivo.",
-      ideal: "Quem quer mudar de verdade e ser acompanhado em cada passo.",
-      differentials: [
-        "Acompanhamento multidisciplinar",
-        "Estratégias eficazes e personalizadas",
-        "Foco no equilíbrio físico e emocional"
-      ]
-    },
-    {
-      id: "app-exclusivo",
+      id: "agendamento-app",
       icon: Smartphone,
-      title: "Acompanhamento via App Exclusivo",
-      description: "Tenha seu plano de treino, evolução e feedbacks na palma da mão, com suporte contínuo.",
-      features: ["App com login pessoal", "Treinos atualizados", "Registro de evolução", "Suporte direto ao profissional"],
-      process: "Tenha todo o controle do seu treino na palma da mão. Nosso app permite check-in rápido, registro de sessões, metas e comunicação direta com os profissionais.",
-      duration: "Acesso completo durante seu contrato.",
-      ideal: "Quem busca praticidade aliada a suporte constante.",
+      title: "Agendamento via App",
+      description: "Sistema prático e intuitivo para agendamento de treinos através do nosso aplicativo exclusivo.",
+      features: ["Agendamento rápido de treinos", "Visualização de horários disponíveis", "Confirmação automática", "Histórico de agendamentos"],
+      process: "Agende seus treinos de forma prática através do nosso app. Visualize horários disponíveis, confirme sua presença e gerencie sua agenda de treinos com facilidade.",
+      duration: "Disponível 24h para agendamentos.",
+      ideal: "Quem busca praticidade e autonomia para organizar seus treinos.",
       differentials: [
-        "Interface intuitiva",
-        "Feedback e acompanhamento automático",
-        "Interação ágil com a equipe"
+        "Interface intuitiva e rápida",
+        "Disponibilidade 24 horas",
+        "Integração total com a agenda do estúdio"
       ]
     },
     {

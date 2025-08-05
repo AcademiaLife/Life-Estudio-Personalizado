@@ -38,15 +38,15 @@ const Services = () => {
     },
     {
       icon: Target,
-      title: "Reabilitação e Reforço",
-      description: "Programas específicos para recuperação de lesões e fortalecimento preventivo.",
-      features: ["Fisioterapia esportiva", "Fortalecimento", "Prevenção de lesões"]
+      title: "Sala Recovery",
+      description: "Espaço dedicado para relaxamento, recuperação muscular e melhora do sono e disposição.",
+      features: ["Técnicas de liberação miofascial", "Sala de descompressão", "Protocolos de recuperação"]
     },
     {
       icon: UserCheck,
-      title: "Acompanhamento Premium",
-      description: "Suporte total com avaliações regulares, ajustes de treino e motivação constante.",
-      features: ["Avaliações mensais", "Ajustes contínuos", "Suporte 24/7"]
+      title: "Agendamento via App",
+      description: "Sistema prático para agendamento de treinos através do nosso aplicativo exclusivo.",
+      features: ["Agendamento rápido", "Horários disponíveis", "Confirmação automática"]
     }
   ];
 

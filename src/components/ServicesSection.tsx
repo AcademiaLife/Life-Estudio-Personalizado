@@ -43,18 +43,13 @@ const ServicesSection = () => {
     },
     {
       icon: Smartphone,
-      title: "App Exclusivo",
-      description: "Tenha seu plano de treino, evolução e feedbacks na palma da mão."
+      title: "Agendamento via App",
+      description: "Sistema prático para agendamento de treinos através do aplicativo."
     },
     {
       icon: Zap,
-      title: "Recuperação e Bem-estar",
-      description: "Protocolo para relaxamento, recuperação muscular e melhora do sono."
-    },
-    {
-      icon: Brain,
-      title: "Consultoria de Estilo de Vida",
-      description: "Mudanças práticas para sua rotina: sono, alimentação e bem-estar."
+      title: "Sala Recovery",
+      description: "Espaço dedicado para relaxamento, recuperação muscular e melhora do sono."
     }
   ];
 
