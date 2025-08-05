@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import SEOHead from "@/components/SEOHead";
 import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp, Zap, Target, Music, Dumbbell, Flame, User, Clock } from "lucide-react";
 
 const Plans = () => {
@@ -130,6 +131,11 @@ const Plans = () => {
 
   return (
     <div className="min-h-screen bg-background pt-16">
+      <SEOHead 
+        title="Planos - Life Personal Estúdio | Academia Premium em Campina Grande do Sul"
+        description="Escolha o plano ideal para você no Life Estúdio Personalizado. Planos a partir de R$399/mês. Treinamento, nutrição e bem-estar em Campina Grande do Sul - PR."
+        path="/planos"
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">

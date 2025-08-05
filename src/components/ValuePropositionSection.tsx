@@ -37,14 +37,14 @@ const ValuePropositionSection = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-elegant">
               <img 
                 src={trainingImage} 
-                alt="Treinamento personalizado no Life Estúdio" 
+                alt="Treinamento personalizado no Life Estúdio - Personal trainer em ação em Campina Grande do Sul" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="relative rounded-3xl overflow-hidden shadow-elegant">
               <img 
                 src={studioImage} 
-                alt="Interior premium do Life Estúdio" 
+                alt="Interior moderno do Life Estúdio Personalizado - Espaço exclusivo para treinamento em Campina Grande do Sul" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>

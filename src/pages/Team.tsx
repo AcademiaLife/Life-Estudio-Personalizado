@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 import { ArrowRight, Award, Users, Heart } from "lucide-react";
 
 const Team = () => {
@@ -119,6 +120,11 @@ const Team = () => {
 
   return (
     <div className="min-h-screen bg-background pt-16">
+      <SEOHead 
+        title="Equipe - Life Personal Estúdio | Profissionais Especializados"
+        description="Conheça a equipe de profissionais especializados do Life Estúdio Personalizado em Campina Grande do Sul - PR. Personal trainers e nutricionistas qualificados."
+        path="/equipe"
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">

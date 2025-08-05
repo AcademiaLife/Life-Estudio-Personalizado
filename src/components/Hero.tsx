@@ -13,7 +13,7 @@ const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Life Personal Estúdio - Academia Premium" className="w-full h-full object-cover" />
+        <img src={heroImage} alt="Life Personal Estúdio em Campina Grande do Sul - Academia premium com equipamentos modernos" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       </div>
 

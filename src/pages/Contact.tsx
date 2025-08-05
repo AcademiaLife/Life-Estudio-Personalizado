@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import SEOHead from "@/components/SEOHead";
 import { Phone, Mail, MapPin, Clock, Calendar, ArrowRight, Instagram, Facebook, CheckCircle } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import { useState } from "react";
@@ -54,6 +55,11 @@ Mensagem: ${formData.message}`;
   const contactReasons = ["Melhorar a Performance e Condicionamento", "Ganho de Massa e Emagrecimento", "Saúde e Bem-Estar", "Indicação Médica", "Informação sobre planos", "Outros"];
   const benefits = ["Resposta em até 2 horas", "Avaliação gratuita garantida", "Sem compromisso inicial", "Atendimento personalizado"];
   return <div className="min-h-screen bg-background pt-16">
+      <SEOHead 
+        title="Contato - Life Personal Estúdio | Entre em Contato Conosco"
+        description="Entre em contato com o Life Estúdio Personalizado. Agende sua avaliação, aula experimental ou treino com personal em Campina Grande do Sul - PR."
+        path="/contato"
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">

@@ -6,6 +6,7 @@ import PlansSection from "@/components/PlansSection";
 import Testimonials from "@/components/Testimonials";
 import ServicesSection from "@/components/ServicesSection";
 import PrioritySection from "@/components/PrioritySection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -16,6 +17,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Life Personal Estúdio - Academia Premium | Treinamento Personalizado"
+        description="Transforme sua vida com acompanhamento personalizado no Life Estúdio Personalizado em Campina Grande do Sul - PR. Agende sua avaliação e alcance seus objetivos fitness."
+        path="/"
+      />
       {/* Hero Section */}
       <Hero />
       

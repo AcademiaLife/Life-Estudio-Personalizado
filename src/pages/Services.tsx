@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import SEOHead from "@/components/SEOHead";
 import { Dumbbell, Apple, Users, Activity, Heart, Zap, Brain, Smartphone, Target, Leaf, ArrowRight, CheckCircle, Clock, User } from "lucide-react";
 import { useState } from "react";
 const Services = () => {
@@ -130,6 +131,11 @@ const Services = () => {
     differentials: ["Abordagem terapêutica personalizada", "Técnicas de relaxamento profundo", "Ambiente sereno e restaurador"]
   }];
   return <div className="min-h-screen bg-background pt-16">
+      <SEOHead 
+        title="Serviços - Life Personal Estúdio | Treinamento e Nutrição Personalizada"
+        description="Treinamento personalizado, nutrição funcional, e muito mais. Descubra os serviços exclusivos do Life Estúdio Personalizado em Campina Grande do Sul - PR."
+        path="/servicos"
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">

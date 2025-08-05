@@ -1,6 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 import { 
   Target, 
   Heart, 
@@ -92,6 +93,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background pt-16">
+      <SEOHead 
+        title="Sobre - Life Personal Estúdio | Nossa História e Valores"
+        description="Conheça a história, missão e valores do Life Estúdio Personalizado em Campina Grande do Sul - PR. Academia premium focada em resultados e excelência."
+        path="/sobre"
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">
