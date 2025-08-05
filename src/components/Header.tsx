@@ -41,8 +41,12 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-primary hover:text-accent transition-colors">
-            Life Personal Estúdio
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <img 
+              src="/lovable-uploads/5887683d-daed-44f6-a773-8375cc8221c0.png" 
+              alt="Life Personal Estúdio" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
