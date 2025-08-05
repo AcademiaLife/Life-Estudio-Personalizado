@@ -21,7 +21,7 @@ const FloatingWhatsApp = () => {
       <div className="group relative">
         <Button
           onClick={handleWhatsApp}
-          className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse hover:animate-none hover:scale-110"
+          className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
           size="icon"
         >
           <MessageCircle className="w-6 h-6" />
