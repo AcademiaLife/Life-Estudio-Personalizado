@@ -160,7 +160,8 @@ Mensagem: ${formData.message}`;
                   </div>
                   
                   <Button type="submit" size="lg" className="w-full btn-premium bg-gradient-gold text-primary font-semibold shadow-gold hover:shadow-xl">
-                    Enviar Mensagem
+                    <WhatsAppIcon className="mr-2 h-5 w-5" />
+                    Enviar via WhatsApp
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </form>
