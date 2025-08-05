@@ -18,10 +18,10 @@ const SEOHead = ({
 
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "SportsActivityLocation", "ExerciseGym"],
     "@id": `${siteUrl}#organization`,
     "name": "Life Estúdio Personalizado",
-    "alternateName": "Life Personal Estúdio",
+    "alternateName": ["Life Personal Estúdio", "Estúdio de Fitness", "Academia"],
     "description": "Academia premium com foco em performance, exclusividade e resultados. Treinamento personalizado e estrutura diferenciada em Campina Grande do Sul.",
     "url": siteUrl,
     "telephone": "(41) 3679-0618",
