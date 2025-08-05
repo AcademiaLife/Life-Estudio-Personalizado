@@ -24,7 +24,7 @@ const ServicesSection = () => {
     {
       icon: Apple,
       title: "Nutrição Funcional",
-      description: "Orientação nutricional integrada ao treino para potencializar seus resultados."
+      description: "Orientação nutricional integrada ao treino para potencializar resultados."
     },
     {
       icon: Users,
@@ -32,9 +32,24 @@ const ServicesSection = () => {
       description: "Turmas pequenas, focadas e com acompanhamento técnico personalizado."
     },
     {
-      icon: Brain,
-      title: "Consultoria para Estilo de Vida",
-      description: "Mudanças práticas para sua rotina: sono, alimentação e bem-estar."
+      icon: Leaf,
+      title: "Pilates e Alongamento",
+      description: "Desenvolva consciência corporal, postura e flexibilidade com práticas suaves."
+    },
+    {
+      icon: Heart,
+      title: "Monitoramento Cardíaco",
+      description: "Acompanhe sua frequência cardíaca em tempo real para otimizar o desempenho."
+    },
+    {
+      icon: Smartphone,
+      title: "Agendamento via App",
+      description: "Sistema prático para agendamento de treinos através do aplicativo."
+    },
+    {
+      icon: Zap,
+      title: "Sala Recovery",
+      description: "Espaço dedicado para relaxamento, recuperação muscular e melhora do sono."
     }
   ];
 
