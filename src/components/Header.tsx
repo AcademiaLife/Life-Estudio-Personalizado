@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -80,7 +81,7 @@ const Header = () => {
               onClick={handleWhatsApp}
               className="border-accent text-accent hover:bg-accent hover:text-primary"
             >
-              <Phone className="mr-2 h-4 w-4" />
+              <WhatsAppIcon className="mr-2 h-4 w-4" />
               WhatsApp
             </Button>
           </div>
@@ -129,7 +130,7 @@ const Header = () => {
                   onClick={handleWhatsApp}
                   className="w-full border-accent text-accent hover:bg-accent hover:text-primary"
                 >
-                  <Phone className="mr-2 h-4 w-4" />
+                  <WhatsAppIcon className="mr-2 h-4 w-4" />
                   WhatsApp
                 </Button>
               </div>
