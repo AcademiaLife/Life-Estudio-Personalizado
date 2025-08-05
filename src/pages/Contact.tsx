@@ -247,7 +247,7 @@ Mensagem: ${formData.message}`;
                     <div>
                       <h4 className="font-semibold text-primary">Horário de Funcionamento</h4>
                       <div className="text-muted-foreground text-sm space-y-1">
-                        <p><strong>Segunda à Sexta:</strong> 6h às 21h</p>
+                        <p><strong>Segunda à Sexta:</strong> 6h às 12h | 13h às 21h</p>
                         <p><strong>Sábado:</strong> 8h às 12h</p>
                         <p><strong>Domingo:</strong> Fechado</p>
                       </div>
