@@ -319,10 +319,10 @@ const Plans = () => {
                   ))}
                   <TableRow className="border-t-2 bg-red-50 font-bold">
                     <TableCell className="font-bold text-primary text-sm md:text-base">Total isolado:</TableCell>
-                    <TableCell className="text-center font-bold text-red-600 text-base md:text-lg">R$ 1.550+</TableCell>
+                    <TableCell className="text-center font-bold text-red-600 text-base md:text-lg">R$ 1.400+</TableCell>
                   </TableRow>
                   <TableRow className="bg-gradient-gold font-bold">
-                    <TableCell className="font-bold text-primary text-sm md:text-base">Plano FULL Life Elite:</TableCell>
+                    <TableCell className="font-bold text-primary text-sm md:text-base">Plano Meta Full:</TableCell>
                     <TableCell className="text-center font-bold text-primary text-lg md:text-xl">R$ 599/mês</TableCell>
                   </TableRow>
                 </TableBody>
@@ -331,7 +331,7 @@ const Plans = () => {
 
             <div className="text-center mt-6 md:mt-8 p-4 md:p-6 bg-gradient-gold rounded-lg">
               <p className="font-bold text-primary text-lg md:text-xl mb-2">
-                💰 Economize mais de R$ 950/mês
+                💰 Economize mais de R$ 800/mês
               </p>
               <p className="text-primary text-sm md:text-base">
                 Tenha tudo em um só lugar com conforto, praticidade e resultados reais.
