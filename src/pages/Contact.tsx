@@ -184,7 +184,7 @@ Mensagem: ${formData.message}`;
                       <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary">Telefone</h4>
+                      <h4 className="font-semibold text-primary">Telefone | WhatsApp</h4>
                       <p className="text-muted-foreground">(41) 3679-0618</p>
                       <p className="text-xs text-muted-foreground">Atendemos de seg à sex, 6h às 12 | 13h às 21h sáb, 8h às 12h </p>
                     </div>
