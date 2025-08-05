@@ -12,14 +12,10 @@ const PlansSection = () => {
     price: "399",
     description: "Seu ponto de partida ideal",
     benefits: [
-      "Personal trainer dedicado 3x por semana (turmas até 3 alunos)",
+      "Personal 3x por semana (turmas até 3 alunos)",
       "Acesso livre para cardio e extras nos demais dias",
       "Monitoramento cardíaco durante o treino",
-      "Aulas coletivas (pilates, metabolic e mais)",
-      "Avaliação física completa",
-      "Programa de treino personalizado",
-      "Acompanhamento semanal",
-      "Acesso total aos equipamentos"
+      "Aulas coletivas (pilates, metabolic e mais)"
     ],
     popular: false,
     color: "border-border"
@@ -28,43 +24,22 @@ const PlansSection = () => {
     price: "449",
     description: "Equilíbrio perfeito",
     benefits: [
-      "Personal trainer dedicado 3x por semana (turmas até 3 alunos)",
-      "Acesso livre para cardio e extras nos demais dias",
-      "Monitoramento cardíaco durante o treino",
-      "Aulas coletivas (pilates, metabolic e mais)",
-      "Avaliação física completa",
-      "Programa de treino personalizado",
-      "Acompanhamento semanal",
-      "Acesso total aos equipamentos",
+      "Tudo do Meta Personal",
       "Nutricionista especializada",
-      "Avaliação física e acompanhamento de resultados",
-      "Plano alimentar personalizado",
-      "Reavaliações mensais"
+      "Avaliação física e acompanhamento de resultados"
     ],
     popular: true,
     color: "border-accent shadow-gold"
   }, {
     name: "Meta Full",
     price: "599",
-    description: "Experiência premium completa",
+    description: "Experiência completa",
     benefits: [
-      "Personal trainer dedicado 3x por semana (turmas até 3 alunos)",
-      "Acesso livre para cardio e extras nos demais dias",
-      "Monitoramento cardíaco durante o treino",
-      "Aulas coletivas (pilates, metabolic e mais)",
-      "Avaliação física completa",
-      "Programa de treino personalizado",
-      "Acompanhamento semanal",
-      "Acesso total aos equipamentos",
-      "Nutricionista especializada",
-      "Avaliação física e acompanhamento de resultados",
-      "Plano alimentar personalizado",
-      "Reavaliações mensais",
+      "Tudo dos planos anteriores",
       "Avaliação de movimento",
       "Bebidas quentes: chocolate, cappuccino, mocaccino",
       "Pré e pós-treino inclusos",
-      "Acesso à sala recovery",
-      "Suporte via WhatsApp"
+      "Acesso à sala recovery"
     ],
     popular: false,
     color: "border-border"
