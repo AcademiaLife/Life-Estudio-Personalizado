@@ -51,9 +51,6 @@ Mensagem: ${formData.message}`;
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de agendar uma avaliação gratuita no Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
-  const handleSchedule = () => {
-    window.open("https://calendly.com/lifepersonalestudio", "_blank");
-  };
   const contactReasons = ["Melhorar a Performance e Condicionamento", "Ganho de Massa e Emagrecimento", "Saúde e Bem-Estar", "Indicação Médica", "Informação sobre planos", "Outros"];
   const benefits = ["Resposta em até 2 horas", "Avaliação gratuita garantida", "Sem compromisso inicial", "Atendimento personalizado"];
   return <div className="min-h-screen bg-background pt-16">
@@ -89,7 +86,7 @@ Mensagem: ${formData.message}`;
       {/* Contact Options */}
       <section id="contact" className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-md mx-auto">
             {/* WhatsApp CTA */}
             <Card className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-6 group-hover:scale-110 transition-transform">
@@ -102,22 +99,6 @@ Mensagem: ${formData.message}`;
               <Button onClick={handleWhatsApp} className="w-full btn-premium bg-green-600 hover:bg-green-700 text-white shadow-elegant group">
                 <WhatsAppIcon className="mr-2 h-5 w-5" />
                 Chamar no WhatsApp
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Card>
-
-            {/* Schedule CTA */}
-            <Card className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-6 group-hover:scale-110 transition-transform">
-                <Calendar className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-h3 text-primary mb-4">Agende Online</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Escolha o melhor horário para sua avaliação gratuita através da nossa agenda online.
-              </p>
-              <Button onClick={handleSchedule} variant="outline" className="w-full btn-premium border-2 border-accent text-accent hover:bg-accent hover:text-primary group">
-                <Calendar className="mr-2 h-5 w-5" />
-                Agendar Horário
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Card>
