@@ -1,6 +1,6 @@
 
 import { Card } from "@/components/ui/card";
-import { Dumbbell, Apple, Users, Brain } from "lucide-react";
+import { Dumbbell, Apple, Users, TrendingUp } from "lucide-react";
 
 const ChooseUsSection = () => {
   const differentiators = [
@@ -20,9 +20,9 @@ const ChooseUsSection = () => {
       description: "Turmas pequenas, focadas e com acompanhamento técnico personalizado."
     },
     {
-      icon: Brain,
-      title: "Consultoria para Estilo de Vida",
-      description: "Mudanças práticas para sua rotina: sono, alimentação e bem-estar."
+      icon: TrendingUp,
+      title: "Monitoramento de Progresso",
+      description: "Acompanhamento contínuo dos seus resultados com análises e ajustes personalizados."
     }
   ];
 
