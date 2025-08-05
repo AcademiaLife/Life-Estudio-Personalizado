@@ -121,11 +121,11 @@ const Plans = () => {
 
   const comparisonData = [
     { service: "Personal Trainer 3x/semana", separate: "R$ 600+" },
-    { service: "Nutricionista", separate: "R$ 300" },
-    { service: "Avaliações físicas e suporte", separate: "R$ 150" },
+    { service: "Nutricionista", separate: "R$ 200" },
+    { service: "Avaliação Física", separate: "R$ 50" },
     { service: "Pilates + Coletivas", separate: "R$ 250+" },
     { service: "Recovery", separate: "R$ 150" },
-    { service: "Bebidas funcionais", separate: "R$ 100" }
+    { service: "Bebidas Funcionais", separate: "Média de R$ 150" }
   ];
 
   return (
