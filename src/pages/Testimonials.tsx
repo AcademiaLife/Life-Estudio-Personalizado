@@ -10,58 +10,49 @@ const TestimonialsPage = () => {
 
   const testimonials = [
     {
-      name: "Marina Silva",
-      age: "32 anos",
-      profession: "Executiva",
+      name: "Marcos Correia",
       rating: 5,
-      text: "O Life Personal Estúdio transformou completamente minha relação com o exercício. Em 6 meses, não apenas perdi 15kg, mas ganhei uma confiança que refletiu em todas as áreas da minha vida profissional e pessoal. A equipe entende exatamente o que eu preciso e me motiva todos os dias.",
-      result: "15kg perdidos em 6 meses",
-      story: "Marina chegou até nós com uma rotina executiva intensa e pouco tempo para exercícios. Desenvolvemos um programa de 45 minutos, 3x por semana, focado em queima de gordura e fortalecimento. Hoje ela é uma das nossas maiores entusiastas!"
+      text: "A experiência está sendo satisfatória. Metodologia de trabalho com os alunos diferenciados mesmo. Ambiente e Equipe excelentes. Assim os resultados aparecem. Obrigado!!!"
     },
     {
-      name: "Carlos Mendes",
-      age: "45 anos", 
-      profession: "Empresário",
+      name: "Daniela Rocio Santos",
       rating: 5,
-      text: "Depois de uma lesão no joelho, achei que não conseguiria mais me exercitar. A equipe desenvolveu um programa específico que não só me reabilitou, como me deixou mais forte do que antes da lesão. A atenção aos detalhes e o cuidado individual fazem toda a diferença.",
-      result: "Recuperação completa de lesão",
-      story: "Carlos passou por cirurgia no joelho e veio até nós desacreditado. Com fisioterapia especializada e fortalecimento progressivo, não apenas recuperou os movimentos como ganhou força e confiança para voltar aos esportes que ama."
+      text: "Melhor local para cuidar do corpo com uma equipe professores atenciosos e com método totalmente focado em treino funcional com resultados. Realmente um estúdio além do treino."
     },
     {
-      name: "Ana Beatriz",
-      age: "28 anos",
-      profession: "Designer",
+      name: "Diarles Araujo",
       rating: 5,
-      text: "O atendimento personalizado faz toda a diferença. Cada treino é pensado para mim, respeitando meu ritmo e desafios. Em 4 meses, já sinto uma mudança incrível na minha força e disposição. É muito mais que uma academia, é um espaço de cuidado pessoal.",
-      result: "Ganho significativo de força",
-      story: "Ana buscava um espaço que respeitasse seu perfil mais reservado. Criamos treinos que desenvolveram sua confiança gradualmente, e hoje ela é uma das alunas mais dedicadas e evolui constantemente."
+      text: "Está completando um ano de umas das melhores escolhas da minha vida. Fui para Life pela dor (depressão, ansiedade e crise de Pânico) e permaneci pelo amor, respeito e carinho que recebi desde o primeiro dia que pisei nesse lugar. Tratamento profissional e acima de tudo humanizado. Amoooo cada dia mais ❤"
     },
     {
-      name: "Roberto Costa",
-      age: "38 anos",
-      profession: "Médico",
+      name: "Valquiria Bochnia",
       rating: 5,
-      text: "Como médico, sei a importância do exercício para a saúde. O Life Personal oferece exatamente o que prescrevo para meus pacientes: treinamento científico, seguro e eficaz. A abordagem holística considerando nutrição, sono e estresse é exemplar. Recomendo sem hesitar.",
-      result: "Melhoria na saúde geral",
-      story: "Roberto queria um local que entendesse a ciência por trás do exercício. Nossa abordagem baseada em evidências e cuidado integral com a saúde o conquistou desde o primeiro dia."
+      text: "A Life Estúdio é simplesmente incrível! Se você está em busca de saúde e bem-estar, esse é o lugar certo. O espaço é amplo e bem organizado, com uma estrutura moderna e equipamentos de alta qualidade. O atendimento é sempre impecável, com profissionais atenciosos e altamente qualificados."
     },
     {
-      name: "Juliana Oliveira",
-      age: "35 anos",
-      profession: "Professora",
+      name: "Vera Regina Ruppel",
       rating: 5,
-      text: "Sempre tive dificuldade para manter a regularidade nos exercícios. Aqui encontrei não apenas um treino, mas um acompanhamento que me motiva todos os dias. A flexibilidade de horários e a atenção pessoal tornaram o exercício parte natural da minha rotina.",
-      result: "Consistência e motivação",
-      story: "Juliana tinha tentado várias modalidades sem sucesso. Nossa abordagem flexível e motivacional a ajudou a criar o hábito que ela tanto buscava, transformando exercício em prazer."
+      text: "Life é minha segunda casa, todos dias treinando na melhor da região e com os melhores professores. Na verdade todos que fazem parte da Life são excelentes."
     },
     {
-      name: "Fernando Santos",
-      age: "41 anos",
-      profession: "Engenheiro",
+      name: "Juliana Moresco",
       rating: 5,
-      text: "Procurava algo diferente das academias convencionais. No Life Personal encontrei um ambiente exclusivo onde cada detalhe é pensado no meu bem-estar. Os resultados aparecem rápido porque o foco é total. Vale cada centavo investido.",
-      result: "Transformação corporal completa",
-      story: "Fernando queria sair do ambiente de academia tradicional. Nossa estrutura premium e atendimento exclusivo proporcionaram a ele a experiência que buscava, com resultados que superaram suas expectativas."
+      text: "Treinando a 9 anos no estúdio e amo o atendimento, e o cuidado como é direcionado aos alunos. Sempre de uma maneira que me sinto acolhida! 🙌"
+    },
+    {
+      name: "Franciele Bio Grupo",
+      rating: 5,
+      text: "A equipe é extremamente profissional e atenciosa, o ambiente é super acolhedor e motivador. As aulas são dinâmicas, desafiadoras e bem estruturadas, sempre com foco no melhor desempenho de cada aluno. Foi a primeira vez na vida que treinar não foi um sacrifício. Super recomendo!"
+    },
+    {
+      name: "Kamila Zanin",
+      rating: 5,
+      text: "Estúdio excelente, trabalho personalizado e adequado a necessidade de cada aluno. As técnicas de treino são pensadas tanto para ganho e manutenção de massa muscular, força, e também reabilitação quando há necessidade. Ah sem contar todo acompanhamento nutricional que o estúdio também oferece."
+    },
+    {
+      name: "Karina Bruno",
+      rating: 5,
+      text: "A melhor experiência em Estúdio Personalizado para atividades físicas de Campina Grande do Sul e toda região. Limpeza, organização, atendimento, cuidado, carinho, muitos outros diferenciais que fazem da Life um lugar único e de excelência no segmento."
     }
   ];
 
@@ -130,9 +121,9 @@ const TestimonialsPage = () => {
                 className="p-8 md:p-12 shadow-card hover:shadow-elegant transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="lg:col-span-3">
                   {/* Quote Section */}
-                  <div className="lg:col-span-2 space-y-6">
+                  <div className="space-y-6">
                     <Quote className="h-8 w-8 text-accent opacity-50" />
                     
                     {/* Rating */}
@@ -152,28 +143,6 @@ const TestimonialsPage = () => {
                       <h4 className="font-semibold text-primary text-lg mb-1">
                         {testimonial.name}
                       </h4>
-                      <p className="text-muted-foreground text-sm">
-                        {testimonial.age} • {testimonial.profession}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Result & Story Section */}
-                  <div className="space-y-6">
-                    {/* Result highlight */}
-                    <div className="bg-gradient-gold p-4 rounded-xl text-center">
-                      <h5 className="font-semibold text-primary text-sm mb-2">Resultado Alcançado</h5>
-                      <p className="font-bold text-primary">
-                        {testimonial.result}
-                      </p>
-                    </div>
-
-                    {/* Story */}
-                    <div className="bg-gradient-subtle p-6 rounded-xl">
-                      <h5 className="font-semibold text-primary text-sm mb-3">Nossa Jornada Juntos</h5>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {testimonial.story}
-                      </p>
                     </div>
                   </div>
                 </div>
