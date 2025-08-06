@@ -58,7 +58,7 @@ const PlansSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16">
             {plans.map((plan, index) => <Card key={plan.name} className={`relative p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in flex flex-col h-full`} style={{
             animationDelay: `${index * 0.1}s`
           }}>
@@ -114,10 +114,9 @@ const PlansSection = () => {
               monitoramento cardíaco e acompanhamento contínuo, tudo isso por um preço muito mais acessível do que 
               contratar esses serviços individualmente.
             </p>
-            <Button size="lg" onClick={() => setShowValuePopup(true)} className="btn-premium bg-gradient-gold text-primary font-semibold px-3 py-2 md:px-8 md:py-4 text-sm md:text-lg shadow-gold hover:shadow-xl group w-full max-w-full">
-              <span className="text-center break-words">Qualidade, economia e
-resultados</span>
-              <ArrowRight className="ml-1 md:ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+            <Button size="lg" onClick={() => setShowValuePopup(true)} className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group max-w-md mx-auto">
+              <span className="text-center">Qualidade, economia e resultados</span>
+              <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
         </div>

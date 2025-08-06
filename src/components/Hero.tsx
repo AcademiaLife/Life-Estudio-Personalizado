@@ -32,19 +32,19 @@ const Hero = () => {
             Transforme sua vida com acompanhamento próximo, resultados reais e um treinamento que respeita o seu ritmo.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-            <Button onClick={handleWhatsApp} size="lg" className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8 max-w-md sm:max-w-none mx-auto">
+            <Button onClick={handleWhatsApp} size="lg" className="btn-premium bg-gradient-gold text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-gold hover:shadow-xl group w-full sm:w-auto">
               Transforme sua vida agora
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button onClick={handleSchedule} variant="outline" size="lg" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-8 py-4 text-lg btn-premium">
-              <Phone className="mr-2 h-5 w-5" />
+            <Button onClick={handleSchedule} variant="outline" size="lg" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg btn-premium w-full sm:w-auto">
+              <Phone className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
               Conhecer Planos
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 sm:pt-16 text-center">
             <div className="space-y-2 animate-slide-up" style={{
             animationDelay: '0.2s'
           }}>

@@ -45,7 +45,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/5887683d-daed-44f6-a773-8375cc8221c0.png" 
               alt="Life Personal Estúdio" 
-              className="h-8 w-auto max-w-[180px]"
+              className="h-6 sm:h-8 w-auto max-w-[120px] sm:max-w-[180px]"
             />
           </Link>
 

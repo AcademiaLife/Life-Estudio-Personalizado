@@ -125,6 +125,7 @@ All colors MUST be HSL. Elegant, sophisticated, performance-focused.
 
   body {
     @apply bg-background text-foreground font-['Montserrat',sans-serif] antialiased;
+    overflow-x: hidden;
   }
 
   /* Premium typography classes */
