@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -50,6 +51,7 @@ const App = () => (
           </main>
           <Footer />
           <FloatingWhatsApp />
+          <CookieBanner />
         </div>
       </BrowserRouter>
     </TooltipProvider>
