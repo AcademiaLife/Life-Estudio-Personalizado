@@ -29,7 +29,7 @@ const Team = () => {
       specializations: "",
       experience: "2 anos",
       differential: "Foco em treinos funcionais e acompanhamento individualizado.",
-      image: "/lovable-uploads/737f59c0-95c3-4726-8b12-528464d848fc.png"
+      image: "/lovable-uploads/fe940964-a328-437f-bd3d-1e2da424d8d6.png"
     },
     {
       name: "Matheus Lima Espetacular",
