@@ -12,36 +12,21 @@ const PlansSection = () => {
     name: "Meta Personal",
     price: "399",
     description: "Seu ponto de partida ideal",
-    benefits: [
-      "Personal 3x por semana (turmas até 3 alunos)",
-      "Acesso livre para cardio e extras nos demais dias",
-      "Monitoramento cardíaco durante o treino",
-      "Aulas coletivas (pilates, metabolic e mais)"
-    ],
+    benefits: ["Personal 3x por semana (turmas até 3 alunos)", "Acesso livre para cardio e extras nos demais dias", "Monitoramento cardíaco durante o treino", "Aulas coletivas (pilates, metabolic e mais)"],
     popular: false,
     color: "border-border"
   }, {
     name: "Meta Slim",
     price: "449",
     description: "Equilíbrio perfeito",
-    benefits: [
-      "Tudo do Meta Personal",
-      "Nutricionista especializada",
-      "Avaliação física e acompanhamento de resultados"
-    ],
+    benefits: ["Tudo do Meta Personal", "Nutricionista especializada", "Avaliação física e acompanhamento de resultados"],
     popular: true,
     color: "border-accent shadow-gold"
   }, {
     name: "Meta Full",
     price: "599",
     description: "Experiência completa",
-    benefits: [
-      "Tudo dos planos anteriores",
-      "Avaliação de movimento",
-      "Bebidas quentes: chocolate, cappuccino, mocaccino",
-      "Pré e pós-treino inclusos",
-      "Acesso à sala recovery"
-    ],
+    benefits: ["Tudo dos planos anteriores", "Avaliação de movimento", "Bebidas quentes: chocolate, cappuccino, mocaccino", "Pré e pós-treino inclusos", "Acesso à sala recovery"],
     popular: false,
     color: "border-border"
   }];
@@ -98,7 +83,7 @@ const PlansSection = () => {
                     <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm sm:text-base ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
                       <WhatsAppIcon className="mr-2 h-4 w-4" />
                       <span className="sm:hidden">Comece agora</span>
-                      <span className="hidden sm:inline">Comece sua transformação hoje</span>
+                      <span className="hidden sm:inline">Comece sua transformação</span>
                     </Button>
                   </div>
                 </CardContent>
