@@ -97,7 +97,7 @@ const PlansSection = () => {
                     
                     <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm sm:text-base ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
                       <WhatsAppIcon className="mr-2 h-4 w-4" />
-                      <span className="sm:hidden">Comece agora</span>
+                      <span className="sm:hidden">Comece sua transformação</span>
                       <span className="hidden sm:inline">Comece sua transformação hoje</span>
                     </Button>
                   </div>
