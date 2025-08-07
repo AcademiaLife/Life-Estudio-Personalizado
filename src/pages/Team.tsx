@@ -77,10 +77,11 @@ const Team = () => {
           {members.map((member, index) => (
             <Card 
               key={index}
-              className="overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in"
+              className="overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in flex flex-col h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="aspect-square bg-gradient-subtle overflow-hidden relative">
+              {/* Image Section - Fixed height */}
+              <div className="aspect-square bg-gradient-subtle overflow-hidden relative flex-shrink-0">
                 <img 
                   src={member.image} 
                   alt={member.name}
@@ -104,42 +105,52 @@ const Team = () => {
                 </div>
               </div>
               
-              <CardContent className="p-6 space-y-4">
-                <div className="text-center">
-                  <h3 className="font-h3 text-primary mb-1">{member.name}</h3>
+              {/* Content Section - Flexible height with consistent structure */}
+              <CardContent className="p-6 flex flex-col flex-grow">
+                {/* Header Section - Fixed height */}
+                <div className="text-center mb-4 flex-shrink-0">
+                  <h3 className="font-h3 text-primary mb-1 line-clamp-2 min-h-[3rem] flex items-center justify-center">{member.name}</h3>
                   <Badge variant="outline" className="mb-2">{member.specialty}</Badge>
                 </div>
 
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center justify-center">
-                    <Badge variant="default" className="bg-accent text-accent-foreground font-semibold">
-                      CREF: {member.cref}
-                    </Badge>
+                {/* CREF Badge - Fixed height */}
+                <div className="flex items-center justify-center mb-4 flex-shrink-0">
+                  <Badge variant="default" className="bg-accent text-accent-foreground font-semibold">
+                    CREF: {member.cref}
+                  </Badge>
+                </div>
+
+                {/* Info Section - Flexible height but structured */}
+                <div className="space-y-3 text-sm flex-grow">
+                  {/* Education - Always present */}
+                  <div>
+                    <span className="text-muted-foreground text-xs">FORMAÇÃO:</span>
+                    <p className="font-medium text-sm line-clamp-2">{member.education}</p>
                   </div>
                   
-                  <div className="space-y-2">
-                    <div>
-                      <span className="text-muted-foreground text-xs">FORMAÇÃO:</span>
-                      <p className="font-medium text-sm">{member.education}</p>
-                    </div>
-                    
-                    {member.specializations && (
-                      <div>
-                        <span className="text-muted-foreground text-xs">ESPECIALIZAÇÕES:</span>
-                        <p className="font-medium text-sm">{member.specializations}</p>
-                      </div>
+                  {/* Specializations - Fixed minimum height */}
+                  <div className="min-h-[3rem]">
+                    <span className="text-muted-foreground text-xs">ESPECIALIZAÇÕES:</span>
+                    {member.specializations ? (
+                      <p className="font-medium text-sm line-clamp-2">{member.specializations}</p>
+                    ) : (
+                      <p className="font-medium text-sm text-muted-foreground/60 italic">Em desenvolvimento</p>
                     )}
-                    
-                    <div className="flex justify-between pt-1">
-                      <span className="text-muted-foreground">Experiência:</span>
-                      <span className="font-medium">{member.experience}</span>
-                    </div>
+                  </div>
+                  
+                  {/* Experience - Fixed height */}
+                  <div className="flex justify-between pt-1 border-t border-border">
+                    <span className="text-muted-foreground">Experiência:</span>
+                    <span className="font-medium">{member.experience}</span>
                   </div>
                 </div>
 
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {member.differential}
-                </p>
+                {/* Differential Section - Fixed height */}
+                <div className="mt-4 pt-3 border-t border-border flex-shrink-0">
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 min-h-[4rem] flex items-start">
+                    {member.differential}
+                  </p>
+                </div>
               </CardContent>
             </Card>
           ))}
