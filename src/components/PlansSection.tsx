@@ -82,7 +82,7 @@ const PlansSection = () => {
                     
                     <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm sm:text-base ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
                       <span className="sm:hidden">Comece agora</span>
-                      <span className="hidden sm:inline">ReComece sua transformação</span>
+                      <span className="hidden sm:inline">Comece sua transformação</span>
                     </Button>
                   </div>
                 </CardContent>
