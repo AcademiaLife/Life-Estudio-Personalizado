@@ -115,8 +115,11 @@ const PlansSection = () => {
               monitoramento cardíaco e acompanhamento contínuo, tudo isso por um preço muito mais acessível do que 
               contratar esses serviços individualmente.
             </p>
-            <Button size="lg" onClick={() => setShowValuePopup(true)} className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group max-w-md mx-auto">
-              <span className="text-center">Qualidade, economia e resultados</span>
+            <Button size="lg" onClick={() => setShowValuePopup(true)} className="btn-premium bg-gradient-gold text-primary font-semibold px-4 sm:px-6 md:px-8 py-3 md:py-4 text-sm sm:text-base md:text-lg shadow-gold hover:shadow-xl group w-full max-w-sm sm:max-w-md mx-auto">
+              <span className="text-center">
+                <span className="sm:hidden">Veja os benefícios</span>
+                <span className="hidden sm:inline">Qualidade, economia e resultados</span>
+              </span>
               <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
