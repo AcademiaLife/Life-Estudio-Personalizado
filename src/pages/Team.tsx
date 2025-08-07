@@ -19,7 +19,7 @@ const Team = () => {
       specializations: "Personal Trainer | Pesquisa no Esporte",
       experience: "5 anos",
       differential: "Treinamento personalizado e acompanhamento de performance.",
-      image: "/placeholder.svg"
+      image: "/lovable-uploads/09ab6a5a-af45-4f74-b666-372770dd585c.png"
     },
     {
       name: "Karen Cristina Basso dos Santos",
@@ -29,7 +29,7 @@ const Team = () => {
       specializations: "",
       experience: "2 anos",
       differential: "Foco em treinos funcionais e acompanhamento individualizado.",
-      image: "/placeholder.svg"
+      image: "/lovable-uploads/737f59c0-95c3-4726-8b12-528464d848fc.png"
     },
     {
       name: "Matheus Lima Espetacular",
@@ -39,7 +39,7 @@ const Team = () => {
       specializations: "Especialista em Lesões | Simpósio de Sarcopenia pelo Hospital Cardiológico Costantini | Certificado em Potência e Pliometria Rafael Winick",
       experience: "5 anos",
       differential: "Atendimento humanizado, alto desempenho e reabilitação de lesões.",
-      image: "/placeholder.svg"
+      image: "/lovable-uploads/7c472fe2-5965-45c9-9f97-f44c1a869a9d.png"
     },
     {
       name: "Carlos Evandro Collere",
@@ -49,7 +49,7 @@ const Team = () => {
       specializations: "",
       experience: "19 anos",
       differential: "Treinamento funcional, performance atlética e emagrecimento.",
-      image: "/placeholder.svg"
+      image: "/lovable-uploads/df299fa5-998e-4275-a504-8b7bd7041eb0.png"
     },
     {
       name: "Rhuan Mateus de Araujo",
@@ -59,7 +59,7 @@ const Team = () => {
       specializations: "Metabolic Training",
       experience: "1 ano",
       differential: "Treinos de alta intensidade e emagrecimento.",
-      image: "/placeholder.svg"
+      image: "/lovable-uploads/f3ca01d3-c68f-47ae-a3bf-1eef554ef9be.png"
     }
   ];
 
@@ -80,10 +80,12 @@ const Team = () => {
               className="overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="aspect-square bg-gradient-subtle flex items-center justify-center">
-                <div className="w-24 h-24 bg-gradient-gold rounded-full flex items-center justify-center">
-                  <span className="text-4xl text-primary">👤</span>
-                </div>
+              <div className="aspect-square bg-gradient-subtle overflow-hidden">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               <CardContent className="p-6 space-y-4">
