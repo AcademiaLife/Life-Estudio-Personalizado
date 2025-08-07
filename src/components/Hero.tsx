@@ -34,8 +34,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8 max-w-md sm:max-w-none mx-auto">
             <Button onClick={handleWhatsApp} size="lg" className="btn-premium bg-gradient-gold text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-gold hover:shadow-xl group w-full sm:w-auto">
-              <span className="sm:hidden">Comece sua transformação</span>
-              <span className="hidden sm:inline">Comece sua transformação hoje</span>
+              Transforme sua vida agora
               <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
