@@ -12,6 +12,26 @@ const Team = () => {
 
   const personalTrainers = [
     {
+      name: "Carlos Evandro Collere",
+      cref: "010039-G/PR",
+      specialty: "Personal Trainer",
+      education: "Educação Física - PUCPR (2006)",
+      specializations: "",
+      experience: "19 anos",
+      differential: "Treinamento funcional, performance atlética e emagrecimento.",
+      image: "/lovable-uploads/86e8ea06-b77e-418f-9754-1743a70bf9fe.png"
+    },
+    {
+      name: "Matheus Lima Espetacular",
+      cref: "036847-G/PR",
+      specialty: "Personal Trainer Especializado",
+      education: "Educação Física - Certificado em IHP (Institute of Human Performance)",
+      specializations: "Especialista em Lesões | Simpósio de Sarcopenia pelo Hospital Cardiológico Costantini | Certificado em Potência e Pliometria Rafael Winick",
+      experience: "5 anos",
+      differential: "Atendimento humanizado, alto desempenho e reabilitação de lesões.",
+      image: "/lovable-uploads/d0e4aced-cd4f-40ca-9b4a-c899f67d97d6.png"
+    },
+    {
       name: "Maxmuller Allebrandt da Luz",
       cref: "036068-G/PR",
       specialty: "Personal Trainer",
@@ -30,26 +50,6 @@ const Team = () => {
       experience: "2 anos",
       differential: "Foco em treinos funcionais e acompanhamento individualizado.",
       image: "/lovable-uploads/fe940964-a328-437f-bd3d-1e2da424d8d6.png"
-    },
-    {
-      name: "Matheus Lima Espetacular",
-      cref: "036847-G/PR",
-      specialty: "Personal Trainer Especializado",
-      education: "Educação Física - Certificado em IHP (Institute of Human Performance)",
-      specializations: "Especialista em Lesões | Simpósio de Sarcopenia pelo Hospital Cardiológico Costantini | Certificado em Potência e Pliometria Rafael Winick",
-      experience: "5 anos",
-      differential: "Atendimento humanizado, alto desempenho e reabilitação de lesões.",
-      image: "/lovable-uploads/d0e4aced-cd4f-40ca-9b4a-c899f67d97d6.png"
-    },
-    {
-      name: "Carlos Evandro Collere",
-      cref: "010039-G/PR",
-      specialty: "Personal Trainer",
-      education: "Educação Física - PUCPR (2006)",
-      specializations: "",
-      experience: "19 anos",
-      differential: "Treinamento funcional, performance atlética e emagrecimento.",
-      image: "/lovable-uploads/86e8ea06-b77e-418f-9754-1743a70bf9fe.png"
     },
     {
       name: "Rhuan Mateus de Araujo",
