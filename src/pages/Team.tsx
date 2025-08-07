@@ -19,7 +19,7 @@ const Team = () => {
       specializations: "Personal Trainer | Pesquisa no Esporte",
       experience: "5 anos",
       differential: "Treinamento personalizado e acompanhamento de performance.",
-      image: "/lovable-uploads/de047b06-8f87-43cc-bb5a-844636360b5f.png"
+      image: "/lovable-uploads/06df3d44-5396-467d-98e3-98020ef05125.png"
     },
     {
       name: "Karen Cristina Basso dos Santos",
