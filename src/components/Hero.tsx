@@ -10,7 +10,7 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-0">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Life Personal Estúdio em Campina Grande do Sul - Academia premium com equipamentos modernos" className="w-full h-full object-cover" />
@@ -49,19 +49,19 @@ const Hero = () => {
             animationDelay: '0.2s'
           }}>
               <h3 className="text-3xl font-bold text-accent">+500</h3>
-              <p className="text-gray-300">Alunos Transformados</p>
+              <p className="text-gray-300 my-[20px]">Alunos Transformados</p>
             </div>
             <div className="space-y-2 animate-slide-up" style={{
             animationDelay: '0.4s'
           }}>
-              <h3 className="text-3xl font-bold text-accent">10+</h3>
-              <p className="text-gray-300">Anos de Experiência</p>
+              <h3 className="text-3xl font-bold text-accent px-0 mx-0">10+</h3>
+              <p className="text-gray-300 my-[20px]">Anos de Experiência</p>
             </div>
-            <div className="space-y-4 animate-slide-up" style={{
+            <div className="space-y-2 animate-slide-up" style={{
             animationDelay: '0.6s'
           }}>
               <h3 className="text-3xl font-bold text-accent">R$ 399</h3>
-              <p className="text-gray-300">A partir de</p>
+              <p className="text-gray-300 my-[20px]">A partir de</p>
             </div>
           </div>
         </div>
