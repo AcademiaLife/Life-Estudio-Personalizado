@@ -80,22 +80,27 @@ const Team = () => {
               className="overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="aspect-square bg-gradient-subtle overflow-hidden">
+              <div className="aspect-square bg-gradient-subtle overflow-hidden relative">
                 <img 
                   src={member.image} 
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-opacity duration-300"
                   onError={(e) => {
                     console.error(`Failed to load image for ${member.name}:`, member.image);
                     e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
                   }}
-                  onLoad={() => {
+                  onLoad={(e) => {
                     console.log(`Successfully loaded image for ${member.name}:`, member.image);
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'none';
                   }}
                 />
-                {/* Fallback content */}
-                <div className="w-full h-full bg-gradient-gold flex items-center justify-center">
-                  <span className="text-4xl text-primary">👤</span>
+                {/* Fallback content - shows when image fails to load */}
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex flex-col items-center justify-center text-primary" style={{ display: 'flex' }}>
+                  <div className="text-6xl mb-2">👤</div>
+                  <div className="text-sm font-medium opacity-75 text-center px-2">{member.name}</div>
                 </div>
               </div>
               
