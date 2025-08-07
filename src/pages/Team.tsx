@@ -139,9 +139,9 @@ const Team = () => {
                   </div>
                   
                   {/* Experience - Fixed height */}
-                  <div className="flex justify-between pt-1 border-t border-border">
-                    <span className="text-muted-foreground">Experiência:</span>
-                    <span className="font-medium">{member.experience}</span>
+                  <div className="pt-1 border-t border-border">
+                    <span className="text-muted-foreground text-xs">EXPERIÊNCIA:</span>
+                    <p className="font-medium text-sm">{member.experience}</p>
                   </div>
                 </div>
 
