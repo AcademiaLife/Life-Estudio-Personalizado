@@ -45,7 +45,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 sm:pt-16 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 sm:pt-16 text-center my-[20px]">
             <div className="space-y-2 animate-slide-up" style={{
             animationDelay: '0.2s'
           }}>
