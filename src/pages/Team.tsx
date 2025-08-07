@@ -85,7 +85,18 @@ const Team = () => {
                   src={member.image} 
                   alt={member.name}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.error(`Failed to load image for ${member.name}:`, member.image);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                  onLoad={() => {
+                    console.log(`Successfully loaded image for ${member.name}:`, member.image);
+                  }}
                 />
+                {/* Fallback content */}
+                <div className="w-full h-full bg-gradient-gold flex items-center justify-center">
+                  <span className="text-4xl text-primary">👤</span>
+                </div>
               </div>
               
               <CardContent className="p-6 space-y-4">
