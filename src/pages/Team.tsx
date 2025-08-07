@@ -12,57 +12,53 @@ const Team = () => {
 
   const personalTrainers = [
     {
-      name: "Carlos Eduardo",
-      specialty: "Personal Trainer Sênior",
-      education: "Ed. Física USP + Pós Fisiologia",
-      experience: "8 anos",
-      differential: "Especialista em transformação corporal e performance atlética. Método exclusivo para queima de gordura.",
-      image: "/placeholder.svg"
-    },
-    {
-      name: "Marina Santos",
+      name: "Maxmuller Allebrandt da Luz",
+      cref: "036068-G/PR",
       specialty: "Personal Trainer",
-      education: "Ed. Física UNINOVE + Biomecânica",
-      experience: "5 anos", 
-      differential: "Focada no público feminino. Expert em treino funcional e fortalecimento do core.",
+      education: "Educação Física - Unibrasil Centro Universitário (2020)",
+      specializations: "Personal Trainer | Pesquisa no Esporte",
+      experience: "5 anos",
+      differential: "Treinamento personalizado e acompanhamento de performance.",
       image: "/placeholder.svg"
     },
     {
-      name: "Rafael Lima",
-      specialty: "Personal Executive",
-      education: "Ed. Física PUC + MBA Gestão",
-      experience: "10 anos",
-      differential: "Atendimento VIP para executivos. Treinos otimizados para agenda corrida.",
-      image: "/placeholder.svg"
-    }
-  ];
-
-  const nutritionists = [
-    {
-      name: "Dra. Ana Beatriz",
-      specialty: "Nutricionista Esportiva",
-      education: "Nutrição UNIFESP + Pós Esportiva",
-      experience: "7 anos",
-      differential: "Especialista em composição corporal. Protocolos para ganho de massa magra e definição.",
+      name: "Karen Cristina Basso dos Santos",
+      cref: "045902-G/PR",
+      specialty: "Personal Trainer",
+      education: "Educação Física - Centro Universitário Unidombosco (2025)",
+      specializations: "",
+      experience: "2 anos",
+      differential: "Foco em treinos funcionais e acompanhamento individualizado.",
       image: "/placeholder.svg"
     },
     {
-      name: "Dra. Camila Rocha",
-      specialty: "Nutricionista Clínica",
-      education: "Nutrição USP + Pós Funcional",
-      experience: "6 anos",
-      differential: "Foco em saúde hormonal e anti-aging. Nutrição personalizada por bioimpedância.",
+      name: "Matheus Lima Espetacular",
+      cref: "036847-G/PR",
+      specialty: "Personal Trainer Especializado",
+      education: "Educação Física - Certificado em IHP (Institute of Human Performance)",
+      specializations: "Especialista em Lesões | Simpósio de Sarcopenia pelo Hospital Cardiológico Costantini | Certificado em Potência e Pliometria Rafael Winick",
+      experience: "5 anos",
+      differential: "Atendimento humanizado, alto desempenho e reabilitação de lesões.",
       image: "/placeholder.svg"
-    }
-  ];
-
-  const evaluators = [
+    },
     {
-      name: "Prof. Marcos Vieira",
-      specialty: "Avaliador Físico",
-      education: "Ed. Física UNICAMP + Cineantropometria",
-      experience: "12 anos",
-      differential: "Avaliações precisas com tecnologia 3D. Protocolos científicos para acompanhamento.",
+      name: "Carlos Evandro Collere",
+      cref: "010039-G/PR",
+      specialty: "Personal Trainer",
+      education: "Educação Física - PUCPR (2006)",
+      specializations: "",
+      experience: "19 anos",
+      differential: "Treinamento funcional, performance atlética e emagrecimento.",
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Rhuan Mateus de Araujo",
+      cref: "047336-G/PR",
+      specialty: "Personal Trainer",
+      education: "Educação Física - Unicesumar (2024)",
+      specializations: "Metabolic Training",
+      experience: "1 ano",
+      differential: "Treinos de alta intensidade e emagrecimento.",
       image: "/placeholder.svg"
     }
   ];
@@ -96,14 +92,30 @@ const Team = () => {
                   <Badge variant="outline" className="mb-2">{member.specialty}</Badge>
                 </div>
 
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Formação:</span>
-                    <span className="font-medium text-right flex-1 ml-2">{member.education}</span>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center justify-center">
+                    <Badge variant="default" className="bg-accent text-accent-foreground font-semibold">
+                      CREF: {member.cref}
+                    </Badge>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Experiência:</span>
-                    <span className="font-medium">{member.experience}</span>
+                  
+                  <div className="space-y-2">
+                    <div>
+                      <span className="text-muted-foreground text-xs">FORMAÇÃO:</span>
+                      <p className="font-medium text-sm">{member.education}</p>
+                    </div>
+                    
+                    {member.specializations && (
+                      <div>
+                        <span className="text-muted-foreground text-xs">ESPECIALIZAÇÕES:</span>
+                        <p className="font-medium text-sm">{member.specializations}</p>
+                      </div>
+                    )}
+                    
+                    <div className="flex justify-between pt-1">
+                      <span className="text-muted-foreground">Experiência:</span>
+                      <span className="font-medium">{member.experience}</span>
+                    </div>
                   </div>
                 </div>
 
@@ -133,13 +145,13 @@ const Team = () => {
               Nossa Equipe de 
               <br />
               <span className="bg-gradient-gold bg-clip-text text-transparent">
-                Especialistas
+                Personal Trainers
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              Profissionais altamente qualificados e dedicados à sua transformação. 
-              Cada membro da nossa equipe é selecionado pela expertise e paixão em entregar resultados excepcionais.
+              Profissionais registrados no CREF, altamente qualificados e dedicados à sua transformação. 
+              Cada personal trainer da nossa equipe possui formação sólida e experiência comprovada.
             </p>
 
             <Button 
@@ -157,26 +169,11 @@ const Team = () => {
       {/* Personal Trainers */}
       <div id="team">
         <TeamSection 
-          title="Personal Trainers" 
+          title="Nossa Equipe de Personal Trainers" 
           icon={Users}
           members={personalTrainers}
         />
       </div>
-
-      {/* Nutritionists */}
-      <TeamSection 
-        title="Nutricionistas" 
-        icon={Heart}
-        members={nutritionists}
-        bgColor="bg-gradient-subtle"
-      />
-
-      {/* Evaluators */}
-      <TeamSection 
-        title="Avaliação Física" 
-        icon={Award}
-        members={evaluators}
-      />
 
       {/* Team Philosophy */}
       <section className="py-16 bg-gradient-subtle">
@@ -209,9 +206,9 @@ const Team = () => {
                 <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-h3 text-primary">Trabalho Integrado</h3>
+                <h3 className="font-h3 text-primary">Metodologia Personalizada</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Personal, nutricionista e avaliador trabalham em conjunto. Comunicação constante para resultados potencializados.
+                  Cada personal trainer aplica metodologias específicas baseadas em evidências científicas e experiência prática comprovada.
                 </p>
               </div>
             </div>
@@ -220,8 +217,8 @@ const Team = () => {
               <div className="space-y-4">
                 <h3 className="font-h3 text-primary">Comprometimento com Resultados</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Não somos apenas profissionais, somos seus parceiros na jornada de transformação. 
-                  Cada membro da equipe está genuinamente investido no seu sucesso e bem-estar.
+                  Nossos personal trainers não são apenas profissionais, são seus parceiros na jornada de transformação. 
+                  Cada membro da equipe possui registro ativo no CREF e está genuinamente investido no seu sucesso e bem-estar.
                 </p>
                 <p className="text-sm text-accent font-semibold">
                   "Seu sucesso é o nosso maior indicador de qualidade."
