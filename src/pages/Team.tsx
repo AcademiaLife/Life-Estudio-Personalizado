@@ -59,7 +59,7 @@ const Team = () => {
       specializations: "Metabolic Training",
       experience: "1 ano",
       differential: "Treinos de alta intensidade e emagrecimento.",
-      image: "/lovable-uploads/f3ca01d3-c68f-47ae-a3bf-1eef554ef9be.png"
+      image: "/lovable-uploads/2be62f36-f655-4c07-a731-79ed6665affd.png"
     }
   ];
 
