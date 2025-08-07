@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="font-hero text-white leading-tight">
+          <h1 className="font-hero text-white leading-tight text-lg my-[20px]">
             Transforme sua jornada fitness no
             <br />
             <span className="bg-gradient-gold bg-clip-text text-transparent">
