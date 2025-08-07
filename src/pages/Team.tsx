@@ -49,7 +49,7 @@ const Team = () => {
       specializations: "",
       experience: "19 anos",
       differential: "Treinamento funcional, performance atlética e emagrecimento.",
-      image: "/lovable-uploads/df299fa5-998e-4275-a504-8b7bd7041eb0.png"
+      image: "/lovable-uploads/86e8ea06-b77e-418f-9754-1743a70bf9fe.png"
     },
     {
       name: "Rhuan Mateus de Araujo",
