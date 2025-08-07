@@ -39,7 +39,7 @@ const Team = () => {
       specializations: "Especialista em Lesões | Simpósio de Sarcopenia pelo Hospital Cardiológico Costantini | Certificado em Potência e Pliometria Rafael Winick",
       experience: "5 anos",
       differential: "Atendimento humanizado, alto desempenho e reabilitação de lesões.",
-      image: "/lovable-uploads/7c472fe2-5965-45c9-9f97-f44c1a869a9d.png"
+      image: "/lovable-uploads/d0e4aced-cd4f-40ca-9b4a-c899f67d97d6.png"
     },
     {
       name: "Carlos Evandro Collere",
