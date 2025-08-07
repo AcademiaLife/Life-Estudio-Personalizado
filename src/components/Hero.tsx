@@ -10,7 +10,7 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Life Personal Estúdio em Campina Grande do Sul - Academia premium com equipamentos modernos" className="w-full h-full object-cover" />
