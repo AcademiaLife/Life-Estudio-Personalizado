@@ -100,6 +100,19 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
+      {/* NPS Seal Section */}
+      <section className="py-8 md:py-12 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex justify-center animate-scale-in">
+            <img 
+              src="/lovable-uploads/f72c16a7-2e72-48f3-85cd-7f0f261db884.png" 
+              alt="NPS +87.9 - 2023" 
+              className="h-24 md:h-32 lg:h-40 w-auto hover-scale transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Statistics */}
       <section className="py-16 bg-gradient-subtle">
         <div className="container mx-auto px-6">
