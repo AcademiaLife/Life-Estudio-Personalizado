@@ -100,37 +100,6 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
-      {/* NPS Seal Section */}
-      <section className="py-8 md:py-12 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex justify-center animate-scale-in">
-            <div className="relative flex flex-col items-center justify-center w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-primary via-primary-glow to-accent rounded-full shadow-elegant hover-scale transition-all duration-300 border-4 border-white/20">
-              {/* Trophy Icon */}
-              <div className="absolute -top-2 -right-2 w-8 h-8 md:w-10 md:h-10 bg-gradient-gold rounded-full flex items-center justify-center shadow-md">
-                <span className="text-white text-lg md:text-xl">🏆</span>
-              </div>
-              
-              {/* NPS Label */}
-              <div className="text-white text-xs md:text-sm font-bold tracking-wider mb-1">
-                NPS
-              </div>
-              
-              {/* Score */}
-              <div className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-none">
-                +87.9
-              </div>
-              
-              {/* Year */}
-              <div className="text-white/90 text-xs md:text-sm font-medium mt-1">
-                2023
-              </div>
-              
-              {/* Shine effect */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Statistics */}
       <section className="py-16 bg-gradient-subtle">
@@ -145,6 +114,57 @@ const TestimonialsPage = () => {
                 <p className="text-muted-foreground text-sm">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Excellence Seal Section */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex justify-center animate-scale-in">
+            <div className="relative bg-gradient-to-br from-primary via-primary-glow to-accent p-8 md:p-10 lg:p-12 rounded-3xl shadow-elegant border-4 border-white/20 max-w-md mx-auto hover-scale transition-all duration-500">
+              {/* Decorative corners */}
+              <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-white/40 rounded-tl-lg"></div>
+              <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-white/40 rounded-tr-lg"></div>
+              <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-white/40 rounded-bl-lg"></div>
+              <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-white/40 rounded-br-lg"></div>
+              
+              {/* Award Icon */}
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold">
+                  <Award className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+                </div>
+              </div>
+              
+              {/* Main Title */}
+              <div className="text-center mb-6">
+                <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold mb-2 leading-tight">
+                  Excelência em
+                </h3>
+                <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold leading-tight">
+                  Experiência do Cliente
+                </h3>
+              </div>
+              
+              {/* NPS Section */}
+              <div className="text-center border-t border-white/20 pt-6">
+                <div className="text-white/90 text-sm md:text-base font-medium mb-1">
+                  Net Promoter Score
+                </div>
+                <div className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+                  +87.9
+                </div>
+                <div className="text-white/80 text-sm md:text-base">
+                  2023
+                </div>
+              </div>
+              
+              {/* Shine overlay */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none"></div>
+              
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 via-primary-glow/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10"></div>
+            </div>
           </div>
         </div>
       </section>
