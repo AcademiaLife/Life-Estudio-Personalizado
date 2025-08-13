@@ -104,11 +104,30 @@ const TestimonialsPage = () => {
       <section className="py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex justify-center animate-scale-in">
-            <img 
-              src="/lovable-uploads/f72c16a7-2e72-48f3-85cd-7f0f261db884.png" 
-              alt="NPS +87.9 - 2023" 
-              className="h-24 md:h-32 lg:h-40 w-auto hover-scale transition-transform duration-300"
-            />
+            <div className="relative flex flex-col items-center justify-center w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-primary via-primary-glow to-accent rounded-full shadow-elegant hover-scale transition-all duration-300 border-4 border-white/20">
+              {/* Trophy Icon */}
+              <div className="absolute -top-2 -right-2 w-8 h-8 md:w-10 md:h-10 bg-gradient-gold rounded-full flex items-center justify-center shadow-md">
+                <span className="text-white text-lg md:text-xl">🏆</span>
+              </div>
+              
+              {/* NPS Label */}
+              <div className="text-white text-xs md:text-sm font-bold tracking-wider mb-1">
+                NPS
+              </div>
+              
+              {/* Score */}
+              <div className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-none">
+                +87.9
+              </div>
+              
+              {/* Year */}
+              <div className="text-white/90 text-xs md:text-sm font-medium mt-1">
+                2023
+              </div>
+              
+              {/* Shine effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
+            </div>
           </div>
         </div>
       </section>
