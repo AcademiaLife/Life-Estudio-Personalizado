@@ -27,7 +27,7 @@ const Team = () => {
       specialty: "Personal Trainer Especializado",
       education: "Educação Física - Certificado em IHP (Institute of Human Performance)",
       specializations: "Especialista em Lesões | Simpósio de Sarcopenia pelo Hospital Cardiológico Costantini | Certificado em Potência e Pliometria Rafael Winick",
-      experience: "5 anos",
+      experience: "3 anos",
       differential: "Atendimento humanizado, alto desempenho e reabilitação de lesões.",
       image: "/lovable-uploads/d0e4aced-cd4f-40ca-9b4a-c899f67d97d6.png"
     },
