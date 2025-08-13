@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import SEOHead from "@/components/SEOHead";
-import { Star, Quote, ArrowRight, TrendingUp, Award, Heart } from "lucide-react";
+import { Star, Quote, ArrowRight, TrendingUp, Award, Heart, Play, Shield } from "lucide-react";
 const TestimonialsPage = () => {
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de saber mais sobre o Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
@@ -153,6 +154,120 @@ const TestimonialsPage = () => {
               
               {/* Glow effect */}
               <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 via-primary-glow/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEBRAE Recognition Section */}
+      <section className="py-12 md:py-16 bg-gradient-subtle">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 animate-fade-in">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-h2 text-primary mb-4">
+                Reconhecimentos e <span className="bg-gradient-gold bg-clip-text text-transparent">Certificações</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Nosso compromisso com a excelência é reconhecido por importantes instituições
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              {/* SEBRAE Seal Column */}
+              <div className="animate-scale-in">
+                <div className="relative bg-gradient-to-br from-primary via-primary-glow to-accent p-8 md:p-10 rounded-2xl shadow-elegant border border-white/30 hover-scale transition-all duration-500">
+                  {/* SEBRAE Icon */}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold">
+                      <Shield className="w-10 h-10 text-primary" />
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <div className="text-center mb-6">
+                    <h3 className="text-white text-xl md:text-2xl font-bold mb-2">
+                      Selo SEBRAE
+                    </h3>
+                    <h4 className="text-white/90 text-lg mb-4">
+                      Empresa Certificada
+                    </h4>
+                    <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                      Reconhecimento oficial do SEBRAE pela excelência em gestão, 
+                      qualidade de serviços e compromisso com o empreendedorismo responsável.
+                    </p>
+                  </div>
+                  
+                  {/* Year */}
+                  <div className="text-center border-t border-white/20 pt-6">
+                    <div className="text-white text-3xl font-bold">
+                      2024
+                    </div>
+                    <div className="text-white/80 text-sm">
+                      Certificação Ativa
+                    </div>
+                  </div>
+                  
+                  {/* Glow effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 via-primary-glow/20 to-accent/20 rounded-2xl blur-xl opacity-50 -z-10"></div>
+                </div>
+              </div>
+
+              {/* Video Column */}
+              <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-500">
+                      {/* Video Preview */}
+                      <div className="relative aspect-video bg-gradient-to-br from-primary/10 to-accent/10">
+                        <video
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-full object-cover"
+                          poster="/api/placeholder/640/360"
+                        >
+                          <source src="/video-sebrae-preview.mp4" type="video/mp4" />
+                        </video>
+                        
+                        {/* Play Overlay */}
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
+                          <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold group-hover:scale-110 transition-transform duration-300">
+                            <Play className="w-8 h-8 text-primary ml-1" fill="currentColor" />
+                          </div>
+                        </div>
+                        
+                        {/* Gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                      </div>
+                      
+                      {/* Video Info */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-lg md:text-xl font-bold mb-2">
+                          Nossa Jornada SEBRAE
+                        </h3>
+                        <p className="text-white/90 text-sm md:text-base">
+                          Veja como conquistamos o reconhecimento oficial
+                        </p>
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  
+                  <DialogContent className="max-w-4xl p-0 bg-black border-0">
+                    <div className="relative aspect-video">
+                      <video
+                        controls
+                        autoPlay
+                        className="w-full h-full"
+                        poster="/api/placeholder/640/360"
+                      >
+                        <source src="/video-sebrae-full.mp4" type="video/mp4" />
+                        Seu navegador não suporta vídeo HTML5.
+                      </video>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
             </div>
           </div>
         </div>
