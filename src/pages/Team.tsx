@@ -22,7 +22,7 @@ const Team = () => {
       image: "/lovable-uploads/86e8ea06-b77e-418f-9754-1743a70bf9fe.png"
     },
     {
-      name: "Matheus Lima Espetacular",
+      name: "Matheus Lima",
       cref: "036847-G/PR",
       specialty: "Personal Trainer Especializado",
       education: "Educação Física - Certificado em IHP (Institute of Human Performance)",
