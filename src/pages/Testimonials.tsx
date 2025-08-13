@@ -111,7 +111,7 @@ const TestimonialsPage = () => {
       <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex justify-center animate-scale-in">
-            <div className="relative bg-gradient-to-br from-primary via-primary-glow to-accent p-8 md:p-10 lg:p-12 rounded-3xl shadow-elegant border-4 border-white/20 max-w-md mx-auto hover-scale transition-all duration-500">
+            <div className="relative bg-gradient-to-br from-primary via-primary-glow to-accent p-8 md:p-10 lg:p-12 rounded-2xl shadow-elegant border border-white/30 max-w-md mx-auto hover-scale transition-all duration-500">
               {/* Decorative corners */}
               
               
