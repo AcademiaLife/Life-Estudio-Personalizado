@@ -160,32 +160,117 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
-      {/* SEBRAE Video Button */}
-      <section className="py-8 bg-gradient-subtle">
+      {/* SEBRAE Recognition Section */}
+      <section className="py-12 md:py-16 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex justify-center">
-            <Dialog>
-              <DialogTrigger asChild>
-                <button className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold hover:scale-110 transition-transform duration-300 group">
-                  <Play className="w-6 h-6 text-primary ml-0.5" fill="currentColor" />
-                </button>
-              </DialogTrigger>
-              
-              <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0 overflow-hidden">
-                <div className="relative aspect-[9/16] w-full">
-                  <iframe
-                    src="https://www.instagram.com/p/C0KfI_Uud9q/embed/captioned/"
-                    className="w-full h-full border-0"
-                    allowFullScreen
-                    allow="encrypted-media"
-                    loading="lazy"
-                    title="Vídeo SEBRAE - Life Personal Estúdio"
-                    frameBorder="0"
-                    scrolling="no"
-                  />
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 animate-fade-in">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-h2 text-primary mb-4">
+                Reconhecimentos e <span className="bg-gradient-gold bg-clip-text text-transparent">Certificações</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Nosso compromisso com a excelência é reconhecido por importantes instituições
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              {/* SEBRAE Seal Column */}
+              <div className="animate-scale-in">
+                <div className="relative bg-gradient-to-br from-primary via-primary-glow to-accent p-8 md:p-10 rounded-2xl shadow-elegant border border-white/30 hover-scale transition-all duration-500">
+                  {/* SEBRAE Icon */}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold">
+                      <Shield className="w-10 h-10 text-primary" />
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <div className="text-center mb-6">
+                    <h3 className="text-white text-xl md:text-2xl font-bold mb-2">
+                      Selo SEBRAE
+                    </h3>
+                    <h4 className="text-white/90 text-lg mb-4">
+                      Empresa Certificada
+                    </h4>
+                    <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                      Reconhecimento oficial do SEBRAE pela excelência em gestão, 
+                      qualidade de serviços e compromisso com o empreendedorismo responsável.
+                    </p>
+                  </div>
+                  
+                  {/* Year */}
+                  <div className="text-center border-t border-white/20 pt-6">
+                    <div className="text-white text-3xl font-bold">
+                      2024
+                    </div>
+                    <div className="text-white/80 text-sm">
+                      Certificação Ativa
+                    </div>
+                  </div>
+                  
+                  {/* Glow effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 via-primary-glow/20 to-accent/20 rounded-2xl blur-xl opacity-50 -z-10"></div>
                 </div>
-              </DialogContent>
-            </Dialog>
+              </div>
+
+              {/* Video Column */}
+              <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-500">
+                      {/* Instagram Video Thumbnail */}
+                      <div className="relative aspect-[9/16] bg-gradient-to-br from-primary/10 to-accent/10 max-w-sm mx-auto">
+                        <img
+                          src={sebraeVideoThumbnail}
+                          alt="Vídeo SEBRAE - Nossa Jornada de Certificação"
+                          className="w-full h-full object-cover"
+                        />
+                        
+                        {/* Play Overlay */}
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
+                          <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold group-hover:scale-110 transition-transform duration-300">
+                            <Play className="w-8 h-8 text-primary ml-1" fill="currentColor" />
+                          </div>
+                        </div>
+                        
+                        {/* Instagram Badge */}
+                        <div className="absolute top-4 right-4 bg-gradient-gold px-3 py-1 rounded-full">
+                          <span className="text-primary text-xs font-semibold">Instagram</span>
+                        </div>
+                        
+                        {/* Gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                      </div>
+                      
+                      {/* Video Info */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-lg md:text-xl font-bold mb-2">
+                          Reconhecimento SEBRAE
+                        </h3>
+                        <p className="text-white/90 text-sm md:text-base">
+                          Assista nosso depoimento oficial
+                        </p>
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  
+                  <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0 overflow-hidden">
+                    <div className="relative aspect-[9/16] w-full">
+                      <iframe
+                        src="https://www.instagram.com/p/C0KfI_Uud9q/embed/captioned/"
+                        className="w-full h-full border-0"
+                        allowFullScreen
+                        allow="encrypted-media"
+                        loading="lazy"
+                        title="Vídeo SEBRAE - Life Personal Estúdio"
+                        frameBorder="0"
+                        scrolling="no"
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
           </div>
         </div>
       </section>
