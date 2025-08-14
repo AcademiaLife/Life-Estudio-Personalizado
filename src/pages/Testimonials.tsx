@@ -217,39 +217,9 @@ const TestimonialsPage = () => {
               <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-500">
-                      {/* Instagram Video Thumbnail */}
-                      <div className="relative aspect-[9/16] bg-gradient-to-br from-primary/10 to-accent/10 max-w-sm mx-auto">
-                        <img
-                          src={sebraeVideoThumbnail}
-                          alt="Vídeo SEBRAE - Nossa Jornada de Certificação"
-                          className="w-full h-full object-cover"
-                        />
-                        
-                        {/* Play Overlay */}
-                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
-                          <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold group-hover:scale-110 transition-transform duration-300">
-                            <Play className="w-8 h-8 text-primary ml-1" fill="currentColor" />
-                          </div>
-                        </div>
-                        
-                        {/* Instagram Badge */}
-                        <div className="absolute top-4 right-4 bg-gradient-gold px-3 py-1 rounded-full">
-                          <span className="text-primary text-xs font-semibold">Instagram</span>
-                        </div>
-                        
-                        {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                      </div>
-                      
-                      {/* Video Info */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h3 className="text-lg md:text-xl font-bold mb-2">
-                          Reconhecimento SEBRAE
-                        </h3>
-                        <p className="text-white/90 text-sm md:text-base">
-                          Assista nosso depoimento oficial
-                        </p>
+                    <div className="flex justify-center">
+                      <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        <Play className="w-8 h-8 text-primary ml-1" fill="currentColor" />
                       </div>
                     </div>
                   </DialogTrigger>
