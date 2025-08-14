@@ -254,27 +254,18 @@ const TestimonialsPage = () => {
                     </div>
                   </DialogTrigger>
                   
-                  <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0">
-                    <div className="relative aspect-[9/16]">
+                  <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0 overflow-hidden">
+                    <div className="relative aspect-[9/16] w-full">
                       <iframe
-                        src="https://www.instagram.com/reel/C0KfI_Uud9q/embed"
+                        src="https://www.instagram.com/p/C0KfI_Uud9q/embed/captioned/"
                         className="w-full h-full border-0"
                         allowFullScreen
+                        allow="encrypted-media"
                         loading="lazy"
                         title="Vídeo SEBRAE - Life Personal Estúdio"
-                        onError={() => {
-                          window.open("https://www.instagram.com/reel/C0KfI_Uud9q/", "_blank");
-                        }}
+                        frameBorder="0"
+                        scrolling="no"
                       />
-                      {/* Fallback for iframe issues */}
-                      <div className="absolute inset-0 bg-black/90 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                        <Button 
-                          onClick={() => window.open("https://www.instagram.com/reel/C0KfI_Uud9q/", "_blank")}
-                          className="bg-gradient-gold text-primary"
-                        >
-                          Abrir no Instagram
-                        </Button>
-                      </div>
                     </div>
                   </DialogContent>
                 </Dialog>
