@@ -200,7 +200,7 @@ const TestimonialsPage = () => {
                   
                   {/* Year */}
                   <div className="text-center border-t border-white/20 pt-6">
-                    <div className="text-white text-3xl font-bold">2022 - 2023 - 2024</div>
+                    <div className="text-white text-3xl font-bold">2022 - 2024</div>
                     <div className="text-white/80 text-sm">
                       Certificação Ativa - 3 anos consecutivos
                     </div>
