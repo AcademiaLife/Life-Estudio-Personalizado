@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import SEOHead from "@/components/SEOHead";
 import { Star, Quote, ArrowRight, TrendingUp, Award, Heart, Play, Shield } from "lucide-react";
+import sebraeVideoThumbnail from "@/assets/sebrae-video-thumbnail.jpg";
 const TestimonialsPage = () => {
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de saber mais sobre o Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
@@ -217,18 +218,13 @@ const TestimonialsPage = () => {
                 <Dialog>
                   <DialogTrigger asChild>
                     <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-500">
-                      {/* Video Preview */}
-                      <div className="relative aspect-video bg-gradient-to-br from-primary/10 to-accent/10">
-                        <video
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
+                      {/* Instagram Video Thumbnail */}
+                      <div className="relative aspect-[9/16] bg-gradient-to-br from-primary/10 to-accent/10 max-w-sm mx-auto">
+                        <img
+                          src={sebraeVideoThumbnail}
+                          alt="Vídeo SEBRAE - Nossa Jornada de Certificação"
                           className="w-full h-full object-cover"
-                          poster="/api/placeholder/640/360"
-                        >
-                          <source src="/video-sebrae-preview.mp4" type="video/mp4" />
-                        </video>
+                        />
                         
                         {/* Play Overlay */}
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
@@ -237,33 +233,48 @@ const TestimonialsPage = () => {
                           </div>
                         </div>
                         
+                        {/* Instagram Badge */}
+                        <div className="absolute top-4 right-4 bg-gradient-gold px-3 py-1 rounded-full">
+                          <span className="text-primary text-xs font-semibold">Instagram</span>
+                        </div>
+                        
                         {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                       </div>
                       
                       {/* Video Info */}
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                         <h3 className="text-lg md:text-xl font-bold mb-2">
-                          Nossa Jornada SEBRAE
+                          Reconhecimento SEBRAE
                         </h3>
                         <p className="text-white/90 text-sm md:text-base">
-                          Veja como conquistamos o reconhecimento oficial
+                          Assista nosso depoimento oficial
                         </p>
                       </div>
                     </div>
                   </DialogTrigger>
                   
-                  <DialogContent className="max-w-4xl p-0 bg-black border-0">
-                    <div className="relative aspect-video">
-                      <video
-                        controls
-                        autoPlay
-                        className="w-full h-full"
-                        poster="/api/placeholder/640/360"
-                      >
-                        <source src="/video-sebrae-full.mp4" type="video/mp4" />
-                        Seu navegador não suporta vídeo HTML5.
-                      </video>
+                  <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0">
+                    <div className="relative aspect-[9/16]">
+                      <iframe
+                        src="https://www.instagram.com/reel/C0KfI_Uud9q/embed"
+                        className="w-full h-full border-0"
+                        allowFullScreen
+                        loading="lazy"
+                        title="Vídeo SEBRAE - Life Personal Estúdio"
+                        onError={() => {
+                          window.open("https://www.instagram.com/reel/C0KfI_Uud9q/", "_blank");
+                        }}
+                      />
+                      {/* Fallback for iframe issues */}
+                      <div className="absolute inset-0 bg-black/90 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                        <Button 
+                          onClick={() => window.open("https://www.instagram.com/reel/C0KfI_Uud9q/", "_blank")}
+                          className="bg-gradient-gold text-primary"
+                        >
+                          Abrir no Instagram
+                        </Button>
+                      </div>
                     </div>
                   </DialogContent>
                 </Dialog>
