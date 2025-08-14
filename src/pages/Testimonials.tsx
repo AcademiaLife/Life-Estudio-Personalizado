@@ -200,9 +200,7 @@ const TestimonialsPage = () => {
                   
                   {/* Year */}
                   <div className="text-center border-t border-white/20 pt-6">
-                    <div className="text-white text-3xl font-bold">
-                      2024
-                    </div>
+                    <div className="text-white text-3xl font-bold">2022 - 2023 - 2024</div>
                     <div className="text-white/80 text-sm">
                       Certificação Ativa - 3 anos consecutivos
                     </div>
@@ -214,7 +212,9 @@ const TestimonialsPage = () => {
               </div>
 
               {/* Video Column */}
-              <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="animate-fade-in" style={{
+              animationDelay: "0.2s"
+            }}>
                 <Dialog>
                   <DialogTrigger asChild>
                     <div className="flex justify-center">
@@ -226,16 +226,7 @@ const TestimonialsPage = () => {
                   
                   <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0 overflow-hidden">
                     <div className="relative aspect-[9/16] w-full">
-                      <iframe
-                        src="https://www.instagram.com/p/C0KfI_Uud9q/embed/captioned/"
-                        className="w-full h-full border-0"
-                        allowFullScreen
-                        allow="encrypted-media"
-                        loading="lazy"
-                        title="Vídeo SEBRAE - Life Personal Estúdio"
-                        frameBorder="0"
-                        scrolling="no"
-                      />
+                      <iframe src="https://www.instagram.com/p/C0KfI_Uud9q/embed/captioned/" className="w-full h-full border-0" allowFullScreen allow="encrypted-media" loading="lazy" title="Vídeo SEBRAE - Life Personal Estúdio" frameBorder="0" scrolling="no" />
                     </div>
                   </DialogContent>
                 </Dialog>
