@@ -7,31 +7,27 @@ const ValuePropositionSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Array com 6 imagens (placeholder até você enviar as imagens)
+  // Array com 5 imagens do estúdio
   const bannerImages = [
     {
-      src: trainingImage,
-      alt: "Treinamento personalizado 1"
+      src: "/lovable-uploads/da2e1463-7c06-4115-8111-cceaf499ad29.png",
+      alt: "Vista panorâmica do estúdio com equipamentos premium e área de treino funcional"
     },
     {
-      src: studioImage,
-      alt: "Ambiente premium 1"
+      src: "/lovable-uploads/2eab7843-e9e1-4b4c-b8e0-6dde60d1502b.png",
+      alt: "Área principal com espelho e ambiente sofisticado para treinamento personalizado"
     },
     {
-      src: trainingImage,
-      alt: "Treinamento personalizado 2"
+      src: "/lovable-uploads/bfefcc3c-2ced-47af-8030-d1f768d4ab2f.png",
+      alt: "Zona cardio com esteiras e equipamentos de última geração"
     },
     {
-      src: studioImage,
-      alt: "Ambiente premium 2"
+      src: "/lovable-uploads/45ed08ef-1b3c-41a8-9ca0-d4a2f0e68f93.png",
+      alt: "Espaço exclusivo com bikes ergométricas e ambiente descontraído"
     },
     {
-      src: trainingImage,
-      alt: "Treinamento personalizado 3"
-    },
-    {
-      src: studioImage,
-      alt: "Ambiente premium 3"
+      src: "/lovable-uploads/e74211ae-1691-4c4c-b789-b13fbe755297.png",
+      alt: "Área completa de cardio com vista ampla do estúdio moderno"
     }
   ];
 
