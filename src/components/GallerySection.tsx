@@ -10,22 +10,22 @@ const GallerySection = () => {
 
   const studioImages = [
     {
-      src: "/lovable-uploads/2be62f36-f655-4c07-a731-79ed6665affd.png",
-      alt: "Vista panorâmica do Life Personal Estúdio com equipamentos premium",
+      src: "/lovable-uploads/17463614-c8e1-430c-88a5-9ab632ad39c1.png",
+      alt: "Treino personalizado em ação no Life Personal Estúdio",
+      title: "Treino em Ação",
+      description: "Acompanhamento profissional durante seu exercício"
+    },
+    {
+      src: "/lovable-uploads/d531f947-83bd-4170-8e91-d88efbe21dca.png",
+      alt: "Vista panorâmica do estúdio com ambiente de treino completo",
       title: "Ambiente Completo",
-      description: "Visão geral do nosso espaço exclusivo e moderno"
+      description: "Espaço amplo e moderno para todos os tipos de treino"
     },
     {
-      src: "/lovable-uploads/06df3d44-5396-467d-98e3-98020ef05125.png",
-      alt: "Área de equipamentos de musculação do estúdio",
-      title: "Equipamentos de Elite",
-      description: "Máquinas de última geração para resultados superiores"
-    },
-    {
-      src: "/lovable-uploads/5887683d-daed-44f6-a773-8375cc8221c0.png",
-      alt: "Zona de treino funcional com tecnologia avançada",
-      title: "Treino Funcional",
-      description: "Espaço dedicado para exercícios funcionais e específicos"
+      src: "/lovable-uploads/7a11de65-3d89-4c33-abbb-236959d4cab1.png",
+      alt: "Área de equipamentos premium com atendimento personalizado",
+      title: "Equipamentos Premium",
+      description: "Tecnologia de ponta com orientação especializada"
     }
   ];
 
