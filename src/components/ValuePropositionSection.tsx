@@ -10,6 +10,10 @@ const ValuePropositionSection = () => {
   // Array com 5 imagens do estúdio
   const bannerImages = [
     {
+      src: "/lovable-uploads/45ed08ef-1b3c-41a8-9ca0-d4a2f0e68f93.png",
+      alt: "Espaço exclusivo com bikes ergométricas e ambiente descontraído"
+    },
+    {
       src: "/lovable-uploads/da2e1463-7c06-4115-8111-cceaf499ad29.png",
       alt: "Vista panorâmica do estúdio com equipamentos premium e área de treino funcional"
     },
@@ -20,10 +24,6 @@ const ValuePropositionSection = () => {
     {
       src: "/lovable-uploads/bfefcc3c-2ced-47af-8030-d1f768d4ab2f.png",
       alt: "Zona cardio com esteiras e equipamentos de última geração"
-    },
-    {
-      src: "/lovable-uploads/45ed08ef-1b3c-41a8-9ca0-d4a2f0e68f93.png",
-      alt: "Espaço exclusivo com bikes ergométricas e ambiente descontraído"
     },
     {
       src: "/lovable-uploads/e74211ae-1691-4c4c-b789-b13fbe755297.png",
