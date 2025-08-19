@@ -1,99 +1,134 @@
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card } from "@/components/ui/card";
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-image.jpg";
 import studioInterior from "@/assets/studio-interior.jpg";
 import trainingImage from "@/assets/training-image.jpg";
 
 const GallerySection = () => {
-  const galleryImages = [
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const studioImages = [
     {
       src: studioInterior,
-      alt: "Área de treino premium",
+      alt: "Área de treino premium do Life Personal Estúdio",
       title: "Ambiente Exclusivo",
-      description: "Espaço amplo e equipado"
+      description: "Espaço amplo e equipado com tecnologia de ponta"
     },
     {
       src: trainingImage,
-      alt: "Equipamentos modernos",
+      alt: "Equipamentos modernos para treino personalizado",
       title: "Equipamentos de Ponta",
-      description: "Tecnologia para resultados"
+      description: "Tecnologia avançada para resultados superiores"
     },
     {
       src: heroImage,
-      alt: "Atendimento personalizado",
+      alt: "Atendimento personalizado no estúdio",
       title: "Atendimento Individual",
-      description: "Foco total em você"
-    },
-    {
-      src: studioInterior,
-      alt: "Estética luxuosa",
-      title: "Design Sofisticado",
-      description: "Ambiente que inspira"
+      description: "Foco total em você e seus objetivos"
     }
   ];
 
+  // Auto-rotate images every 3 seconds
+  useEffect(() => {
+    if (!isHovered) {
+      const timer = setInterval(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % studioImages.length);
+      }, 3000);
+      
+      return () => clearInterval(timer);
+    }
+  }, [isHovered, studioImages.length]);
+
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-h1 text-primary mb-6">Nossos Ambientes</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-            Muito além de uma academia – um estúdio criado para performance, saúde e estilo.
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="font-h1 text-primary mb-6">Conheça Nosso Estúdio</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Ambiente premium criado especialmente para sua transformação
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <Carousel className="w-full" opts={{ align: "start", loop: true }}>
-            <CarouselContent className="-ml-4">
-              {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <h3 className="font-semibold text-lg mb-1">{image.title}</h3>
-                          <p className="text-sm text-gray-200">{image.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                </CarouselItem>
+        {/* Auto Banner */}
+        <div 
+          className="relative max-w-6xl mx-auto mb-16 overflow-hidden rounded-2xl shadow-elegant group"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="relative aspect-[16/9] md:aspect-[21/9]">
+            {studioImages.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                  index === currentImageIndex 
+                    ? 'opacity-100 scale-100' 
+                    : 'opacity-0 scale-105'
+                }`}
+              >
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
+              </div>
+            ))}
+            
+            {/* Content Overlay */}
+            <div className="absolute bottom-8 left-8 right-8 text-white z-10">
+              <div className="max-w-2xl">
+                <h3 className="font-h2 mb-3 animate-fade-in">
+                  {studioImages[currentImageIndex].title}
+                </h3>
+                <p className="text-lg opacity-90 animate-fade-in">
+                  {studioImages[currentImageIndex].description}
+                </p>
+              </div>
+            </div>
+
+            {/* Indicators */}
+            <div className="absolute bottom-6 right-8 flex space-x-2 z-10">
+              {studioImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentImageIndex 
+                      ? 'bg-accent scale-125' 
+                      : 'bg-white/50 hover:bg-white/70'
+                  }`}
+                  aria-label={`Ver imagem ${index + 1}`}
+                />
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
-          </Carousel>
+            </div>
+          </div>
         </div>
 
-        <div className="text-center mt-12 animate-fade-in">
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="space-y-2">
-              <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏋️</span>
-              </div>
-              <h3 className="font-h3 text-primary">Equipamentos Premium</h3>
-              <p className="text-muted-foreground text-sm">Tecnologia de ponta para máximos resultados</p>
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in">
+          <div className="text-center group">
+            <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-2xl">🏋️</span>
             </div>
-            <div className="space-y-2">
-              <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👥</span>
-              </div>
-              <h3 className="font-h3 text-primary">Ambiente Exclusivo</h3>
-              <p className="text-muted-foreground text-sm">Privacidade e conforto para seu treino</p>
+            <h3 className="font-h3 text-primary mb-2">Equipamentos Premium</h3>
+            <p className="text-muted-foreground">Tecnologia de ponta para máximos resultados</p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-2xl">👥</span>
             </div>
-            <div className="space-y-2">
-              <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">✨</span>
-              </div>
-              <h3 className="font-h3 text-primary">Design Sofisticado</h3>
-              <p className="text-muted-foreground text-sm">Ambiente que inspira e motiva</p>
+            <h3 className="font-h3 text-primary mb-2">Ambiente Exclusivo</h3>
+            <p className="text-muted-foreground">Privacidade e conforto para seu treino</p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-2xl">✨</span>
             </div>
+            <h3 className="font-h3 text-primary mb-2">Design Sofisticado</h3>
+            <p className="text-muted-foreground">Ambiente que inspira e motiva</p>
           </div>
         </div>
       </div>

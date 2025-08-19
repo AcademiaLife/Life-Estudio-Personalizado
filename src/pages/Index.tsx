@@ -2,6 +2,7 @@
 import Hero from "@/components/Hero";
 import ChooseUsSection from "@/components/ChooseUsSection";
 import ValuePropositionSection from "@/components/ValuePropositionSection";
+import GallerySection from "@/components/GallerySection";
 import PlansSection from "@/components/PlansSection";
 import Testimonials from "@/components/Testimonials";
 import ServicesSection from "@/components/ServicesSection";
@@ -30,6 +31,9 @@ const Index = () => {
 
       {/* Value Proposition Section */}
       <ValuePropositionSection />
+
+      {/* Gallery Section - Auto Banner */}
+      <GallerySection />
 
       {/* Plans Section */}
       <PlansSection />
