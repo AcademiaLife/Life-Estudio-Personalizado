@@ -26,6 +26,24 @@ const GallerySection = () => {
       alt: "Área de equipamentos premium com atendimento personalizado",
       title: "Equipamentos Premium",
       description: "Tecnologia de ponta com orientação especializada"
+    },
+    {
+      src: "/lovable-uploads/2be62f36-f655-4c07-a731-79ed6665affd.png",
+      alt: "Equipamentos modernos de musculação no estúdio",
+      title: "Musculação Avançada",
+      description: "Equipamentos de última geração para resultados efetivos"
+    },
+    {
+      src: "/lovable-uploads/5887683d-daed-44f6-a773-8375cc8221c0.png",
+      alt: "Espaço de treino funcional com acompanhamento",
+      title: "Treino Funcional",
+      description: "Exercícios funcionais para o dia a dia"
+    },
+    {
+      src: "/lovable-uploads/86e8ea06-b77e-418f-9754-1743a70bf9fe.png",
+      alt: "Personal trainer orientando cliente durante exercício",
+      title: "Orientação Personalizada",
+      description: "Acompanhamento individual em cada movimento"
     }
   ];
 
@@ -56,7 +74,7 @@ const GallerySection = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative aspect-[16/9] md:aspect-[21/9]">
+          <div className="relative aspect-[4/5] md:aspect-[4/5]">
             {studioImages.map((image, index) => (
               <div
                 key={index}
