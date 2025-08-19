@@ -75,8 +75,8 @@ const GallerySection = () => {
               </div>
             ))}
             
-            {/* Content Overlay */}
-            <div className="absolute bottom-8 left-8 right-8 text-white z-10">
+            {/* Content Overlay - Hidden on mobile */}
+            <div className="absolute bottom-8 left-8 right-8 text-white z-10 hidden md:block">
               <div className="max-w-2xl">
                 <h3 className="font-h2 mb-3 animate-fade-in">
                   {studioImages[currentImageIndex].title}
