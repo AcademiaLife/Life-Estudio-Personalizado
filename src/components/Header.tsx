@@ -40,14 +40,8 @@ const Header = () => {
     } border-b border-border`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <img 
-              src="/lovable-uploads/5887683d-daed-44f6-a773-8375cc8221c0.png" 
-              alt="Life Personal Estúdio" 
-              className="h-6 sm:h-8 w-auto max-w-[120px] sm:max-w-[180px]"
-            />
-          </Link>
+          {/* Logo area - removed */}
+          <div></div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
