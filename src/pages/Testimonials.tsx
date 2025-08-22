@@ -224,8 +224,8 @@ const TestimonialsPage = () => {
                     </div>
                   </DialogTrigger>
                   
-                  <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0 overflow-hidden">
-                    <div className="relative aspect-video w-full">
+                  <DialogContent className="max-w-xs md:max-w-sm p-0 bg-black border-0 overflow-hidden">
+                    <div className="relative aspect-[9/16] w-full">
                       <video 
                         controls 
                         className="w-full h-full object-cover"
