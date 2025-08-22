@@ -43,9 +43,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img 
-              src="/lovable-uploads/0dff7e02-45d4-4579-b158-b4a37423ab81.png" 
+              src="/lovable-uploads/5887683d-daed-44f6-a773-8375cc8221c0.png" 
               alt="Life Personal Estúdio" 
-              className="h-20 sm:h-24 w-auto max-w-[350px] sm:max-w-[450px]"
+              className="h-6 sm:h-8 w-auto max-w-[120px] sm:max-w-[180px]"
             />
           </Link>
 
