@@ -39,13 +39,13 @@ const Header = () => {
         : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
     } border-b border-border`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img 
               src="/lovable-uploads/f3be380c-6b36-48a0-8037-dd52519e825d.png" 
               alt="Life Personal Estúdio" 
-              className="h-8 sm:h-10 w-auto max-w-[160px] sm:max-w-[220px]"
+              className="h-12 sm:h-14 w-auto max-w-[200px] sm:max-w-[260px]"
             />
           </Link>
 
