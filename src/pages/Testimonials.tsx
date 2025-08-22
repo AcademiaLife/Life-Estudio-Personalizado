@@ -231,7 +231,7 @@ const TestimonialsPage = () => {
                         className="w-full h-full object-cover"
                         poster={sebraeVideoThumbnail}
                       >
-                        <source src="/lovable-uploads/sebrae-video.mp4" type="video/mp4" />
+                        <source src="/lovable-uploads/Vem pra Life.mp4" type="video/mp4" />
                         Seu navegador não suporta o elemento de vídeo.
                       </video>
                     </div>
