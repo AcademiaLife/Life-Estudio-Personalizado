@@ -225,8 +225,15 @@ const TestimonialsPage = () => {
                   </DialogTrigger>
                   
                   <DialogContent className="max-w-sm md:max-w-md p-0 bg-black border-0 overflow-hidden">
-                    <div className="relative aspect-[9/16] w-full">
-                      <iframe src="https://www.instagram.com/p/C0KfI_Uud9q/embed/captioned/" className="w-full h-full border-0" allowFullScreen allow="encrypted-media" loading="lazy" title="Vídeo SEBRAE - Life Personal Estúdio" frameBorder="0" scrolling="no" />
+                    <div className="relative aspect-video w-full">
+                      <video 
+                        controls 
+                        className="w-full h-full object-cover"
+                        poster={sebraeVideoThumbnail}
+                      >
+                        <source src="/lovable-uploads/sebrae-video.mp4" type="video/mp4" />
+                        Seu navegador não suporta o elemento de vídeo.
+                      </video>
                     </div>
                   </DialogContent>
                 </Dialog>
