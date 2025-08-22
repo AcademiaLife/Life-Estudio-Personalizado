@@ -217,9 +217,25 @@ const TestimonialsPage = () => {
             }}>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <div className="flex justify-center">
-                      <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold hover:scale-110 transition-transform duration-300 cursor-pointer">
-                        <Play className="w-8 h-8 text-primary ml-1" fill="currentColor" />
+                    <div className="flex justify-center cursor-pointer">
+                      <div className="relative w-48 md:w-56 aspect-[9/16] rounded-lg overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <video 
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="w-full h-full object-cover"
+                          poster={sebraeVideoThumbnail}
+                        >
+                          <source src="/lovable-uploads/Vem pra Life.mp4" type="video/mp4" />
+                          Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        {/* Play overlay indicator */}
+                        <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </DialogTrigger>
@@ -228,6 +244,7 @@ const TestimonialsPage = () => {
                     <div className="relative aspect-[9/16] w-full">
                       <video 
                         controls 
+                        autoPlay
                         className="w-full h-full object-cover"
                         poster={sebraeVideoThumbnail}
                       >
