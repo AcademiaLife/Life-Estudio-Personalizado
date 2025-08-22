@@ -241,11 +241,12 @@ const TestimonialsPage = () => {
                   </DialogTrigger>
                   
                   <DialogContent className="max-w-xs md:max-w-sm p-0 bg-black border-0 overflow-hidden">
-                    <div className="relative aspect-[9/16] w-full">
+                    <div className="relative aspect-[9/16] w-full bg-black">
                       <video 
                         controls 
                         autoPlay
-                        className="w-full h-full object-cover"
+                        preload="metadata"
+                        className="w-full h-full object-cover bg-black"
                         poster={sebraeVideoThumbnail}
                       >
                         <source src="/lovable-uploads/Vem pra Life.mp4" type="video/mp4" />
