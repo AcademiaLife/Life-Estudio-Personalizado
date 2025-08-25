@@ -269,8 +269,11 @@ const About = () => {
             <div className="relative animate-scale-in order-2 lg:order-1">
               <ImageBanner
                 images={[
-                  { src: studioImage, alt: "Experiência personalizada no Life Estúdio" },
-                  // As próximas 4 imagens serão adicionadas aqui
+                  { src: "/lovable-uploads/ca7e6037-9517-4397-a50b-cb47d27d20cd.png", alt: "Área de treino funcional com equipamentos premium" },
+                  { src: "/lovable-uploads/0f54dbfd-b10c-4c7a-8f31-5e8d31938a6f.png", alt: "Vista completa do estúdio com área de café" },
+                  { src: "/lovable-uploads/5a6e795a-16c4-4fdc-9d1e-671bf83ae283.png", alt: "Área de musculação com equipamentos modernos" },
+                  { src: "/lovable-uploads/020895d0-4727-49a3-b26b-a04341f1c93b.png", alt: "Espaço amplo para treinamento personalizado" },
+                  { src: "/lovable-uploads/0f1efe9d-c551-407a-98ee-18cb9aa64cc6.png", alt: "Área funcional com piso de borracha premium" }
                 ]}
                 className="rounded-2xl shadow-elegant w-full h-80 lg:h-96"
               />
