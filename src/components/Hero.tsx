@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/whatsapp-icon";
-import heroImage from "@/assets/hero-image.jpg";
+import HeroCarousel from "./HeroCarousel";
 const Hero = () => {
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de agendar uma avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
@@ -12,11 +12,8 @@ const Hero = () => {
     });
   };
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Life Personal Estúdio em Campina Grande do Sul - Academia premium com equipamentos modernos" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
-      </div>
+      {/* Hero Carousel */}
+      <HeroCarousel />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
