@@ -34,7 +34,7 @@ const PlansSection = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de saber mais sobre os planos do Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
   return <>
-      <section id="plans" className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-h1 text-primary mb-6">Escolha o plano ideal para você</h2>
@@ -94,11 +94,7 @@ const PlansSection = () => {
             <h3 className="font-h2 text-white mb-4">
               Invista no seu bem-estar com um plano que oferece muito mais por menos
             </h3>
-            <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Ao contratar o Life Estúdio Personalizado, você tem acesso a treinamento exclusivo, nutrição personalizada, 
-              monitoramento cardíaco e acompanhamento contínuo, tudo isso por um preço muito mais acessível do que 
-              contratar esses serviços individualmente.
-            </p>
+            <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">Ao contratar o Life Personal Estúdio, você tem acesso a treinamento exclusivo, nutrição personalizada, monitoramento cardíaco e acompanhamento contínuo, tudo isso por um preço muito mais acessível do que contratar esses serviços individualmente.</p>
             <Button size="lg" onClick={() => setShowValuePopup(true)} className="btn-premium bg-gradient-gold text-primary font-semibold px-4 sm:px-6 md:px-8 py-3 md:py-4 text-sm sm:text-base md:text-lg shadow-gold hover:shadow-xl group w-full max-w-sm sm:max-w-md mx-auto">
               <span className="text-center">
                 <span className="sm:hidden">Veja os benefícios</span>
