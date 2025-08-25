@@ -7,7 +7,7 @@ const Hero = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de agendar uma avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
   };
   const handleSchedule = () => {
-    document.getElementById("plans")?.scrollIntoView({
+    document.getElementById("contact")?.scrollIntoView({
       behavior: "smooth"
     });
   };
@@ -24,9 +24,7 @@ const Hero = () => {
           <h1 className="font-hero text-white leading-tight text-lg my-[20px]">
             Transforme sua jornada fitness no
             <br />
-            <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Life Estúdio Personalizado
-            </span>
+            <span className="bg-gradient-gold bg-clip-text text-transparent">Life Personal Estúdio</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
@@ -40,6 +38,7 @@ const Hero = () => {
             </Button>
             
             <Button onClick={handleSchedule} variant="outline" size="lg" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg btn-premium w-full sm:w-auto">
+              <WhatsAppIcon className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
               Conhecer Planos
             </Button>
           </div>
