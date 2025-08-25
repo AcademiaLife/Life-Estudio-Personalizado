@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import trainingImage from "@/assets/training-image.jpg";
 import studioImage from "@/assets/studio-interior.jpg";
+import ImageBanner from "@/components/ImageBanner";
 
 const About = () => {
   const handleWhatsApp = () => {
@@ -266,12 +267,14 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative animate-scale-in order-2 lg:order-1">
-              <img 
-                src={studioImage} 
-                alt="Experiência personalizada no Life Estúdio" 
-                className="rounded-2xl shadow-elegant w-full"
+              <ImageBanner
+                images={[
+                  { src: studioImage, alt: "Experiência personalizada no Life Estúdio" },
+                  // As próximas 4 imagens serão adicionadas aqui
+                ]}
+                className="rounded-2xl shadow-elegant w-full h-80 lg:h-96"
               />
-              <div className="absolute -bottom-6 -left-6 bg-gradient-gold p-6 rounded-2xl shadow-gold">
+              <div className="absolute -bottom-6 -left-6 bg-gradient-gold p-6 rounded-2xl shadow-gold z-10">
                 <Users className="h-12 w-12 text-primary" />
               </div>
             </div>
