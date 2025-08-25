@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-2 space-y-6">
-            <h3 className="text-2xl font-bold text-accent">Life Estúdio Personalizado</h3>
+            <h3 className="text-2xl font-bold text-accent">Life Personal Estúdio</h3>
             <p className="text-gray-300 leading-relaxed max-w-md">
               Transformando vidas através do treinamento personalizado de alta performance. 
               Mais que uma academia, somos seu parceiro na jornada para uma vida mais saudável e plena.
