@@ -1,37 +1,34 @@
 import { useState, useEffect } from 'react';
-import heroImage from "@/assets/hero-image.jpg";
-import studioInterior from "@/assets/studio-interior.jpg";
-import trainingImage from "@/assets/training-image.jpg";
 
 // Studio images for the carousel
 const studioImages = [
   {
-    src: heroImage,
-    alt: "Life Personal Estúdio - Área de treino principal"
+    src: "/lovable-uploads/0e50b423-a059-46b1-812c-94bb97041a7a.png",
+    alt: "Life Personal Estúdio - Área funcional com equipamentos modernos e espaço verde"
   },
   {
-    src: studioInterior,
-    alt: "Life Personal Estúdio - Interior moderno e equipado"
+    src: "/lovable-uploads/be4ce413-8d8f-46f6-81f7-abc0c5d35b4f.png",
+    alt: "Life Personal Estúdio - Área de musculação com halteres e equipamentos"
   },
   {
-    src: trainingImage,
-    alt: "Life Personal Estúdio - Ambiente de treinamento personalizado"
+    src: "/lovable-uploads/bd04263d-4dba-4a19-a337-434bf100f8af.png",
+    alt: "Life Personal Estúdio - Ampla área de pesos livres e musculação"
   },
   {
-    src: heroImage,
-    alt: "Life Personal Estúdio - Equipamentos profissionais"
+    src: "/lovable-uploads/23810c73-f9d0-4d8f-92d5-b922a66bc1dc.png",
+    alt: "Life Personal Estúdio - Espaço cardio com esteiras e área funcional"
   },
   {
-    src: studioInterior,
-    alt: "Life Personal Estúdio - Espaço amplo para exercícios"
+    src: "/lovable-uploads/fa7fb012-7c24-4bb7-9150-7e8d45bc5a0b.png",
+    alt: "Life Personal Estúdio - Ambiente amplo com piso de madeira para treinos"
   },
   {
-    src: trainingImage,
-    alt: "Life Personal Estúdio - Ambiente climatizado e confortável"
+    src: "/lovable-uploads/4f5a49ee-d244-4d9d-898f-8b9504251afa.png",
+    alt: "Life Personal Estúdio - Vista geral do espaço de treinamento"
   },
   {
-    src: heroImage,
-    alt: "Life Personal Estúdio - Vista geral das instalações"
+    src: "/lovable-uploads/0e50b423-a059-46b1-812c-94bb97041a7a.png",
+    alt: "Life Personal Estúdio - Instalações completas para seu treino"
   }
 ];
 
