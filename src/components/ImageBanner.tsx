@@ -33,7 +33,7 @@ const ImageBanner = ({
 
   return (
     <div 
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden bg-black/5 ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -42,7 +42,7 @@ const ImageBanner = ({
           key={index}
           src={image.src}
           alt={image.alt}
-          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+          className={`w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
         />

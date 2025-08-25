@@ -275,7 +275,7 @@ const About = () => {
                   { src: "/lovable-uploads/020895d0-4727-49a3-b26b-a04341f1c93b.png", alt: "Espaço amplo para treinamento personalizado" },
                   { src: "/lovable-uploads/0f1efe9d-c551-407a-98ee-18cb9aa64cc6.png", alt: "Área funcional com piso de borracha premium" }
                 ]}
-                className="rounded-2xl shadow-elegant w-full h-80 lg:h-96"
+                className="rounded-2xl shadow-elegant w-full h-64 md:h-80 lg:h-96"
               />
               <div className="absolute -bottom-6 -left-6 bg-gradient-gold p-6 rounded-2xl shadow-gold z-10">
                 <Users className="h-12 w-12 text-primary" />
