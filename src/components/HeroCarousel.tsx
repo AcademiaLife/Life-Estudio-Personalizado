@@ -25,10 +25,6 @@ const studioImages = [
   {
     src: "/lovable-uploads/4f5a49ee-d244-4d9d-898f-8b9504251afa.png",
     alt: "Life Personal Estúdio - Vista geral do espaço de treinamento"
-  },
-  {
-    src: "/lovable-uploads/0e50b423-a059-46b1-812c-94bb97041a7a.png",
-    alt: "Life Personal Estúdio - Instalações completas para seu treino"
   }
 ];
 
