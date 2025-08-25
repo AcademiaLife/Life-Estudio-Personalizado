@@ -34,7 +34,7 @@ const PlansSection = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de saber mais sobre os planos do Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
   return <>
-      <section className="py-20 bg-gradient-subtle">
+      <section id="plans" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-h1 text-primary mb-6">Escolha o plano ideal para você</h2>
