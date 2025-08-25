@@ -35,7 +35,6 @@ const Hero = () => {
             </Button>
             
             <Button onClick={handleSchedule} variant="outline" size="lg" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg btn-premium w-full sm:w-auto">
-              <WhatsAppIcon className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
               Conhecer Planos
             </Button>
           </div>
