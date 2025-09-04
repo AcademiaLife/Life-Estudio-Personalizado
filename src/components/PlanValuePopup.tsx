@@ -36,7 +36,7 @@ const PlanValuePopup = ({ open, onOpenChange }: PlanValuePopupProps) => {
       <DialogContent className="max-w-2xl">
         <DialogHeader>
           <DialogTitle className="font-h2 text-primary text-center mb-4">
-            Por que escolher o Life Estúdio Personalizado?
+            Por que escolher o Life Personal Estúdio?
           </DialogTitle>
         </DialogHeader>
 

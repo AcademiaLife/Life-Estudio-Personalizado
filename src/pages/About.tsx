@@ -28,7 +28,7 @@ import ImageBanner from "@/components/ImageBanner";
 
 const About = () => {
   const handleWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer mais sobre o Life Estúdio Personalizado e agendar minha avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer mais sobre o Life Personal Estúdio e agendar minha avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
   };
 
   const valores = [
@@ -96,7 +96,7 @@ const About = () => {
     <div className="min-h-screen bg-background pt-16">
       <SEOHead 
         title="Sobre - Life Personal Estúdio | Nossa História e Valores"
-        description="Conheça a história, missão e valores do Life Estúdio Personalizado em Campina Grande do Sul - PR. Academia premium focada em resultados e excelência."
+        description="Conheça a história, missão e valores do Life Personal Estúdio em Campina Grande do Sul - PR. Academia premium focada em resultados e excelência."
         path="/sobre"
       />
       {/* Hero Section */}
@@ -135,7 +135,7 @@ const About = () => {
             <div className="space-y-8 animate-fade-in">
               <h2 className="font-h1 text-primary mb-6">Nossa História</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                O <strong>Life Estúdio Personalizado</strong> nasceu de um sonho: criar um espaço onde cada pessoa 
+                O <strong>Life Personal Estúdio</strong> nasceu de um sonho: criar um espaço onde cada pessoa 
                 pudesse encontrar não apenas um treino, mas uma jornada de autodescoberta e transformação. 
                 Acreditamos que o exercício físico vai muito além da estética - é sobre despertar o seu potencial, 
                 fortalecer sua confiança e enriquecer todas as dimensões da sua vida.
@@ -286,7 +286,7 @@ const About = () => {
               <h2 className="font-h1 text-primary mb-6">Sua experiência, do seu jeito</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Entendemos que cada pessoa tem uma história única, objetivos específicos e um ritmo próprio. 
-                Por isso, no <strong>Life Estúdio Personalizado</strong>, não existe receita pronta ou programa padronizado.
+                Por isso, no <strong>Life Personal Estúdio</strong>, não existe receita pronta ou programa padronizado.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Desde o primeiro encontro, dedicamos tempo para conhecer você: suas preferências, limitações, 

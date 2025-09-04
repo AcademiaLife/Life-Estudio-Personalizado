@@ -9,7 +9,7 @@ interface SEOHeadProps {
 
 const SEOHead = ({ 
   title = "Life Personal Estúdio - Academia Premium | Treinamento Personalizado", 
-  description = "Transforme sua vida com acompanhamento personalizado no Life Estúdio Personalizado em Campina Grande do Sul - PR. Agende sua avaliação e alcance seus objetivos fitness.",
+  description = "Transforme sua vida com acompanhamento personalizado no Life Personal Estúdio em Campina Grande do Sul - PR. Agende sua avaliação e alcance seus objetivos fitness.",
   path = "/",
   ogImage = "https://lovable.dev/opengraph-image-p98pqg.png"
 }: SEOHeadProps) => {
@@ -20,7 +20,7 @@ const SEOHead = ({
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "SportsActivityLocation", "ExerciseGym"],
     "@id": `${siteUrl}#organization`,
-    "name": "Life Estúdio Personalizado",
+    "name": "Life Personal Estúdio",
     "alternateName": ["Life Personal Estúdio", "Estúdio de Fitness", "Academia"],
     "description": "Academia premium com foco em performance, exclusividade e resultados. Treinamento personalizado e estrutura diferenciada em Campina Grande do Sul.",
     "url": siteUrl,
@@ -94,7 +94,7 @@ const SEOHead = ({
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
-      <meta name="author" content="Life Estúdio Personalizado" />
+      <meta name="author" content="Life Personal Estúdio" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <link rel="canonical" href={fullUrl} />
       
@@ -117,7 +117,7 @@ const SEOHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Life Estúdio Personalizado" />
+      <meta property="og:site_name" content="Life Personal Estúdio" />
       <meta property="og:locale" content="pt_BR" />
 
       {/* Twitter */}

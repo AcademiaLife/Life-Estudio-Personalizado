@@ -63,7 +63,7 @@ const TestimonialsPage = () => {
     icon: Star
   }];
   return <div className="min-h-screen bg-background pt-16">
-      <SEOHead title="Depoimentos - Life Personal Estúdio | Histórias de Transformação" description="Veja os resultados reais dos nossos clientes e como o Life Estúdio Personalizado pode transformar sua jornada fitness." path="/depoimentos" />
+      <SEOHead title="Depoimentos - Life Personal Estúdio | Histórias de Transformação" description="Veja os resultados reais dos nossos clientes e como o Life Personal Estúdio pode transformar sua jornada fitness." path="/depoimentos" />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">

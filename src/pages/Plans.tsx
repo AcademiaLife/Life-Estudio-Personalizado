@@ -133,7 +133,7 @@ const Plans = () => {
     <div className="min-h-screen bg-background pt-16">
       <SEOHead 
         title="Planos - Life Personal Estúdio | Academia Premium em Campina Grande do Sul"
-        description="Escolha o plano ideal para você no Life Estúdio Personalizado. Planos a partir de R$399/mês. Treinamento, nutrição e bem-estar em Campina Grande do Sul - PR."
+        description="Escolha o plano ideal para você no Life Personal Estúdio. Planos a partir de R$399/mês. Treinamento, nutrição e bem-estar em Campina Grande do Sul - PR."
         path="/planos"
       />
       {/* Hero Section */}

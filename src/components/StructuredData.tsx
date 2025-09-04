@@ -30,7 +30,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "description": data.description,
           "provider": {
             "@type": "LocalBusiness",
-            "name": "Life Estúdio Personalizado",
+            "name": "Life Personal Estúdio",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "R. Pedro Pasa, 1158",
@@ -65,7 +65,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "@type": "Review",
           "itemReviewed": {
             "@type": "LocalBusiness",
-            "name": "Life Estúdio Personalizado"
+            "name": "Life Personal Estúdio"
           },
           "reviewRating": {
             "@type": "Rating",

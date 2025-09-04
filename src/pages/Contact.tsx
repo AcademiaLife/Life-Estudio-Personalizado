@@ -57,7 +57,7 @@ Mensagem: ${formData.message}`;
   return <div className="min-h-screen bg-background pt-16">
       <SEOHead 
         title="Contato - Life Personal Estúdio | Entre em Contato Conosco"
-        description="Entre em contato com o Life Estúdio Personalizado. Agende sua avaliação, aula experimental ou treino com personal em Campina Grande do Sul - PR."
+        description="Entre em contato com o Life Personal Estúdio. Agende sua avaliação, aula experimental ou treino com personal em Campina Grande do Sul - PR."
         path="/contato"
       />
       {/* Hero Section */}

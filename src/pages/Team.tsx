@@ -163,7 +163,7 @@ const Team = () => {
     <div className="min-h-screen bg-background pt-16">
       <SEOHead 
         title="Equipe - Life Personal Estúdio | Profissionais Especializados"
-        description="Conheça a equipe de profissionais especializados do Life Estúdio Personalizado em Campina Grande do Sul - PR. Personal trainers e nutricionistas qualificados."
+        description="Conheça a equipe de profissionais especializados do Life Personal Estúdio em Campina Grande do Sul - PR. Personal trainers e nutricionistas qualificados."
         path="/equipe"
       />
       {/* Hero Section */}

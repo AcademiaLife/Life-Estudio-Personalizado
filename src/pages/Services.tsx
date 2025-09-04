@@ -133,7 +133,7 @@ const Services = () => {
   return <div className="min-h-screen bg-background pt-16">
       <SEOHead 
         title="Serviços - Life Personal Estúdio | Treinamento e Nutrição Personalizada"
-        description="Treinamento personalizado, nutrição funcional, e muito mais. Descubra os serviços exclusivos do Life Estúdio Personalizado em Campina Grande do Sul - PR."
+        description="Treinamento personalizado, nutrição funcional, e muito mais. Descubra os serviços exclusivos do Life Personal Estúdio em Campina Grande do Sul - PR."
         path="/servicos"
       />
       {/* Hero Section */}
