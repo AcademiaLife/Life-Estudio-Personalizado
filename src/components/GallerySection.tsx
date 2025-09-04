@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import studioInterior from "@/assets/studio-interior.jpg";
 import trainingImage from "@/assets/training-image.jpg";
@@ -125,7 +126,7 @@ const GallerySection = () => {
           
           <div className="text-center group">
             <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-2xl">✨</span>
+              <Sparkles className="w-8 h-8 text-primary" />
             </div>
             <h3 className="font-h3 text-primary mb-2">Design Sofisticado</h3>
             <p className="text-muted-foreground">Ambiente que inspira e motiva</p>
