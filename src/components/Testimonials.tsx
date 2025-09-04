@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import { useState, useEffect } from "react";
+import StructuredData from "@/components/StructuredData";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -69,15 +70,25 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-h1 text-primary mb-6">O Que Nossos Alunos Dizem</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Histórias reais de transformação que inspiram e motivam. 
-            Cada depoimento representa uma jornada única de superação e conquista.
-          </p>
-        </div>
+    <>
+      {/* Add structured data for each testimonial */}
+      {testimonials.map((testimonial, index) => (
+        <StructuredData 
+          key={index}
+          type="review" 
+          data={testimonial}
+        />
+      ))}
+      
+      <section id="testimonials" className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="font-h1 text-primary mb-6">O Que Nossos Alunos Dizem</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Histórias reais de transformação que inspiram e motivam. 
+              Cada depoimento representa uma jornada única de superação e conquista.
+            </p>
+          </div>
 
         {/* Carousel */}
         <div className="relative max-w-4xl mx-auto">
@@ -170,8 +181,9 @@ const Testimonials = () => {
             <p className="text-muted-foreground">Anos Média de Permanência</p>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 

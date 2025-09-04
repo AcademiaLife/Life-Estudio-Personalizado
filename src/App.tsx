@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
@@ -31,31 +32,32 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-        <ScrollToTop />
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/sobre" element={<About />} />
-              <Route path="/servicos" element={<Services />} />
-              <Route path="/planos" element={<Plans />} />
-              <Route path="/equipe" element={<Team />} />
-              <Route path="/depoimentos" element={<TestimonialsPage />} />
-              <Route path="/contato" element={<ContactPage />} />
-              <Route path="/termos-de-servico" element={<TermsOfService />} />
-              <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
-              <Route path="/politica-de-cookies" element={<CookiePolicy />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-          <FloatingWhatsApp />
-          <CookieBanner />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+          <GoogleAnalytics />
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/sobre" element={<About />} />
+                <Route path="/servicos" element={<Services />} />
+                <Route path="/planos" element={<Plans />} />
+                <Route path="/equipe" element={<Team />} />
+                <Route path="/depoimentos" element={<TestimonialsPage />} />
+                <Route path="/contato" element={<ContactPage />} />
+                <Route path="/termos-de-servico" element={<TermsOfService />} />
+                <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
+                <Route path="/politica-de-cookies" element={<CookiePolicy />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+            <FloatingWhatsApp />
+            <CookieBanner />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
   </HelmetProvider>
 );
 

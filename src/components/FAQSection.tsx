@@ -1,5 +1,6 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import StructuredData from "@/components/StructuredData";
 
 const FAQSection = () => {
   const faqs = [
@@ -34,36 +35,40 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-h1 text-primary mb-6">Dúvidas Frequentes</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Esclarecemos as principais questões sobre nosso método e funcionamento.
-          </p>
-        </div>
+    <>
+      <StructuredData type="faq" data={faqs} />
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="font-h1 text-primary mb-6">Perguntas Frequentes</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Esclareça suas dúvidas sobre nossos serviços, planos e metodologia. 
+              Caso não encontre sua pergunta, entre em contato conosco.
+            </p>
+          </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-background rounded-lg px-6 py-2 shadow-card hover:shadow-elegant transition-all animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent transition-colors">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="bg-background rounded-lg px-6 py-2 shadow-card hover:shadow-elegant transition-all animate-scale-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent transition-colors">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

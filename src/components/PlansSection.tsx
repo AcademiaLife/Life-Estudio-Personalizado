@@ -31,6 +31,11 @@ const PlansSection = () => {
     color: "border-border"
   }];
   const handleWhatsApp = () => {
+    // Track analytics
+    if (typeof window !== 'undefined' && window.trackWhatsAppClick) {
+      window.trackWhatsAppClick('plans_section');
+    }
+    
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de saber mais sobre os planos do Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
   return <>

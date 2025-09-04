@@ -95,8 +95,21 @@ const SEOHead = ({
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="author" content="Life Estúdio Personalizado" />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <link rel="canonical" href={fullUrl} />
+      
+      {/* Performance hints */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://api.whatsapp.com" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      
+      {/* Mobile optimization */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="theme-color" content="#1a1a1a" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
