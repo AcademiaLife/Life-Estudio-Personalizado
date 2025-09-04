@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="space-y-2 animate-slide-up" style={{
             animationDelay: '0.4s'
           }}>
-              <h3 className="text-3xl font-bold text-accent px-0 mx-0">10+</h3>
+              <h3 className="text-3xl font-bold text-accent px-0 mx-0">20+</h3>
               <p className="text-gray-300 my-[20px]">Anos de Experiência</p>
             </div>
             <div className="space-y-2 animate-slide-up" style={{
