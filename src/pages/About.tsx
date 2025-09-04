@@ -1,104 +1,62 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
-import { 
-  Target, 
-  Heart, 
-  Trophy, 
-  Users, 
-  Star, 
-  Award, 
-  ArrowRight,
-  Brain,
-  Dumbbell,
-  Leaf,
-  Lightbulb,
-  FlaskConical,
-  CheckCircle,
-  Shield,
-  UserCheck,
-  Zap,
-  Recycle,
-  Sparkles
-} from "lucide-react";
+import { Target, Heart, Trophy, Users, Star, Award, ArrowRight, Brain, Dumbbell, Leaf, Lightbulb, FlaskConical, CheckCircle, Shield, UserCheck, Zap, Recycle, Sparkles } from "lucide-react";
 import trainingImage from "@/assets/training-image.jpg";
 import studioImage from "@/assets/studio-interior.jpg";
 import ImageBanner from "@/components/ImageBanner";
-
 const About = () => {
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer mais sobre o Life Personal Estúdio e agendar minha avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
   };
-
-  const valores = [
-    {
-      icon: Star,
-      title: "Excelência no serviço de atendimento",
-      description: "Buscamos sempre superar expectativas em cada interação"
-    },
-    {
-      icon: Shield,
-      title: "Transparência e confiança nos relacionamentos",
-      description: "Construímos vínculos baseados na honestidade e clareza"
-    },
-    {
-      icon: UserCheck,
-      title: "Respeito por clientes e colaboradores",
-      description: "Tratamos todos com dignidade, empatia e consideração"
-    },
-    {
-      icon: Zap,
-      title: "Busca constante por aprimoramentos e inovações",
-      description: "Evoluímos continuamente para oferecer o melhor"
-    },
-    {
-      icon: Recycle,
-      title: "Comprometimento com a sustentabilidade",
-      description: "Cuidamos do planeta enquanto cuidamos de você"
-    },
-    {
-      icon: Sparkles,
-      title: "Paixão por transformar vidas com propósito",
-      description: "Cada conquista nossa é uma vida transformada"
-    }
-  ];
-
-  const pilares = [
-    {
-      icon: Brain,
-      title: "Atendimento exclusivo e humanizado",
-      description: "Cada pessoa é única e merece atenção personalizada"
-    },
-    {
-      icon: Dumbbell,
-      title: "Treinos personalizados e eficazes",
-      description: "Metodologia adaptada aos seus objetivos específicos"
-    },
-    {
-      icon: Leaf,
-      title: "Compromisso com o meio ambiente",
-      description: "Práticas sustentáveis em todas as nossas ações"
-    },
-    {
-      icon: FlaskConical,
-      title: "Inovação em equipamentos",
-      description: "Tecnologia de ponta para resultados superiores"
-    },
-    {
-      icon: Lightbulb,
-      title: "Equilíbrio entre corpo e mente",
-      description: "Bem-estar integral para uma vida plena"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background pt-16">
-      <SEOHead 
-        title="Sobre - Life Personal Estúdio | Nossa História e Valores"
-        description="Conheça a história, missão e valores do Life Personal Estúdio em Campina Grande do Sul - PR. Academia premium focada em resultados e excelência."
-        path="/sobre"
-      />
+  const valores = [{
+    icon: Star,
+    title: "Excelência no serviço de atendimento",
+    description: "Buscamos sempre superar expectativas em cada interação"
+  }, {
+    icon: Shield,
+    title: "Transparência e confiança nos relacionamentos",
+    description: "Construímos vínculos baseados na honestidade e clareza"
+  }, {
+    icon: UserCheck,
+    title: "Respeito por clientes e colaboradores",
+    description: "Tratamos todos com dignidade, empatia e consideração"
+  }, {
+    icon: Zap,
+    title: "Busca constante por aprimoramentos e inovações",
+    description: "Evoluímos continuamente para oferecer o melhor"
+  }, {
+    icon: Recycle,
+    title: "Comprometimento com a sustentabilidade",
+    description: "Cuidamos do planeta enquanto cuidamos de você"
+  }, {
+    icon: Sparkles,
+    title: "Paixão por transformar vidas com propósito",
+    description: "Cada conquista nossa é uma vida transformada"
+  }];
+  const pilares = [{
+    icon: Brain,
+    title: "Atendimento exclusivo e humanizado",
+    description: "Cada pessoa é única e merece atenção personalizada"
+  }, {
+    icon: Dumbbell,
+    title: "Treinos personalizados e eficazes",
+    description: "Metodologia adaptada aos seus objetivos específicos"
+  }, {
+    icon: Leaf,
+    title: "Compromisso com o meio ambiente",
+    description: "Práticas sustentáveis em todas as nossas ações"
+  }, {
+    icon: FlaskConical,
+    title: "Inovação em equipamentos",
+    description: "Tecnologia de ponta para resultados superiores"
+  }, {
+    icon: Lightbulb,
+    title: "Equilíbrio entre corpo e mente",
+    description: "Bem-estar integral para uma vida plena"
+  }];
+  return <div className="min-h-screen bg-background pt-16">
+      <SEOHead title="Sobre - Life Personal Estúdio | Nossa História e Valores" description="Conheça a história, missão e valores do Life Personal Estúdio em Campina Grande do Sul - PR. Academia premium focada em resultados e excelência." path="/sobre" />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">
@@ -116,11 +74,9 @@ const About = () => {
               Descubra um novo conceito de bem-estar e transformação pessoal.
             </p>
 
-            <Button 
-              onClick={() => document.getElementById("about-content")?.scrollIntoView({ behavior: "smooth" })}
-              size="lg" 
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
-            >
+            <Button onClick={() => document.getElementById("about-content")?.scrollIntoView({
+            behavior: "smooth"
+          })} size="lg" className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group">
               Conheça Nossa História
               <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -145,19 +101,11 @@ const About = () => {
                 Por isso, dedicamos tempo para conhecer sua história, seus objetivos e seus desafios, 
                 criando uma experiência verdadeiramente personalizada que respeita seu ritmo e celebra suas conquistas.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Hoje, somos mais que um estúdio - somos um parceiro na sua jornada de bem-estar, 
-                comprometidos em proporcionar não apenas resultados excepcionais, mas também momentos 
-                de alegria, superação e crescimento pessoal.
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">Hoje, somos mais que um estúdio, somos um parceiro na sua jornada de bem-estar, comprometidos em proporcionar não apenas resultados excepcionais, mas também momentos de alegria, superação e crescimento pessoal.</p>
             </div>
             
             <div className="relative animate-scale-in">
-              <img 
-                src={trainingImage} 
-                alt="Atendimento personalizado no Life Estúdio" 
-                className="rounded-2xl shadow-elegant w-full"
-              />
+              <img src={trainingImage} alt="Atendimento personalizado no Life Estúdio" className="rounded-2xl shadow-elegant w-full" />
               <div className="absolute -bottom-6 -right-6 bg-gradient-gold p-6 rounded-2xl shadow-gold">
                 <Heart className="h-12 w-12 text-primary" />
               </div>
@@ -213,12 +161,9 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {valores.map((valor, index) => (
-              <Card 
-                key={index} 
-                className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in bg-white/80 backdrop-blur-sm"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {valores.map((valor, index) => <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in bg-white/80 backdrop-blur-sm" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="flex items-start space-x-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-gold rounded-full group-hover:scale-110 transition-transform flex-shrink-0">
                     <valor.icon className="h-6 w-6 text-primary" />
@@ -228,8 +173,7 @@ const About = () => {
                     <p className="text-muted-foreground text-sm leading-relaxed">{valor.description}</p>
                   </div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -245,19 +189,15 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {pilares.map((pilar, index) => (
-              <Card 
-                key={index} 
-                className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in h-full flex flex-col"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {pilares.map((pilar, index) => <Card key={index} className="p-8 text-center shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-scale-in h-full flex flex-col" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-6 group-hover:scale-110 transition-transform">
                   <pilar.icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-h3 text-primary mb-4 min-h-[3.5rem] flex items-center justify-center">{pilar.title}</h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">{pilar.description}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -267,16 +207,22 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative animate-scale-in order-2 lg:order-1">
-              <ImageBanner
-                images={[
-                  { src: "/lovable-uploads/ca7e6037-9517-4397-a50b-cb47d27d20cd.png", alt: "Área de treino funcional com equipamentos premium" },
-                  { src: "/lovable-uploads/0f54dbfd-b10c-4c7a-8f31-5e8d31938a6f.png", alt: "Vista completa do estúdio com área de café" },
-                  { src: "/lovable-uploads/5a6e795a-16c4-4fdc-9d1e-671bf83ae283.png", alt: "Área de musculação com equipamentos modernos" },
-                  { src: "/lovable-uploads/020895d0-4727-49a3-b26b-a04341f1c93b.png", alt: "Espaço amplo para treinamento personalizado" },
-                  { src: "/lovable-uploads/0f1efe9d-c551-407a-98ee-18cb9aa64cc6.png", alt: "Área funcional com piso de borracha premium" }
-                ]}
-                className="max-w-6xl mx-auto"
-              />
+              <ImageBanner images={[{
+              src: "/lovable-uploads/ca7e6037-9517-4397-a50b-cb47d27d20cd.png",
+              alt: "Área de treino funcional com equipamentos premium"
+            }, {
+              src: "/lovable-uploads/0f54dbfd-b10c-4c7a-8f31-5e8d31938a6f.png",
+              alt: "Vista completa do estúdio com área de café"
+            }, {
+              src: "/lovable-uploads/5a6e795a-16c4-4fdc-9d1e-671bf83ae283.png",
+              alt: "Área de musculação com equipamentos modernos"
+            }, {
+              src: "/lovable-uploads/020895d0-4727-49a3-b26b-a04341f1c93b.png",
+              alt: "Espaço amplo para treinamento personalizado"
+            }, {
+              src: "/lovable-uploads/0f1efe9d-c551-407a-98ee-18cb9aa64cc6.png",
+              alt: "Área funcional com piso de borracha premium"
+            }]} className="max-w-6xl mx-auto" />
               <div className="absolute -bottom-6 -left-6 bg-gradient-gold p-6 rounded-2xl shadow-gold z-10">
                 <Users className="h-12 w-12 text-primary" />
               </div>
@@ -293,10 +239,7 @@ const About = () => {
                 sonhos e desafios. <strong>Seu treino é desenhado especialmente para você</strong>, respeitando seu corpo, 
                 sua agenda e seu estilo de vida.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Aqui, você não é apenas mais um aluno - você é o protagonista de uma jornada de transformação 
-                que celebra suas conquistas, supera obstáculos e constrói uma versão mais forte e confiante de si mesmo.
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">Aqui, você não é apenas mais um aluno, você é o protagonista de uma jornada de transformação que celebra suas conquistas, supera obstáculos e constrói uma versão mais forte e confiante de si mesmo.</p>
             </div>
           </div>
         </div>
@@ -328,11 +271,7 @@ const About = () => {
               <br />
               Agende sua avaliação gratuita e conheça uma nova forma de cuidar de si mesmo.
             </p>
-            <Button 
-              size="lg" 
-              onClick={handleWhatsApp}
-              className="btn-premium bg-primary text-white font-semibold px-12 py-6 text-xl shadow-elegant hover:shadow-xl group hover:bg-primary/90"
-            >
+            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-primary text-white font-semibold px-12 py-6 text-xl shadow-elegant hover:shadow-xl group hover:bg-primary/90">
               Agende sua avaliação
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -350,19 +289,13 @@ const About = () => {
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8 px-4">
               Venha conhecer nosso espaço e descobrir como podemos ajudar você a alcançar seus objetivos de forma sustentável e prazerosa.
             </p>
-            <Button 
-              size="lg" 
-              onClick={handleWhatsApp}
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto"
-            >
+            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto">
               <span className="whitespace-nowrap">Agendar Visita</span>
               <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
