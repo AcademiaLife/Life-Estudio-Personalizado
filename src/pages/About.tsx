@@ -272,7 +272,7 @@ const About = () => {
               Agende sua avaliação gratuita e conheça uma nova forma de cuidar de si mesmo.
             </p>
             <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-primary text-white font-semibold px-12 py-6 text-xl shadow-elegant hover:shadow-xl group hover:bg-primary/90">
-              Agende sua avaliação
+              Agende sua aula experimental
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
