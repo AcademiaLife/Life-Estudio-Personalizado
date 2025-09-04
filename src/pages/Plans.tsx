@@ -1,141 +1,109 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import SEOHead from "@/components/SEOHead";
 import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp, Zap, Target, Music, Dumbbell, Flame, User, Clock } from "lucide-react";
-
 const Plans = () => {
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer os planos do Life Elite Studio e agendar uma avaliação.&type=phone_number&app_absent=0", "_blank");
   };
-
-  const plans = [
-    {
-      name: "Meta Personal",
-      price: "399",
-      color: "border-green-400",
-      description: "Seu ponto de partida ideal",
-      paymentInfo: "1 entrada de R$ 399 + 11x de R$ 399",
-      features: [
-        "Personal 3x por semana (turmas até 3 alunos)",
-        "Acesso livre para cardio e extras nos demais dias",
-        "Monitoramento cardíaco durante o treino",
-        "Aulas coletivas (pilates, metabolic e mais)"
-      ]
-    },
-    {
-      name: "Meta Slim",
-      price: "449",
-      color: "border-blue-400",
-      description: "Equilíbrio perfeito",
-      paymentInfo: "1 entrada de R$ 399 + 11x de R$ 449",
-      features: [
-        "Tudo do Meta Personal",
-        "Nutricionista especializada",
-        "Avaliação física e acompanhamento de resultados"
-      ]
-    },
-    {
-      name: "Meta Full",
-      price: "599",
-      color: "border-accent shadow-gold",
-      description: "Experiência completa",
-      paymentInfo: "1 entrada de R$ 599 + 11x de R$ 599",
-      popular: true,
-      features: [
-        "Tudo dos planos anteriores",
-        "Avaliação de movimento",
-        "Bebidas quentes: chocolate, cappuccino, mocaccino",
-        "Pré e pós-treino inclusos",
-        "Acesso à sala recovery"
-      ]
-    }
-  ];
-
-  const highlights = [
-    {
-      icon: Heart,
-      title: "Acompanhamento personalizado",
-      description: "Cada treino é único e pensado especialmente para você"
-    },
-    {
-      icon: Users,
-      title: "Atendimento de qualidade",
-      description: "Profissionais especializados sempre prontos para ajudar"
-    },
-    {
-      icon: Smartphone,
-      title: "Check-in fácil via app",
-      description: "Praticidade total na palma da sua mão"
-    },
-    {
-      icon: Calendar,
-      title: "Aulas coletivas inclusas",
-      description: "Variedade e motivação em grupo"
-    },
-    {
-      icon: TrendingUp,
-      title: "Resultados reais",
-      description: "Acompanhamento contínuo da sua evolução"
-    }
-  ];
-
-  const classes = [
-    {
-      icon: Music,
-      name: "ZUMBA",
-      description: "Aula de fitness com ritmos latinos e coreografias, divertida e queima calorias.",
-      instructor: "Gil",
-      schedule: "Terça e quinta, 16h00"
-    },
-    {
-      icon: Target,
-      name: "D'GYM TRAINING",
-      description: "Mix completo criado pelo Profº Dodô, combinando dança, ginástica calistênica, funcional e relaxamento.",
-      instructor: "Dodô",
-      schedule: "Seg, Qua e Sex, 19h00"
-    },
-    {
-      icon: Flame,
-      name: "METABOLIC TRAINING",
-      description: "Aula intensa para queimar calorias e acelerar metabolismo com exercícios dinâmicos.",
-      instructor: "Evandro",
-      schedule: "Seg, Qua e Sex, 6h00 / Ter, Qui, 19h00"
-    },
-    {
-      icon: Dumbbell,
-      name: "PILATES SOLO",
-      description: "Fortalece postura, equilíbrio e flexibilidade com exercícios controlados e respiração.",
-      instructor: "Ana",
-      schedule: "Ter e Qui, 07h00 e 18h00"
-    },
-    {
-      icon: User,
-      name: "ALONGAMENTO",
-      description: "Melhora flexibilidade, reduz tensões e previne lesões com movimentos guiados.",
-      instructor: "Maicow",
-      schedule: "Ter e Qui, 10h00"
-    }
-  ];
-
-  const comparisonData = [
-    { service: "Personal Trainer 3x/semana", separate: "R$ 600+" },
-    { service: "Nutricionista", separate: "R$ 200" },
-    { service: "Avaliação Física", separate: "R$ 50" },
-    { service: "Pilates + Coletivas", separate: "R$ 250+" },
-    { service: "Recovery", separate: "R$ 150" },
-    { service: "Bebidas Funcionais", separate: "Média de R$ 150" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background pt-16">
-      <SEOHead 
-        title="Planos - Life Personal Estúdio | Academia Premium em Campina Grande do Sul"
-        description="Escolha o plano ideal para você no Life Personal Estúdio. Planos a partir de R$399/mês. Treinamento, nutrição e bem-estar em Campina Grande do Sul - PR."
-        path="/planos"
-      />
+  const plans = [{
+    name: "Meta Personal",
+    price: "399",
+    color: "border-green-400",
+    description: "Seu ponto de partida ideal",
+    paymentInfo: "1 entrada de R$ 399 + 11x de R$ 399",
+    features: ["Personal 3x por semana (turmas até 3 alunos)", "Acesso livre para cardio e extras nos demais dias", "Monitoramento cardíaco durante o treino", "Aulas coletivas (pilates, metabolic e mais)"]
+  }, {
+    name: "Meta Slim",
+    price: "449",
+    color: "border-blue-400",
+    description: "Equilíbrio perfeito",
+    paymentInfo: "1 entrada de R$ 399 + 11x de R$ 449",
+    features: ["Tudo do Meta Personal", "Nutricionista especializada", "Avaliação física e acompanhamento de resultados"]
+  }, {
+    name: "Meta Full",
+    price: "599",
+    color: "border-accent shadow-gold",
+    description: "Experiência completa",
+    paymentInfo: "1 entrada de R$ 599 + 11x de R$ 599",
+    popular: true,
+    features: ["Tudo dos planos anteriores", "Avaliação de movimento", "Bebidas quentes: chocolate, cappuccino, mocaccino", "Pré e pós-treino inclusos", "Acesso à sala recovery"]
+  }];
+  const highlights = [{
+    icon: Heart,
+    title: "Acompanhamento personalizado",
+    description: "Cada treino é único e pensado especialmente para você"
+  }, {
+    icon: Users,
+    title: "Atendimento de qualidade",
+    description: "Profissionais especializados sempre prontos para ajudar"
+  }, {
+    icon: Smartphone,
+    title: "Check-in fácil via app",
+    description: "Praticidade total na palma da sua mão"
+  }, {
+    icon: Calendar,
+    title: "Aulas coletivas inclusas",
+    description: "Variedade e motivação em grupo"
+  }, {
+    icon: TrendingUp,
+    title: "Resultados reais",
+    description: "Acompanhamento contínuo da sua evolução"
+  }];
+  const classes = [{
+    icon: Music,
+    name: "ZUMBA",
+    description: "Aula de fitness com ritmos latinos e coreografias, divertida e queima calorias.",
+    instructor: "Gil",
+    schedule: "Terça e quinta, 16h00"
+  }, {
+    icon: Target,
+    name: "D'GYM TRAINING",
+    description: "Mix completo criado pelo Profº Dodô, combinando dança, ginástica calistênica, funcional e relaxamento.",
+    instructor: "Dodô",
+    schedule: "Seg, Qua e Sex, 19h00"
+  }, {
+    icon: Flame,
+    name: "METABOLIC TRAINING",
+    description: "Aula intensa para queimar calorias e acelerar metabolismo com exercícios dinâmicos.",
+    instructor: "Evandro",
+    schedule: "Seg, Qua e Sex, 6h00 / Ter, Qui, 19h00"
+  }, {
+    icon: Dumbbell,
+    name: "PILATES SOLO",
+    description: "Fortalece postura, equilíbrio e flexibilidade com exercícios controlados e respiração.",
+    instructor: "Ana",
+    schedule: "Ter e Qui, 07h00 e 18h00"
+  }, {
+    icon: User,
+    name: "ALONGAMENTO",
+    description: "Melhora flexibilidade, reduz tensões e previne lesões com movimentos guiados.",
+    instructor: "Maicow",
+    schedule: "Ter e Qui, 10h00"
+  }];
+  const comparisonData = [{
+    service: "Personal Trainer 3x/semana",
+    separate: "R$ 600+"
+  }, {
+    service: "Nutricionista",
+    separate: "R$ 200"
+  }, {
+    service: "Avaliação Física",
+    separate: "R$ 50"
+  }, {
+    service: "Pilates + Coletivas",
+    separate: "R$ 250+"
+  }, {
+    service: "Recovery",
+    separate: "R$ 150"
+  }, {
+    service: "Bebidas Funcionais",
+    separate: "Média de R$ 150"
+  }];
+  return <div className="min-h-screen bg-background pt-16">
+      <SEOHead title="Planos - Life Personal Estúdio | Academia Premium em Campina Grande do Sul" description="Escolha o plano ideal para você no Life Personal Estúdio. Planos a partir de R$399/mês. Treinamento, nutrição e bem-estar em Campina Grande do Sul - PR." path="/planos" />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">
@@ -153,11 +121,9 @@ const Plans = () => {
               acolhido, respeitado e acompanhado em cada etapa da sua jornada.
             </p>
 
-            <Button 
-              onClick={() => document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" })}
-              size="lg" 
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
-            >
+            <Button onClick={() => document.getElementById("plans")?.scrollIntoView({
+            behavior: "smooth"
+          })} size="lg" className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group">
               Conheça nossos planos
               <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -169,12 +135,9 @@ const Plans = () => {
       <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
-            {highlights.map((highlight, index) => (
-              <Card 
-                key={highlight.title}
-                className="p-4 md:p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in h-full flex flex-col"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {highlights.map((highlight, index) => <Card key={highlight.title} className="p-4 md:p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in h-full flex flex-col" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <CardContent className="space-y-3 md:space-y-4 p-0 flex flex-col h-full">
                   <div className="mx-auto w-12 md:w-16 h-12 md:h-16 bg-gradient-gold rounded-full flex items-center justify-center">
                     <highlight.icon className="h-6 md:h-8 w-6 md:w-8 text-primary" />
@@ -182,8 +145,7 @@ const Plans = () => {
                   <h3 className="font-h3 text-primary text-xs md:text-sm font-semibold min-h-[2.5rem] flex items-center justify-center">{highlight.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed flex-grow flex items-center justify-center text-center">{highlight.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -199,18 +161,13 @@ const Plans = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {plans.map((plan, index) => (
-              <Card 
-                key={plan.name}
-                className={`relative p-4 md:p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in flex flex-col h-full`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-3 md:px-4 py-1 text-xs">
+            {plans.map((plan, index) => <Card key={plan.name} className={`relative p-4 md:p-6 text-center ${plan.color} hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 animate-scale-in flex flex-col h-full`} style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
+                {plan.popular && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-3 md:px-4 py-1 text-xs">
                     <Star className="w-3 md:w-4 h-3 md:h-4 mr-1" />
                     Mais Completo
-                  </Badge>
-                )}
+                  </Badge>}
 
                 <CardHeader className="pb-4">
                   <CardTitle className="text-xl md:text-2xl font-h2 text-primary mb-2">{plan.name}</CardTitle>
@@ -226,27 +183,17 @@ const Plans = () => {
 
                 <CardContent className="space-y-6 flex-grow flex flex-col">
                   <ul className="space-y-3 text-left flex-grow">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
+                    {plan.features.map((feature, idx) => <li key={idx} className="flex items-start space-x-3">
                         <Check className="h-4 md:h-5 w-4 md:w-5 text-green-500 flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
 
-                  <Button 
-                    onClick={handleWhatsApp}
-                    className={`w-full font-semibold text-sm md:text-base mt-auto ${
-                      plan.popular 
-                        ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' 
-                        : 'bg-primary hover:bg-primary/90 text-white'
-                    }`}
-                  >
+                  <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm md:text-base mt-auto ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90 text-white'}`}>
                     {plan.popular ? 'Quero o plano mais completo' : 'Quero este plano'}
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -262,12 +209,9 @@ const Plans = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
-            {classes.map((classItem, index) => (
-              <Card 
-                key={classItem.name}
-                className="p-4 md:p-6 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in h-full flex flex-col"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {classes.map((classItem, index) => <Card key={classItem.name} className="p-4 md:p-6 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-scale-in h-full flex flex-col" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-gold rounded-full flex items-center justify-center flex-shrink-0">
@@ -291,8 +235,7 @@ const Plans = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -317,12 +260,10 @@ const Plans = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {comparisonData.map((item, index) => (
-                    <TableRow key={index} className="hover:bg-muted/20">
+                  {comparisonData.map((item, index) => <TableRow key={index} className="hover:bg-muted/20">
                       <TableCell className="font-medium text-sm md:text-base">{item.service}</TableCell>
                       <TableCell className="text-center font-semibold text-primary text-sm md:text-base">{item.separate}</TableCell>
-                    </TableRow>
-                  ))}
+                    </TableRow>)}
                   <TableRow className="border-t-2 bg-red-50 font-bold">
                     <TableCell className="font-bold text-primary text-sm md:text-base">Total isolado:</TableCell>
                     <TableCell className="text-center font-bold text-red-600 text-base md:text-lg">R$ 1.400+</TableCell>
@@ -358,19 +299,13 @@ const Plans = () => {
               Comece sua transformação com a gente! Nossa equipe está pronta para 
               criar o plano perfeito para seus objetivos.
             </p>
-            <Button 
-              size="lg" 
-              onClick={handleWhatsApp}
-              className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto"
-            >
-              <span className="whitespace-nowrap">Falar com um especialista agora</span>
+            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto">
+              <span className="whitespace-nowrap">Falar com uma atendente agora</span>
               <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Plans;
