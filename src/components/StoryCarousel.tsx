@@ -11,72 +11,44 @@ const StoryCarousel = ({ className = "" }: StoryCarouselProps) => {
 
   const storyImages = [
     {
-      src: "/lovable-uploads/ca7e6037-9517-4397-a50b-cb47d27d20cd.png",
-      alt: "Área de treino funcional com equipamentos premium"
+      src: "/lovable-uploads/dae9f4fa-948e-487d-953e-170214e8e6af.png",
+      alt: "2004 - INÍCIO de um sonho: Academia Life Sport Fitness"
     },
     {
-      src: "/lovable-uploads/0f54dbfd-b10c-4c7a-8f31-5e8d31938a6f.png",
-      alt: "Vista completa do estúdio com área de café"
+      src: "/lovable-uploads/e4a9a6f2-9dac-4193-924c-912ee04c96bd.png",
+      alt: "2005-2006 - Um novo Ciclo e novos sonhos"
     },
     {
-      src: "/lovable-uploads/5a6e795a-16c4-4fdc-9d1e-671bf83ae283.png",
-      alt: "Área de musculação com equipamentos modernos"
+      src: "/lovable-uploads/03e7f5e6-d347-45f8-8fb3-e21e052ce707.png",
+      alt: "2009-2011 - A GRANDE reinauguração"
     },
     {
-      src: "/lovable-uploads/020895d0-4727-49a3-b26b-a04341f1c93b.png",
-      alt: "Espaço amplo para treinamento personalizado"
+      src: "/lovable-uploads/70c74dcc-70d9-4580-97c4-9961ddbe33ac.png",
+      alt: "2012-2014 - O MARCO da expansão - Crescimento exponencial"
     },
     {
-      src: "/lovable-uploads/0f1efe9d-c551-407a-98ee-18cb9aa64cc6.png",
-      alt: "Área funcional com piso de borracha premium"
+      src: "/lovable-uploads/916bc7ae-f9e6-4041-9961-6a3b6264495e.png",
+      alt: "2012-2014 - O MARCO da expansão - Ampliação da estrutura"
     },
     {
-      src: "/lovable-uploads/06df3d44-5396-467d-98e3-98020ef05125.png",
-      alt: "Equipamentos de última geração"
+      src: "/lovable-uploads/ed08fb03-0163-4c66-bd02-299815244210.png",
+      alt: "2012-2014 - O MARCO da expansão - Eventos e atividades coletivas"
     },
     {
-      src: "/lovable-uploads/0e50b423-a059-46b1-812c-94bb97041a7a.png",
-      alt: "Ambiente acolhedor e profissional"
+      src: "/lovable-uploads/3aef2d9b-39a8-411e-924e-f14a74f2de28.png",
+      alt: "2015-2020 - ENTRE ESTABILIDADE e tempestade - Período de consolidação"
     },
     {
-      src: "/lovable-uploads/17463614-c8e1-430c-88a5-9ab632ad39c1.png",
-      alt: "Espaço de relaxamento e convivência"
+      src: "/lovable-uploads/d3787581-421b-4c0c-8763-9367522091d9.png",
+      alt: "2015-2020 - ENTRE ESTABILIDADE e tempestade - Enfrentando desafios"
     },
     {
-      src: "/lovable-uploads/23810c73-f9d0-4d8f-92d5-b922a66bc1dc.png",
-      alt: "Área de aquecimento e alongamento"
+      src: "/lovable-uploads/14ba99d6-2cb8-4a5e-ae0b-6d9879affeb3.png",
+      alt: "2015-2020 - ENTRE ESTABILIDADE e tempestade - Pandemia COVID-19"
     },
     {
-      src: "/lovable-uploads/2be62f36-f655-4c07-a731-79ed6665affd.png",
-      alt: "Equipamentos funcionais especializados"
-    },
-    {
-      src: "/lovable-uploads/2eab7843-e9e1-4b4c-b8e0-6dde60d1502b.png",
-      alt: "Vista lateral do estúdio"
-    },
-    {
-      src: "/lovable-uploads/45ed08ef-1b3c-41a8-9ca0-d4a2f0e68f93.png",
-      alt: "Área de treinamento personalizado"
-    },
-    {
-      src: "/lovable-uploads/4f5a49ee-d244-4d9d-898f-8b9504251afa.png",
-      alt: "Equipamentos cardiovasculares"
-    },
-    {
-      src: "/lovable-uploads/5887683d-daed-44f6-a773-8375cc8221c0.png",
-      alt: "Espaço para grupos pequenos"
-    },
-    {
-      src: "/lovable-uploads/7015c4c7-ce1f-42fa-9ba6-3cd8e59920f0.png",
-      alt: "Área de musculação completa"
-    },
-    {
-      src: "/lovable-uploads/7a11de65-3d89-4c33-abbb-236959d4cab1.png",
-      alt: "Vista panorâmica do estúdio"
-    },
-    {
-      src: "/lovable-uploads/86e8ea06-b77e-418f-9754-1743a70bf9fe.png",
-      alt: "Ambiente motivador e inspirador"
+      src: "/lovable-uploads/dae74d17-dd70-4c3d-94c9-94254d5e3c7b.png",
+      alt: "2021 - UM NOVO caminho - Inovação e metodologia híbrida"
     }
   ];
 
