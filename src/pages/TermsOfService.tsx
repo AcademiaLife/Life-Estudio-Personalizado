@@ -25,7 +25,7 @@ const TermsOfService = () => {
     id: "foro",
     title: "8. Foro e Legislação"
   }];
-  return <LegalPageLayout title="Termos de Serviço" lastUpdated="22 de julho de 2024" sections={sections}>
+  return <LegalPageLayout title="Termos de Serviço" lastUpdated="27 de julho de 2025" sections={sections}>
       <section id="definicoes">
         <h2 className="text-2xl font-semibold mb-4">1. Definições e Escopo</h2>
         <div className="space-y-4 text-muted-foreground">
@@ -40,7 +40,7 @@ const TermsOfService = () => {
           <ul className="list-disc pl-6 space-y-2">
             <li>Treinamento personalizado individual e em pequenos grupos</li>
             <li>Consultoria e acompanhamento nutricional funcional</li>
-            <li>Aulas coletivas exclusivas (Pilates, alongamento, etc.)</li>
+            <li>Aulas coletivas (Pilates, alongamento, etc.)</li>
             <li>Monitoramento cardíaco durante treinos</li>
             <li>Acompanhamento via aplicativo exclusivo</li>
             <li>Consultoria para estilo de vida saudável</li>
@@ -58,7 +58,7 @@ const TermsOfService = () => {
             <li>Seguir as orientações dos profissionais</li>
             <li>Respeitar as normas de convivência do estúdio</li>
             <li>Efetuar pagamentos nas datas acordadas</li>
-            <li>Comunicar cancelamentos com antecedência mínima de 12 horas</li>
+            <li>Comunicar cancelamentos de check-ins com antecedência de até 1 hora antes da aula.</li>
           </ul>
 
           <h3 className="text-lg font-medium text-foreground">2.2 Responsabilidades do Life Personal Estúdio</h3>
@@ -76,7 +76,7 @@ const TermsOfService = () => {
       <section id="pagamentos">
         <h2 className="text-2xl font-semibold mb-4">3. Pagamentos e Planos</h2>
         <div className="space-y-4 text-muted-foreground">
-          <h3 className="text-lg font-medium text-foreground">3.1 Planos Disponíveis</h3>
+          <h3 className="text-lg font-medium text-foreground">3.1 Planos Disponíveis a partir de:</h3>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Meta Personal:</strong> R$ 399,00/mês</li>
             <li><strong>Meta Slim:</strong> R$ 449,00/mês</li>
@@ -85,17 +85,15 @@ const TermsOfService = () => {
 
           <h3 className="text-lg font-medium text-foreground">3.2 Condições de Pagamento</h3>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Mensalidades com vencimento todo dia 10 do mês</li>
+            <li>Para vencimento da mensalidade será considerado o dia da matricula.</li>
             <li>Primeira mensalidade paga no ato da contratação</li>
-            
-            <li>
-          </li>
-            <li>
-          </li>
+            <li>Multa de 2% sobre o valor em atraso após 10 dias do vencimento</li>
+            <li>Juros de 1% ao mês sobre o valor em atraso</li>
+            <li>Reajuste anual conforme IPCA ou índice que vier a substituí-lo</li>
           </ul>
 
           <h3 className="text-lg font-medium text-foreground">3.3 Formas de Pagamento</h3>
-          <p>Aceitamos pagamentos via PIX, cartão de crédito, débito automático e transferência bancária, pagamento por recorrência.</p>
+          <p>Aceitamos pagamentos via PIX, cartão de crédito, recorrência e transferência bancária.</p>
         </div>
       </section>
 
@@ -194,16 +192,9 @@ const TermsOfService = () => {
             <li>Lei Geral de Proteção de Dados (Lei 13.709/18)</li>
           </ul>
           <p>
-            Fica eleito o foro da Comarca de Campina Grande do Sul - PR para dirimir quaisquer controvérsias 
+            Fica eleito o foro da Comarca de São Paulo - SP para dirimir quaisquer controvérsias 
             decorrentes da prestação dos serviços, renunciando as partes a qualquer outro, 
             por mais privilegiado que seja.
-          </p>
-          <p className="mt-6 pt-4 border-t border-border font-medium">
-            Para dúvidas ou esclarecimentos sobre estes Termos de Serviço, entre em contato conosco:
-            <br />
-            <strong>E-mail:</strong> contato@lifepersonalestudio.com.br
-            <br />
-            <strong>WhatsApp:</strong> (11) 99999-9999
           </p>
         </div>
       </section>
