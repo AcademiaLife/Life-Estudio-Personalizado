@@ -12,6 +12,7 @@ const PlansSection = () => {
     name: "Meta Personal",
     price: "399",
     description: "Seu ponto de partida ideal",
+    paymentInfo: "1 entrada de R$ 399 + 11x de R$ 399",
     benefits: ["Personal 3x por semana (turmas até 3 alunos)", "Acesso livre para cardio e extras nos demais dias", "Monitoramento cardíaco durante o treino", "Aulas coletivas (pilates, metabolic e mais)"],
     popular: false,
     color: "border-border"
@@ -19,16 +20,18 @@ const PlansSection = () => {
     name: "Meta Slim",
     price: "449",
     description: "Equilíbrio perfeito",
+    paymentInfo: "1 entrada de R$ 399 + 11x de R$ 449",
     benefits: ["Tudo do Meta Personal", "Nutricionista especializada", "Avaliação física e acompanhamento de resultados"],
-    popular: true,
-    color: "border-accent shadow-gold"
+    popular: false,
+    color: "border-border"
   }, {
     name: "Meta Full",
     price: "599",
     description: "Experiência completa",
+    paymentInfo: "1 entrada de R$ 599 + 11x de R$ 599",
     benefits: ["Tudo dos planos anteriores", "Avaliação de movimento", "Bebidas quentes: chocolate, cappuccino, mocaccino", "Pré e pós-treino inclusos", "Acesso à sala recovery"],
-    popular: false,
-    color: "border-border"
+    popular: true,
+    color: "border-accent shadow-gold"
   }];
   const handleWhatsApp = () => {
     // Track analytics
@@ -66,6 +69,7 @@ const PlansSection = () => {
                       <span className="text-lg">R$</span> {plan.price}
                       <span className="text-base font-normal text-muted-foreground">/mês</span>
                     </p>
+                    <p className="text-xs text-muted-foreground mt-2">{plan.paymentInfo}</p>
                   </div>
                 </CardHeader>
 
