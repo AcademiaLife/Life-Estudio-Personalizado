@@ -19,20 +19,12 @@ const About = () => {
     description: "Construímos vínculos baseados na honestidade e clareza"
   }, {
     icon: UserCheck,
-    title: "Respeito por clientes e colaboradores",
+    title: "Respeito pelos clientes e colaboradores",
     description: "Tratamos todos com dignidade, empatia e consideração"
   }, {
     icon: Zap,
     title: "Busca constante por aprimoramentos e inovações",
     description: "Evoluímos continuamente para oferecer o melhor"
-  }, {
-    icon: Recycle,
-    title: "Comprometimento com a sustentabilidade",
-    description: "Cuidamos do planeta enquanto cuidamos de você"
-  }, {
-    icon: Sparkles,
-    title: "Paixão por transformar vidas com propósito",
-    description: "Cada conquista nossa é uma vida transformada"
   }];
   const pilares = [{
     icon: Brain,
@@ -127,9 +119,8 @@ const About = () => {
                 <h2 className="font-h2 text-primary mb-6">Nossa Missão</h2>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                <strong>Ajudar e inspirar pessoas através do exercício físico, enriquecendo todas as áreas da sua vida</strong> 
-                — nos aspectos mental, social e físico — transformando vidas e realizando sonhos com acolhimento, 
-                propósito e excelência.
+                Ajudar e inspirar pessoas através do exercício físico enriquecendo todas as áreas da sua vida, 
+                nos aspectos mental, social e físico, transformando vidas e realizando sonhos.
               </p>
             </Card>
 
@@ -142,8 +133,8 @@ const About = () => {
                 <h2 className="font-h2 text-primary mb-6">Nossa Visão</h2>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                <strong>Ser referência no mercado de Wellness como um estúdio inovador, confiável e transformador</strong>, 
-                reconhecido pela excelência na experiência oferecida e pelo impacto positivo na vida de cada aluno.
+                Fazer com que o Life Personal Estúdio seja reconhecido positivamente por todos 
+                como uma grande empresa que oferece a melhor experiência no ramo de Wellness.
               </p>
             </Card>
           </div>

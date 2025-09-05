@@ -58,8 +58,8 @@ const About = () => {
               </div>
               <h3 className="font-h3 text-primary mb-4">Missão</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Oferecer treinamento personalizado de máxima qualidade, focado em resultados sustentáveis 
-                e no bem-estar integral de nossos alunos, sempre com excelência e dedicação.
+                Ajudar e inspirar pessoas através do exercício físico enriquecendo todas as áreas da sua vida, 
+                nos aspectos mental, social e físico, transformando vidas e realizando sonhos.
               </p>
             </div>
           </Card>
@@ -71,8 +71,8 @@ const About = () => {
               </div>
               <h3 className="font-h3 text-primary mb-4">Visão</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Ser referência nacional em treinamento personalizado, reconhecidos pela transformação 
-                de vidas e pela inovação em metodologias de fitness e bem-estar.
+                Fazer com que o Life Personal Estúdio seja reconhecido positivamente por todos 
+                como uma grande empresa que oferece a melhor experiência no ramo de Wellness.
               </p>
             </div>
           </Card>
@@ -84,8 +84,8 @@ const About = () => {
               </div>
               <h3 className="font-h3 text-primary mb-4">Valores</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Excelência, personalização, respeito à individualidade, comprometimento com resultados, 
-                ética profissional e paixão pela transformação de vidas.
+                Excelência no serviço de atendimento, transparência e confiança nos relacionamentos, 
+                respeito pelos clientes e colaboradores, busca constante por aprimoramentos e inovações.
               </p>
             </div>
           </Card>
