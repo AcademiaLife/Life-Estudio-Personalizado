@@ -12,21 +12,43 @@ const PlansSection = () => {
     name: "Meta Personal",
     price: "399",
     description: "Seu ponto de partida ideal",
-    benefits: ["Personal 3x por semana (turmas até 3 alunos)", "Acesso livre para cardio e extras nos demais dias", "Monitoramento cardíaco durante o treino", "Aulas coletivas (pilates, metabolic e mais)"],
+    benefits: [
+      "🏋🏻 Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
+      "✅ Acesso livre nos demais dias para cárdio e extras",
+      "📊 Monitoramento cardíaco durante o treino",
+      "💪🏻 Aulas coletivas, como pilates, metabolic e mais"
+    ],
     popular: false,
     color: "border-border"
   }, {
     name: "Meta Slim",
     price: "449",
     description: "Equilíbrio perfeito",
-    benefits: ["Tudo do Meta Personal", "Nutricionista especializada", "Avaliação física e acompanhamento de resultados"],
+    benefits: [
+      "🏋🏻 Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
+      "✅ Acesso livre nos demais dias para cárdio e extras",
+      "🍎 Nutricionista",
+      "⏱ Avaliação física (acompanhamentos de resultados)",
+      "📊 Monitoramento cardíaco durante o treino",
+      "💪🏻 Aulas coletivas, como pilates, metabolic e mais"
+    ],
     popular: true,
     color: "border-accent shadow-gold"
   }, {
     name: "Meta Full",
     price: "599",
     description: "Experiência completa",
-    benefits: ["Tudo dos planos anteriores", "Avaliação de movimento", "Bebidas quentes: chocolate, cappuccino, mocaccino", "Pré e pós-treino inclusos", "Acesso à sala recovery"],
+    benefits: [
+      "🏋🏻 Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
+      "✅ Acesso livre nos demais dias para cárdio, aulas ou treinos extras",
+      "🍎 Nutricionista",
+      "⏱ Avaliação física",
+      "🚶🏻‍♀ Avaliação de movimento",
+      "📊 Monitoramento cardíaco durante o treino",
+      "☕ Ficha de bebidas quente (Chocolate, capuccino, mocaccino)",
+      "🥤 Pré treino e pós treino",
+      "😎 Acesso a sala recovery"
+    ],
     popular: false,
     color: "border-border"
   }];
