@@ -39,7 +39,8 @@ const ChooseUsSection = () => {
         </div>
 
         <div className="text-center max-w-4xl mx-auto animate-fade-in">
-          <p className="text-xl text-muted-foreground leading-relaxed">Transforme sua saúde e bem-estar com um treinamento único que respeita seu ritmo e suas metas. O Life Personal Estúdio oferece a você um ambiente onde os resultados falam mais alto que qualquer promessa.</p>
+          <p className="text-xl text-muted-foreground leading-relaxed">Ajudar e inspirar pessoas através do exercício físico enriquecendo todas as áreas da sua vida, nos aspectos mental, social e físico, transformando vidas e realizando sonhos.
+        </p>
         </div>
       </div>
     </section>;
