@@ -49,6 +49,30 @@ const StoryCarousel = ({ className = "" }: StoryCarouselProps) => {
     {
       src: "/lovable-uploads/dae74d17-dd70-4c3d-94c9-94254d5e3c7b.png",
       alt: "2021 - UM NOVO caminho - Inovação e metodologia híbrida"
+    },
+    {
+      src: "/lovable-uploads/61910244-d625-4dd9-b4c9-85e52bb4851f.png",
+      alt: "2021 - UM NOVO caminho - Reformulação do espaço"
+    },
+    {
+      src: "/lovable-uploads/6f38537a-8136-47a1-9b33-c015307677e6.png",
+      alt: "2024 - Nasce o Life Personal Estúdio"
+    },
+    {
+      src: "/lovable-uploads/abfacdad-034a-4d27-85ef-1f594d1e5f08.png",
+      alt: "2024 - Nasce o Life Personal Estúdio - Foco humanizado"
+    },
+    {
+      src: "/lovable-uploads/a3f508a1-2379-40d9-9760-8e1e8b6c6287.png",
+      alt: "2024 - A VIRADA para o Propósito"
+    },
+    {
+      src: "/lovable-uploads/5de897b4-8e3a-46e8-802b-1e1bf11fdb8d.png",
+      alt: "2025 - E continua... - Life Personal Estúdio"
+    },
+    {
+      src: "/lovable-uploads/0cb170a3-9a9d-4d95-ad95-559f51fff7e6.png",
+      alt: "2025 - E continua... - Metodologia de treinamento avançado"
     }
   ];
 
