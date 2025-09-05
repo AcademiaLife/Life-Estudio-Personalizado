@@ -30,7 +30,7 @@ const PlansSection = () => {
       "Monitoramento cardíaco durante o treino",
       "Aulas coletivas, como pilates, metabolic e mais",
       "Nutricionista",
-      "Avaliação física (acompanhamentos de resultados)"
+      "Avaliação física"
     ],
     popular: true,
     color: "border-accent shadow-gold"
