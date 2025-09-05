@@ -146,9 +146,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-h1 text-primary mb-6">Nossos Valores</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Os princípios que orientam cada decisão e cada relacionamento que construímos no nosso estúdio.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Excelência no serviço de atendimento, transparência e confiança nos relacionamentos, respeito pelos clientes e colaboradores, busca constante por aprimoramentos e inovações.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
