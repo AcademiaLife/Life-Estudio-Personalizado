@@ -27,10 +27,10 @@ const PlansSection = () => {
     benefits: [
       "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
       "Acesso livre nos demais dias para cárdio e extras",
-      "Nutricionista",
-      "Avaliação física (acompanhamentos de resultados)",
       "Monitoramento cardíaco durante o treino",
-      "Aulas coletivas, como pilates, metabolic e mais"
+      "Aulas coletivas, como pilates, metabolic e mais",
+      "Nutricionista",
+      "Avaliação física (acompanhamentos de resultados)"
     ],
     popular: true,
     color: "border-accent shadow-gold"
@@ -41,10 +41,11 @@ const PlansSection = () => {
     benefits: [
       "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
       "Acesso livre nos demais dias para cárdio, aulas ou treinos extras",
+      "Monitoramento cardíaco durante o treino",
+      "Aulas coletivas, como pilates, metabolic e mais",
       "Nutricionista",
       "Avaliação física",
       "Avaliação de movimento",
-      "Monitoramento cardíaco durante o treino",
       "Ficha de bebidas quente (Chocolate, capuccino, mocaccino)",
       "Pré treino e pós treino",
       "Acesso a sala recovery"
