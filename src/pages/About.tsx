@@ -5,6 +5,7 @@ import { Target, Heart, Trophy, Users, Star, Award, ArrowRight, Brain, Dumbbell,
 import trainingImage from "@/assets/training-image.jpg";
 import studioImage from "@/assets/studio-interior.jpg";
 import ImageBanner from "@/components/ImageBanner";
+import StoryCarousel from "@/components/StoryCarousel";
 const About = () => {
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer mais sobre o Life Personal Estúdio e agendar minha avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
@@ -96,11 +97,8 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">Hoje, somos mais que um estúdio, somos um parceiro na sua jornada de bem-estar, comprometidos em proporcionar não apenas resultados excepcionais, mas também momentos de alegria, superação e crescimento pessoal.</p>
             </div>
             
-            <div className="relative animate-scale-in">
-              <img src={trainingImage} alt="Atendimento personalizado no Life Estúdio" className="rounded-2xl shadow-elegant w-full" />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-gold p-6 rounded-2xl shadow-gold">
-                <Heart className="h-12 w-12 text-primary" />
-              </div>
+            <div className="animate-scale-in">
+              <StoryCarousel className="w-full" />
             </div>
           </div>
         </div>
