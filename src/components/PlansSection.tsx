@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check, Star, ArrowRight } from "lucide-react";
+import { Check, Star, ArrowRight, Award } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -51,6 +51,7 @@ const PlansSection = () => {
       "Acesso a sala recovery"
     ],
     popular: false,
+    bestValue: true,
     color: "border-border"
   }];
   const handleWhatsApp = () => {
@@ -78,6 +79,11 @@ const PlansSection = () => {
                 {plan.popular && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
                     <Star className="w-4 h-4 mr-1" />
                     Mais Popular
+                  </Badge>}
+                
+                {plan.bestValue && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-4 py-1">
+                    <Award className="w-4 h-4 mr-1" />
+                    Melhor Custo Benefício
                   </Badge>}
 
                 <CardHeader className="pb-4">
@@ -108,7 +114,7 @@ const PlansSection = () => {
                       </Button>
                     </Link>
                     
-                    <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm sm:text-base ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
+                    <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm sm:text-base ${plan.popular || plan.bestValue ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
                       <span className="sm:hidden">Comece agora</span>
                       <span className="hidden sm:inline">Comece sua transformação</span>
                     </Button>
