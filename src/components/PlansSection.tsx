@@ -13,10 +13,10 @@ const PlansSection = () => {
     price: "399",
     description: "Seu ponto de partida ideal",
     benefits: [
-      "🏋🏻 Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
-      "✅ Acesso livre nos demais dias para cárdio e extras",
-      "📊 Monitoramento cardíaco durante o treino",
-      "💪🏻 Aulas coletivas, como pilates, metabolic e mais"
+      "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
+      "Acesso livre nos demais dias para cárdio e extras",
+      "Monitoramento cardíaco durante o treino",
+      "Aulas coletivas, como pilates, metabolic e mais"
     ],
     popular: false,
     color: "border-border"
@@ -25,12 +25,12 @@ const PlansSection = () => {
     price: "449",
     description: "Equilíbrio perfeito",
     benefits: [
-      "🏋🏻 Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
-      "✅ Acesso livre nos demais dias para cárdio e extras",
-      "🍎 Nutricionista",
-      "⏱ Avaliação física (acompanhamentos de resultados)",
-      "📊 Monitoramento cardíaco durante o treino",
-      "💪🏻 Aulas coletivas, como pilates, metabolic e mais"
+      "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
+      "Acesso livre nos demais dias para cárdio e extras",
+      "Nutricionista",
+      "Avaliação física (acompanhamentos de resultados)",
+      "Monitoramento cardíaco durante o treino",
+      "Aulas coletivas, como pilates, metabolic e mais"
     ],
     popular: true,
     color: "border-accent shadow-gold"
@@ -39,15 +39,15 @@ const PlansSection = () => {
     price: "599",
     description: "Experiência completa",
     benefits: [
-      "🏋🏻 Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
-      "✅ Acesso livre nos demais dias para cárdio, aulas ou treinos extras",
-      "🍎 Nutricionista",
-      "⏱ Avaliação física",
-      "🚶🏻‍♀ Avaliação de movimento",
-      "📊 Monitoramento cardíaco durante o treino",
-      "☕ Ficha de bebidas quente (Chocolate, capuccino, mocaccino)",
-      "🥤 Pré treino e pós treino",
-      "😎 Acesso a sala recovery"
+      "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
+      "Acesso livre nos demais dias para cárdio, aulas ou treinos extras",
+      "Nutricionista",
+      "Avaliação física",
+      "Avaliação de movimento",
+      "Monitoramento cardíaco durante o treino",
+      "Ficha de bebidas quente (Chocolate, capuccino, mocaccino)",
+      "Pré treino e pós treino",
+      "Acesso a sala recovery"
     ],
     popular: false,
     color: "border-border"
