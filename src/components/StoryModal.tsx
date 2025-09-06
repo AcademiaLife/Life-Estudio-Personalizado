@@ -172,7 +172,7 @@ const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
               <img
                 src={currentImage.src}
                 alt={currentImage.alt}
-                className="w-full h-auto max-h-[45vh] sm:max-h-[55vh] lg:max-h-[65vh] object-contain rounded-lg sm:rounded-xl shadow-elegant"
+                className="w-full h-auto max-h-[60vh] sm:max-h-[70vh] lg:max-h-[80vh] object-contain rounded-lg sm:rounded-xl shadow-elegant"
               />
               
               {/* Navigation Arrows */}
