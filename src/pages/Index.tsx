@@ -47,9 +47,10 @@ const Index = () => {
               Pronto para investir em você?
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">Venha viver a experiência Life Personal Estúdio e veja como podemos ajudar você a alcançar seus objetivos.</p>
-            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-4 text-lg shadow-gold hover:shadow-xl group">
-              Agende sua aula experimental
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-gradient-gold text-primary font-semibold px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-lg shadow-gold hover:shadow-xl group w-full sm:w-auto">
+              <span className="hidden sm:inline">Agende sua aula experimental</span>
+              <span className="sm:hidden">Agendar Aula Grátis</span>
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
