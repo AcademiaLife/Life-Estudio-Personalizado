@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
@@ -6,7 +7,11 @@ import trainingImage from "@/assets/training-image.jpg";
 import studioImage from "@/assets/studio-interior.jpg";
 import ImageBanner from "@/components/ImageBanner";
 import StoryCarousel from "@/components/StoryCarousel";
+import StoryModal from "@/components/StoryModal";
+
 const About = () => {
+  const [isStoryModalOpen, setIsStoryModalOpen] = useState(false);
+
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer mais sobre o Life Personal Estúdio e agendar minha avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
   };
@@ -67,9 +72,11 @@ const About = () => {
               Descubra um novo conceito de bem-estar e transformação pessoal.
             </p>
 
-            <Button onClick={() => document.getElementById("about-content")?.scrollIntoView({
-            behavior: "smooth"
-          })} size="lg" className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group">
+            <Button 
+              onClick={() => setIsStoryModalOpen(true)} 
+              size="lg" 
+              className="btn-premium bg-gradient-gold text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg shadow-gold hover:shadow-xl group"
+            >
               Conheça Nossa História
               <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -283,6 +290,12 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Story Modal */}
+      <StoryModal 
+        isOpen={isStoryModalOpen} 
+        onClose={() => setIsStoryModalOpen(false)} 
+      />
     </div>;
 };
 export default About;
