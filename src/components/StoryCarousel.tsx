@@ -126,9 +126,9 @@ const StoryCarousel = ({ className = "" }: StoryCarouselProps) => {
         </div>
       </div>
       
-      {/* Ícone decorativo */}
-      <div className="absolute -bottom-6 -right-6 bg-gradient-gold p-6 rounded-2xl shadow-gold">
-        <Heart className="h-12 w-12 text-primary" />
+      {/* Ícone decorativo - hidden on mobile to prevent overflow */}
+      <div className="absolute -bottom-6 -right-6 bg-gradient-gold p-4 md:p-6 rounded-2xl shadow-gold hidden sm:block">
+        <Heart className="h-8 w-8 md:h-12 md:w-12 text-primary" />
       </div>
     </div>
   );

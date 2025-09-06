@@ -56,8 +56,8 @@ const About = () => {
   return <div className="min-h-screen bg-background pt-16">
       <SEOHead title="Sobre - Life Personal Estúdio | Nossa História e Valores" description="Conheça a história, missão e valores do Life Personal Estúdio em Campina Grande do Sul - PR. Academia premium focada em resultados e excelência." path="/sobre" />
       {/* Hero Section */}
-      <section className="py-12 md:py-20 bg-gradient-subtle">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-12 md:py-20 bg-gradient-subtle overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 max-w-full">
           <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8 animate-fade-in">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-hero text-primary leading-tight">
               Sobre o 
@@ -197,10 +197,10 @@ const About = () => {
       </section>
 
       {/* Sua experiência, do seu jeito */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative animate-scale-in order-2 lg:order-1">
+      <section className="py-20 bg-gradient-subtle overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 max-w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="relative animate-scale-in order-2 lg:order-1 overflow-hidden">
               <ImageBanner images={[{
               src: "/lovable-uploads/ca7e6037-9517-4397-a50b-cb47d27d20cd.png",
               alt: "Área de treino funcional com equipamentos premium"
@@ -217,8 +217,8 @@ const About = () => {
               src: "/lovable-uploads/0f1efe9d-c551-407a-98ee-18cb9aa64cc6.png",
               alt: "Área funcional com piso de borracha premium"
             }]} className="max-w-6xl mx-auto" />
-              <div className="absolute -bottom-6 -left-6 bg-gradient-gold p-6 rounded-2xl shadow-gold z-10">
-                <Users className="h-12 w-12 text-primary" />
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-gradient-gold p-3 md:p-6 rounded-2xl shadow-gold z-10 hidden sm:block">
+                <Users className="h-8 w-8 md:h-12 md:w-12 text-primary" />
               </div>
             </div>
 

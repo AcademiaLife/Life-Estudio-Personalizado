@@ -152,8 +152,8 @@ const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
   const currentImage = storyImages[currentImageIndex];
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="relative w-full max-w-6xl max-h-[90vh] bg-background rounded-2xl shadow-2xl overflow-hidden animate-scale-in">
+    <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4">
+      <div className="relative w-full max-w-sm sm:max-w-4xl lg:max-w-6xl max-h-[95vh] sm:max-h-[90vh] bg-background rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden animate-scale-in">
         {/* Close Button */}
         <Button
           onClick={onClose}
@@ -165,14 +165,14 @@ const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
         </Button>
 
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
+        <div className="flex flex-col h-full max-h-[95vh] sm:max-h-[90vh]">
           {/* Image Section */}
-          <div className="relative flex-1 bg-gradient-subtle flex items-center justify-center p-4 lg:p-8">
-            <div className="relative w-full max-w-2xl">
+          <div className="relative flex-1 bg-gradient-subtle flex items-center justify-center p-3 sm:p-4 lg:p-8 overflow-hidden">
+            <div className="relative w-full max-w-xs sm:max-w-lg lg:max-w-2xl">
               <img
                 src={currentImage.src}
                 alt={currentImage.alt}
-                className="w-full h-auto max-h-[60vh] lg:max-h-[70vh] object-contain rounded-xl shadow-elegant"
+                className="w-full h-auto max-h-[45vh] sm:max-h-[55vh] lg:max-h-[65vh] object-contain rounded-lg sm:rounded-xl shadow-elegant"
               />
               
               {/* Navigation Arrows */}
@@ -180,37 +180,37 @@ const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
                 onClick={prevImage}
                 variant="ghost"
                 size="icon"
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm"
+                className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm w-8 h-8 sm:w-10 sm:h-10"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               
               <Button
                 onClick={nextImage}
                 variant="ghost"
                 size="icon"
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm"
+                className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm w-8 h-8 sm:w-10 sm:h-10"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </div>
           </div>
 
           {/* Info Section */}
-          <div className="lg:w-96 bg-background border-l p-6 lg:p-8 flex flex-col justify-between">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="bg-gradient-gold p-3 rounded-full">
-                  <Heart className="h-6 w-6 text-primary" />
+          <div className="bg-background border-t p-4 sm:p-6 flex flex-col justify-between min-h-0">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="bg-gradient-gold p-2 sm:p-3 rounded-full">
+                  <Heart className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <span className="text-2xl font-bold text-primary">{currentImage.year}</span>
+                <span className="text-lg sm:text-xl font-bold text-primary">{currentImage.year}</span>
               </div>
               
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold text-primary leading-tight">
+              <div className="space-y-2">
+                <h3 className="text-base sm:text-lg font-bold text-primary leading-tight">
                   {currentImage.title}
                 </h3>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground">
                   {currentImage.subtitle}
                 </p>
               </div>
