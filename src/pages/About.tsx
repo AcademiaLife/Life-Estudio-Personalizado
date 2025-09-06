@@ -265,9 +265,9 @@ const About = () => {
               <br />
               Agende sua avaliação gratuita e conheça uma nova forma de cuidar de si mesmo.
             </p>
-            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-primary text-white font-semibold px-12 py-6 text-xl shadow-elegant hover:shadow-xl group hover:bg-primary/90">
-              Agende sua aula experimental
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-primary text-white font-semibold px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl shadow-elegant hover:shadow-xl group hover:bg-primary/90 w-full sm:w-auto">
+              <span className="text-center">Agendar Aula Grátis</span>
+              <ArrowRight className="ml-2 sm:ml-3 h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
           </div>
         </div>
