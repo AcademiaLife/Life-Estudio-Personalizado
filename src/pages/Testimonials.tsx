@@ -142,12 +142,8 @@ const TestimonialsPage = () => {
                 <div className="text-white/90 text-sm md:text-base font-medium mb-1">
                   Net Promoter Score
                 </div>
-                <div className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
-                  +87.9
-                </div>
-                <div className="text-white/80 text-sm md:text-base">
-                  2023
-                </div>
+                <div className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-2">+92,6</div>
+                <div className="text-white/80 text-sm md:text-base">2025</div>
               </div>
               
               {/* Shine overlay */}
@@ -219,14 +215,7 @@ const TestimonialsPage = () => {
                   <DialogTrigger asChild>
                     <div className="flex justify-center cursor-pointer">
                       <div className="relative w-48 md:w-56 aspect-[9/16] rounded-lg overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <video 
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="w-full h-full object-cover"
-                          poster={sebraeVideoThumbnail}
-                        >
+                        <video autoPlay muted loop playsInline className="w-full h-full object-cover" poster={sebraeVideoThumbnail}>
                           <source src="/lovable-uploads/Vem pra Life.mp4" type="video/mp4" />
                           Seu navegador não suporta o elemento de vídeo.
                         </video>
@@ -242,13 +231,7 @@ const TestimonialsPage = () => {
                   
                   <DialogContent className="max-w-xs md:max-w-sm p-0 bg-black border-0 overflow-hidden">
                     <div className="relative aspect-[9/16] w-full bg-black">
-                      <video 
-                        controls 
-                        autoPlay
-                        preload="metadata"
-                        className="w-full h-full object-cover bg-black"
-                        poster={sebraeVideoThumbnail}
-                      >
+                      <video controls autoPlay preload="metadata" className="w-full h-full object-cover bg-black" poster={sebraeVideoThumbnail}>
                         <source src="/lovable-uploads/Vem pra Life.mp4" type="video/mp4" />
                         Seu navegador não suporta o elemento de vídeo.
                       </video>
