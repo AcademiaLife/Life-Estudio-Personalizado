@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import SEOHead from "@/components/SEOHead";
-import { Dumbbell, Apple, Users, Activity, Heart, Zap, Brain, Smartphone, Target, Leaf, ArrowRight, CheckCircle, Clock, User } from "lucide-react";
+import { Dumbbell, Apple, Users, Activity, Heart, Zap, Brain, Smartphone, Target, Leaf, ArrowRight, CheckCircle, Clock, User, X } from "lucide-react";
 import { useState } from "react";
 const Services = () => {
   const [openDialog, setOpenDialog] = useState<string | null>(null);
@@ -199,18 +199,28 @@ const Services = () => {
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                      <DialogHeader>
-                        <DialogTitle className="flex items-center space-x-3">
-                          <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-gold rounded-lg">
-                            <service.icon className="h-5 w-5 text-primary" />
-                          </div>
-                          <span>{service.title}</span>
-                        </DialogTitle>
-                        <DialogDescription>
-                          {service.description}
-                        </DialogDescription>
-                      </DialogHeader>
+                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-hidden relative">
+                      {/* Fixed Close Button */}
+                      <button
+                        onClick={() => setOpenDialog(null)}
+                        className="fixed top-4 right-4 z-50 bg-background/80 hover:bg-background/90 backdrop-blur-sm rounded-full p-2 shadow-lg transition-all duration-200"
+                        aria-label="Fechar"
+                      >
+                        <X className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                      </button>
+                      
+                      <div className="overflow-y-auto max-h-[calc(80vh-2rem)] pr-4">
+                        <DialogHeader>
+                          <DialogTitle className="flex items-center space-x-3 pr-12">
+                            <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-gold rounded-lg">
+                              <service.icon className="h-5 w-5 text-primary" />
+                            </div>
+                            <span>{service.title}</span>
+                          </DialogTitle>
+                          <DialogDescription>
+                            {service.description}
+                          </DialogDescription>
+                        </DialogHeader>
                       
                       <div className="space-y-6 mt-6">
                         <div>
@@ -259,8 +269,9 @@ const Services = () => {
                             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                           </Button>
                         </div>
-                      </div>
-                    </DialogContent>
+                         </div>
+                       </div>
+                     </DialogContent>
                   </Dialog>
                 </div>
               </Card>)}
