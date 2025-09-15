@@ -13,8 +13,8 @@ const ValuePropositionSection = () => {
     src: "/lovable-uploads/da2e1463-7c06-4115-8111-cceaf499ad29.png",
     alt: "Vista panorâmica do estúdio com equipamentos premium e área de treino funcional"
   }, {
-    src: "/lovable-uploads/2eab7843-e9e1-4b4c-b8e0-6dde60d1502b.png",
-    alt: "Área principal com espelho e ambiente sofisticado para treinamento personalizado"
+    src: "/lovable-uploads/new-studio-04.jpg",
+    alt: "Área de musculação com equipamentos modernos e ambiente profissional"
   }, {
     src: "/lovable-uploads/bfefcc3c-2ced-47af-8030-d1f768d4ab2f.png",
     alt: "Zona cardio com esteiras e equipamentos de última geração"
