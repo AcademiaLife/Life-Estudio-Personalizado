@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { X, ChevronLeft, ChevronRight, Heart } from "lucide-react";
@@ -10,6 +10,8 @@ interface StoryModalProps {
 
 const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
   const storyImages = [
     {
@@ -142,6 +144,30 @@ const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
     if (e.key === "Escape") onClose();
   };
 
+  // Touch/Swipe handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextImage();
+    }
+    if (isRightSwipe) {
+      prevImage();
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
@@ -168,19 +194,24 @@ const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
         <div className="flex flex-col h-full max-h-[95vh] sm:max-h-[90vh]">
           {/* Image Section */}
           <div className="relative flex-1 bg-gradient-subtle flex items-center justify-center p-3 sm:p-4 lg:p-8 overflow-hidden">
-            <div className="relative w-full max-w-xs sm:max-w-lg lg:max-w-2xl">
+            <div 
+              className="relative w-full max-w-xs sm:max-w-lg lg:max-w-2xl"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <img
                 src={currentImage.src}
                 alt={currentImage.alt}
-                className="w-full h-auto max-h-[60vh] sm:max-h-[70vh] lg:max-h-[80vh] object-contain rounded-lg sm:rounded-xl shadow-elegant"
+                className="w-full h-auto max-h-[60vh] sm:max-h-[70vh] lg:max-h-[80vh] object-contain rounded-lg sm:rounded-xl shadow-elegant select-none"
               />
               
-              {/* Navigation Arrows */}
+              {/* Navigation Arrows - Hidden on mobile, visible on desktop */}
               <Button
                 onClick={prevImage}
                 variant="ghost"
                 size="icon"
-                className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm w-8 h-8 sm:w-10 sm:h-10"
+                className="hidden sm:flex absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm w-8 h-8 sm:w-10 sm:h-10"
               >
                 <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
@@ -189,7 +220,7 @@ const StoryModal = ({ isOpen, onClose }: StoryModalProps) => {
                 onClick={nextImage}
                 variant="ghost"
                 size="icon"
-                className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm w-8 h-8 sm:w-10 sm:h-10"
+                className="hidden sm:flex absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm w-8 h-8 sm:w-10 sm:h-10"
               >
                 <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
