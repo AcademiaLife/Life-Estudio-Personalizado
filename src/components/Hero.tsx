@@ -11,7 +11,7 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
+  return <section className="relative min-h-[120vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
       {/* Hero Carousel */}
       <HeroCarousel />
 

@@ -46,7 +46,7 @@ const HeroCarousel = () => {
 
   return (
     <div 
-      className="absolute inset-0 z-0"
+      className="absolute inset-0 z-0 min-h-[120vh] sm:min-h-screen"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
