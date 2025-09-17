@@ -248,7 +248,7 @@ const TestimonialsPage = () => {
       <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex justify-center animate-scale-in">
-            <Card className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 md:p-10 lg:p-12 rounded-2xl shadow-elegant border border-gray-700/50 max-w-sm mx-auto hover-scale transition-all duration-500">
+            <Card className="relative bg-gradient-to-br from-primary via-primary-glow to-accent p-8 md:p-10 lg:p-12 rounded-2xl shadow-elegant border border-white/30 max-w-sm mx-auto hover-scale transition-all duration-500">
               {/* Studio Name */}
               <div className="text-center mb-6">
                 <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold leading-tight">
