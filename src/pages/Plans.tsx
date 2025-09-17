@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import SEOHead from "@/components/SEOHead";
-import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp, Zap, Target, Music, Dumbbell, Flame, User, Clock } from "lucide-react";
+import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp, Zap, Target, Music, Dumbbell, Flame, User, Clock, Award } from "lucide-react";
 const Plans = () => {
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer os planos do Life Elite Studio e agendar uma avaliação.&type=phone_number&app_absent=0", "_blank");
@@ -11,25 +11,30 @@ const Plans = () => {
   const plans = [{
     name: "Meta Personal",
     price: "399",
-    color: "border-green-400",
+    color: "border-border",
     description: "Seu ponto de partida ideal",
     paymentInfo: "1 entrada de R$ 399 + 11x de R$ 399",
-    features: ["Personal 3x por semana (turmas até 3 alunos)", "Acesso livre para cardio e extras nos demais dias", "Monitoramento cardíaco durante o treino", "Aulas coletivas (pilates, metabolic e mais)"]
+    features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio e extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais"],
+    popular: false,
+    bestValue: false
   }, {
     name: "Meta Slim",
     price: "449",
-    color: "border-blue-400",
+    color: "border-accent shadow-gold",
     description: "Equilíbrio perfeito",
     paymentInfo: "1 entrada de R$ 399 + 11x de R$ 449",
-    features: ["Tudo do Meta Personal", "Nutricionista especializada", "Avaliação física e acompanhamento de resultados"]
+    features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio e extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais", "Nutricionista", "Avaliação física"],
+    popular: true,
+    bestValue: false
   }, {
     name: "Meta Full",
     price: "599",
-    color: "border-accent shadow-gold",
+    color: "border-border",
     description: "Experiência completa",
     paymentInfo: "1 entrada de R$ 599 + 11x de R$ 599",
-    popular: true,
-    features: ["Tudo dos planos anteriores", "Avaliação de movimento", "Bebidas quentes: chocolate, cappuccino, mocaccino", "Pré e pós-treino inclusos", "Acesso à sala recovery"]
+    features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio, aulas ou treinos extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais", "Nutricionista", "Avaliação física", "Avaliação de movimento", "Ficha de bebidas quente (Chocolate, capuccino, mocaccino)", "Pré treino e pós treino", "Acesso a sala recovery"],
+    popular: false,
+    bestValue: true
   }];
   const highlights = [{
     icon: Heart,
@@ -160,32 +165,44 @@ const Plans = () => {
           }}>
                 {plan.popular && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-3 md:px-4 py-1 text-xs">
                     <Star className="w-3 md:w-4 h-3 md:h-4 mr-1" />
-                    Mais Completo
+                    Mais Popular
+                  </Badge>}
+                
+                {plan.bestValue && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-primary font-semibold px-3 md:px-4 py-1 text-xs">
+                    <Award className="w-3 md:w-4 h-3 md:h-4 mr-1" />
+                    Melhor Custo Benefício
                   </Badge>}
 
                 <CardHeader className="pb-4">
                   <CardTitle className="text-xl md:text-2xl font-h2 text-primary mb-2">{plan.name}</CardTitle>
                   <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
-                  <div className="space-y-2">
+                  <div className="space-y-1">
+                    <p className="text-sm text-muted-foreground">A partir de</p>
                     <p className="text-2xl md:text-3xl lg:text-4xl font-h1 text-primary">
                       <span className="text-base md:text-lg">R$</span> {plan.price}
                       <span className="text-sm md:text-base font-normal text-muted-foreground">/mês</span>
                     </p>
-                    <p className="text-xs text-muted-foreground">{plan.paymentInfo}</p>
                   </div>
                 </CardHeader>
 
                 <CardContent className="space-y-6 flex-grow flex flex-col">
                   <ul className="space-y-3 text-left flex-grow">
                     {plan.features.map((feature, idx) => <li key={idx} className="flex items-start space-x-3">
-                        <Check className="h-4 md:h-5 w-4 md:w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <Check className="h-4 md:h-5 w-4 md:w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>)}
                   </ul>
 
-                  <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm md:text-base mt-auto ${plan.popular ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90 text-white'}`}>
-                    {plan.popular ? 'Quero o plano mais completo' : 'Quero este plano'}
-                  </Button>
+                  <div className="space-y-3 pt-4 py-px mt-auto">
+                    <Button variant="outline" className="w-full group hover:bg-accent hover:text-primary transition-all">
+                      Ver Detalhes
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                    
+                    <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm md:text-base ${plan.popular || plan.bestValue ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
+                      Comece sua transformação
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>)}
           </div>
