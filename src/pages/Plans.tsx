@@ -53,12 +53,6 @@ const Plans = () => {
     description: "Acompanhamento contínuo da sua evolução"
   }];
   const classes = [{
-    icon: Music,
-    name: "ZUMBA",
-    description: "Aula de fitness com ritmos latinos e coreografias, divertida e queima calorias.",
-    instructor: "Gil",
-    schedule: "Terça e quinta, 16h00"
-  }, {
     icon: Target,
     name: "D'GYM TRAINING",
     description: "Mix completo criado pelo Profº Dodô, combinando dança, ginástica calistênica, funcional e relaxamento.",

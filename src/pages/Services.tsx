@@ -35,7 +35,7 @@ const Services = () => {
     title: "Aulas Coletivas Exclusivas",
     description: "Turmas pequenas, focadas e com acompanhamento técnico, promovendo motivação e resultado.",
     features: ["Variedade de modalidades", "Grupos reduzidos", "Instrutores especializados", "Acompanhamento técnico personalizado"],
-    process: "Participe de aulas como pilates, metabolic training e zumba, em grupos selecionados. Cada aula foi pensada para ser motivadora e eficaz, com apoio constante dos nossos profissionais.",
+    process: "Participe de aulas como pilates e metabolic training, em grupos selecionados. Cada aula foi pensada para ser motivadora e eficaz, com apoio constante dos nossos profissionais.",
     duration: "Programação variada com horários flexíveis.",
     ideal: "Quem busca treinar com energia, socializar e evoluir em grupo com atenção e segurança.",
     differentials: ["Grupos pequenos e acolhedores", "Instrutores experientes e atenciosos", "Vibração positiva e foco em resultado"]
@@ -79,16 +79,6 @@ const Services = () => {
     duration: "Disponível 24h para agendamentos.",
     ideal: "Quem busca praticidade e autonomia para organizar seus treinos.",
     differentials: ["Interface intuitiva e rápida", "Disponibilidade 24 horas", "Integração total com a agenda do estúdio"]
-  }, {
-    id: "zumba-fitness",
-    icon: Heart,
-    title: "Zumba Fitness",
-    description: "Dança fitness envolvente que combina movimentos latinos com exercícios cardiovasculares dinâmicos.",
-    features: ["Coreografias variadas", "Queima calórica elevada", "Ambiente divertido e motivador", "Instrutores especializados"],
-    process: "Mergulhe em uma experiência única de dança fitness com ritmos latinos contagiantes. Cada aula é uma festa que fortalece o corpo e libera endorfinas.",
-    duration: "Aulas de 50 minutos com programação regular.",
-    ideal: "Quem busca diversão, socialização e um treino cardiovascular completo.",
-    differentials: ["Ambiente festivo e acolhedor", "Instrutores com formação específica", "Coreografias renovadas constantemente"]
   }, {
     id: "dgym-training",
     icon: Zap,
