@@ -263,7 +263,7 @@ const About = () => {
             <p className="text-xl text-primary/80 leading-relaxed mb-12 max-w-3xl mx-auto">
               <strong>Quer descobrir como é treinar em um estúdio onde você realmente é prioridade?</strong>
               <br />
-              Agende sua avaliação gratuita e conheça uma nova forma de cuidar de si mesmo.
+              Agende sua aula gratuita e conheça uma nova forma de cuidar de si mesmo.
             </p>
             <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-primary text-white font-semibold px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl shadow-elegant hover:shadow-xl group hover:bg-primary/90 w-full sm:w-auto">
               <span className="text-center">Agendar Aula Grátis</span>
