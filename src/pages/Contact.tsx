@@ -120,7 +120,7 @@ Mensagem: ${formData.message}`;
                 <h2 className="font-h2 text-primary mb-4">Envie sua Mensagem</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Preencha o formulário abaixo e entraremos em contato rapidamente para 
-                  agendar sua avaliação gratuita e responder todas suas dúvidas.
+                  agendar sua aula gratuita e responder todas suas dúvidas.
                 </p>
               </div>
 
