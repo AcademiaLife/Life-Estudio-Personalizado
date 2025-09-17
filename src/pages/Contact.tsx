@@ -53,7 +53,7 @@ Mensagem: ${formData.message}`;
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de agendar uma avaliação gratuita no Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
   const contactReasons = ["Melhorar a Performance e Condicionamento", "Ganho de Massa e Emagrecimento", "Saúde e Bem-Estar", "Indicação Médica", "Informação sobre planos", "Outros"];
-  const benefits = ["Resposta em até 2 horas", "Avaliação gratuita garantida", "Sem compromisso inicial", "Atendimento personalizado"];
+  const benefits = ["Resposta em até 2 horas", "Aula gratuita garantida", "Sem compromisso inicial", "Atendimento personalizado"];
   return <div className="min-h-screen bg-background pt-16">
       <SEOHead 
         title="Contato - Life Personal Estúdio | Entre em Contato Conosco"
