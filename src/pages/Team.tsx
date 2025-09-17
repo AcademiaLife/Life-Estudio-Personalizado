@@ -16,7 +16,7 @@ const Team = () => {
       cref: "010039-G/PR",
       specialty: "Personal Trainer",
       education: "Educação Física - PUCPR (2006)",
-      specializations: "",
+      specializations: "Pós graduado em Treinamento Individual e Qualidade de Vida - PUC PR 2009 | Pós graduado em MBA Gestão em Academia - Inspirar 2016 | Life e Professional COACH | Treinador da Metodologia IHP Brasil",
       experience: "19 anos",
       differential: "Treinamento funcional, performance atlética e emagrecimento.",
       image: "/lovable-uploads/86e8ea06-b77e-418f-9754-1743a70bf9fe.png"
