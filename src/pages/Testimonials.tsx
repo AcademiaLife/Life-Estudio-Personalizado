@@ -244,6 +244,57 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
+      {/* Google Reviews Card */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex justify-center animate-scale-in">
+            <Card className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 md:p-10 lg:p-12 rounded-2xl shadow-elegant border border-gray-700/50 max-w-sm mx-auto hover-scale transition-all duration-500">
+              {/* Studio Name */}
+              <div className="text-center mb-6">
+                <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold leading-tight">
+                  Life Personal
+                </h3>
+                <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold leading-tight">
+                  Estúdio
+                </h3>
+              </div>
+              
+              {/* Rating Score */}
+              <div className="text-center mb-4">
+                <div className="text-yellow-400 text-5xl md:text-6xl lg:text-7xl font-bold">4,9</div>
+              </div>
+              
+              {/* Stars */}
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 md:h-7 md:w-7 text-yellow-400 fill-current mx-0.5" />
+                ))}
+              </div>
+              
+              {/* Review Count */}
+              <div className="text-center mb-8">
+                <span className="text-white/80 text-base md:text-lg">(149 avaliações)</span>
+              </div>
+              
+              {/* Google Logo */}
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold">
+                  <span className="text-blue-500">G</span>
+                  <span className="text-red-500">o</span>
+                  <span className="text-yellow-400">o</span>
+                  <span className="text-blue-500">g</span>
+                  <span className="text-green-500">l</span>
+                  <span className="text-red-500">e</span>
+                </div>
+              </div>
+              
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400/10 via-gray-600/10 to-yellow-400/10 rounded-2xl blur-xl opacity-50 -z-10"></div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Detailed Testimonials */}
       <section id="testimonials" className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4 md:px-6">
