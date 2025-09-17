@@ -46,7 +46,7 @@ const TestimonialsPage = () => {
     text: "A melhor experiência em Estúdio Personalizado para atividades físicas de Campina Grande do Sul e toda região. Limpeza, organização, atendimento, cuidado, carinho, muitos outros diferenciais que fazem da Life um lugar único e de excelência no segmento."
   }];
   const stats = [{
-    number: "98%",
+    number: "92%",
     label: "Satisfação dos Alunos",
     icon: Heart
   }, {
@@ -54,7 +54,7 @@ const TestimonialsPage = () => {
     label: "Alcançam Objetivos",
     icon: TrendingUp
   }, {
-    number: "92%",
+    number: "99%",
     label: "Recomendam o Estúdio",
     icon: Award
   }, {
