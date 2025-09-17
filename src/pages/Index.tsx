@@ -14,7 +14,7 @@ const Index = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de agendar uma avaliação gratuita no Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
   };
   return <div className="min-h-screen bg-background">
-      <SEOHead title="Life Personal Estúdio - Academia Premium | Treinamento Personalizado" description="Transforme sua vida com acompanhamento personalizado no Life Personal Estúdio em Campina Grande do Sul - PR. Agende sua avaliação e alcance seus objetivos fitness." path="/" />
+      <SEOHead title="Life Personal Estúdio - Academia de qualidade | Treinamento Personalizado" description="Transforme sua vida com acompanhamento personalizado no Life Personal Estúdio em Campina Grande do Sul - PR. Agende sua aula e alcance seus objetivos fitness." path="/" />
       {/* Hero Section */}
       <Hero />
       
