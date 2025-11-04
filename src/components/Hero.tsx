@@ -2,14 +2,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 import HeroCarousel from "./HeroCarousel";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
+  const navigate = useNavigate();
+  
   const handleWhatsApp = () => {
     window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de agendar uma avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
   };
-  const handleSchedule = () => {
-    document.getElementById("plans")?.scrollIntoView({
-      behavior: "smooth"
-    });
+  
+  const handlePlansRedirect = () => {
+    navigate('/planos');
   };
   return <section className="relative min-h-[120vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
       {/* Hero Carousel */}
@@ -34,7 +36,7 @@ const Hero = () => {
               <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button onClick={handleSchedule} variant="outline" size="lg" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg btn-premium w-full sm:w-auto">
+            <Button onClick={handlePlansRedirect} variant="outline" size="lg" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg btn-premium w-full sm:w-auto">
               Conhecer Planos
             </Button>
           </div>
