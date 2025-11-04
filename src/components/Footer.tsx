@@ -86,7 +86,7 @@ const Footer = () => {
             </p>
             <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-gradient-gold text-primary font-semibold px-8 py-3 shadow-gold hover:shadow-xl">
               <WhatsAppIcon className="mr-2 h-5 w-5" />
-              Agenda Sua Aula Experimental
+              Agende Sua Aula Experimental
             </Button>
           </div>
         </div>
