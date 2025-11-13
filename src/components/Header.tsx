@@ -76,10 +76,7 @@ const Header = () => {
               {navigation.map(item => <Link key={item.name} to={item.href} className={`text-sm font-medium transition-colors hover:text-accent px-2 py-1 ${location.pathname === item.href ? "text-accent bg-accent/10 rounded" : "text-muted-foreground"}`} onClick={() => setIsMenuOpen(false)}>
                   {item.name}
                 </Link>)}
-              <div className="pt-4 space-y-3">
-                <Button onClick={handleWhatsApp} className="w-full btn-premium bg-gradient-gold text-primary font-semibold shadow-gold">
-                  Avaliação Gratuita
-                </Button>
+              <div className="pt-4">
                 <Button variant="outline" size="sm" onClick={handleWhatsApp} className="w-full border-accent text-accent hover:bg-accent hover:text-primary">
                   <WhatsAppIcon className="mr-2 h-4 w-4" />
                   WhatsApp
