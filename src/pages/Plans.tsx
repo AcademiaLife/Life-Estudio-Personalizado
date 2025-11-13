@@ -6,7 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp, Zap, Target, Music, Dumbbell, Flame, User, Clock, Award } from "lucide-react";
 const Plans = () => {
   const handleWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer os planos do Life Elite Studio e agendar uma avaliação.&type=phone_number&app_absent=0", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer os planos do Life Personal Estúdio e agendar uma avaliação.&type=phone_number&app_absent=0", "_blank");
   };
   const plans = [{
     name: "Meta Personal",
