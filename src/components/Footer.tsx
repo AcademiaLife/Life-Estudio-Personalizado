@@ -114,10 +114,20 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">© 2025 Life Personal Estúdio. Todos os direitos reservados.</p>
-          <div className="flex items-center space-x-2 text-gray-400 text-sm">
-            <span>Feito com</span>
-            <Heart className="h-4 w-4 text-accent fill-current" />
-            <span>para sua transformação</span>
+          <div className="flex flex-col items-center space-y-2">
+            <div className="flex items-center space-x-2 text-gray-400 text-sm">
+              <span>Feito com</span>
+              <Heart className="h-4 w-4 text-accent fill-current" />
+              <span>para sua transformação</span>
+            </div>
+            <a 
+              href="https://www.instagram.com/luisdantas.studio" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-500 text-xs hover:text-accent transition-colors"
+            >
+              Desenvolvido por Luis Dantas
+            </a>
           </div>
         </div>
       </div>
