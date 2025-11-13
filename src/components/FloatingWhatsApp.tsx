@@ -15,7 +15,7 @@ const FloatingWhatsApp = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
   const handleWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Vim através do site do Life Personal Estúdio e gostaria de agendar uma avaliação gratuita.&type=phone_number&app_absent=0", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá, gostaria de saber mais sobre o Life Personal Estúdio😃&type=phone_number&app_absent=0", "_blank");
   };
   return <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
       <div className="group relative">
