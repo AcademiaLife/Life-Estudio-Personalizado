@@ -77,9 +77,7 @@ const Header = () => {
                   {item.name}
                 </Link>)}
               <div className="pt-4 space-y-3">
-                <Button onClick={handleWhatsApp} className="w-full btn-premium bg-gradient-gold text-primary font-semibold shadow-gold">
-                  Avaliação Gratuita
-                </Button>
+                
                 <Button variant="outline" size="sm" onClick={handleWhatsApp} className="w-full border-accent text-accent hover:bg-accent hover:text-primary">
                   <WhatsAppIcon className="mr-2 h-4 w-4" />
                   WhatsApp
