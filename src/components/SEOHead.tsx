@@ -11,7 +11,7 @@ const SEOHead = ({
   title = "Life Personal Estúdio - Academia Premium | Treinamento Personalizado", 
   description = "Transforme sua vida com acompanhamento personalizado no Life Personal Estúdio em Campina Grande do Sul - PR. Agende sua avaliação e alcance seus objetivos fitness.",
   path = "/",
-  ogImage = "https://lovable.dev/opengraph-image-p98pqg.png"
+  ogImage = "/og-image.jpg"
 }: SEOHeadProps) => {
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
   const fullUrl = `${siteUrl}${path}`;
