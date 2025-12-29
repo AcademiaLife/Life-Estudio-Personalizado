@@ -10,19 +10,19 @@ const Plans = () => {
   };
   const plans = [{
     name: "Meta Personal",
-    price: "399",
+    price: "439",
     color: "border-border",
     description: "Seu ponto de partida ideal",
-    paymentInfo: "1 entrada de R$ 399 + 11x de R$ 399",
+    paymentInfo: "1 entrada de R$ 439 + 11x de R$ 439",
     features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio e extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais"],
     popular: false,
     bestValue: false
   }, {
     name: "Meta Slim",
-    price: "449",
+    price: "499",
     color: "border-accent shadow-gold",
     description: "Equilíbrio perfeito",
-    paymentInfo: "1 entrada de R$ 399 + 11x de R$ 449",
+    paymentInfo: "1 entrada de R$ 499 + 11x de R$ 499",
     features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio e extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais", "Nutricionista", "Avaliação física"],
     popular: true,
     bestValue: false
@@ -102,7 +102,7 @@ const Plans = () => {
     separate: "Média de R$ 150"
   }];
   return <div className="min-h-screen bg-background pt-16">
-      <SEOHead title="Planos - Life Personal Estúdio | Academia Premium em Campina Grande do Sul" description="Escolha o plano ideal para você no Life Personal Estúdio. Planos a partir de R$399/mês. Treinamento, nutrição e bem-estar em Campina Grande do Sul - PR." path="/planos" />
+      <SEOHead title="Planos - Life Personal Estúdio | Academia Premium em Campina Grande do Sul" description="Escolha o plano ideal para você no Life Personal Estúdio. Planos a partir de R$439/mês. Treinamento, nutrição e bem-estar em Campina Grande do Sul - PR." path="/planos" />
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 md:px-6">

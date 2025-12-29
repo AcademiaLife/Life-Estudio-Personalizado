@@ -78,8 +78,8 @@ const TermsOfService = () => {
         <div className="space-y-4 text-muted-foreground">
           <h3 className="text-lg font-medium text-foreground">3.1 Planos Disponíveis a partir de:</h3>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Meta Personal:</strong> R$ 399,00/mês</li>
-            <li><strong>Meta Slim:</strong> R$ 449,00/mês</li>
+            <li><strong>Meta Personal:</strong> R$ 439,00/mês</li>
+            <li><strong>Meta Slim:</strong> R$ 499,00/mês</li>
             <li><strong>Meta Full:</strong> R$ 599,00/mês</li>
           </ul>
 

@@ -57,7 +57,7 @@ const Hero = () => {
             <div className="space-y-2 animate-slide-up" style={{
             animationDelay: '0.6s'
           }}>
-              <h3 className="text-3xl font-bold text-accent">R$ 399</h3>
+              <h3 className="text-3xl font-bold text-accent">R$ 439</h3>
               <p className="text-gray-300 my-[20px]">A partir de</p>
             </div>
           </div>
