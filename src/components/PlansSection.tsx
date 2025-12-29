@@ -10,7 +10,7 @@ const PlansSection = () => {
   const [showValuePopup, setShowValuePopup] = useState(false);
   const plans = [{
     name: "Meta Personal",
-    price: "399",
+    price: "439",
     description: "Seu ponto de partida ideal",
     benefits: [
       "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
@@ -22,7 +22,7 @@ const PlansSection = () => {
     color: "border-border"
   }, {
     name: "Meta Slim",
-    price: "449",
+    price: "499",
     description: "Equilíbrio perfeito",
     benefits: [
       "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
