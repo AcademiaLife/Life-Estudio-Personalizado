@@ -5,8 +5,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import SEOHead from "@/components/SEOHead";
 import { Check, Star, ArrowRight, Heart, Users, Smartphone, Calendar, TrendingUp, Zap, Target, Music, Dumbbell, Flame, User, Clock, Award } from "lucide-react";
 const Plans = () => {
-  const handleWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de conhecer os planos do Life Personal Estúdio e agendar uma avaliação.&type=phone_number&app_absent=0", "_blank");
+  const handleWhatsApp = (planName: string) => {
+    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o plano ${planName}.`);
+    window.open(`https://api.whatsapp.com/send/?phone=554136790618&text=${message}&type=phone_number&app_absent=0`, "_blank");
   };
   const plans = [{
     name: "Meta Personal",
@@ -199,7 +200,7 @@ const Plans = () => {
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                     
-                    <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm md:text-base ${plan.popular || plan.bestValue ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
+                    <Button onClick={() => handleWhatsApp(plan.name)} className={`w-full font-semibold text-sm md:text-base ${plan.popular || plan.bestValue ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
                       Comece sua transformação
                     </Button>
                   </div>
@@ -310,7 +311,7 @@ const Plans = () => {
               Comece sua transformação com a gente! Nossa equipe está pronta para 
               criar o plano perfeito para seus objetivos.
             </p>
-            <Button size="lg" onClick={handleWhatsApp} className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto">
+            <Button size="lg" onClick={() => handleWhatsApp("Life Personal Estúdio")} className="btn-premium bg-gradient-gold text-primary font-semibold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl shadow-gold hover:shadow-2xl group w-full sm:w-auto">
               <span className="whitespace-nowrap">Falar com uma atendente agora</span>
               <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
