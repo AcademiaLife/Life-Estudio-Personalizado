@@ -54,13 +54,14 @@ const PlansSection = () => {
     bestValue: true,
     color: "border-border"
   }];
-  const handleWhatsApp = () => {
+  const handleWhatsApp = (planName: string) => {
     // Track analytics
     if (typeof window !== 'undefined' && window.trackWhatsAppClick) {
       window.trackWhatsAppClick('plans_section');
     }
     
-    window.open("https://api.whatsapp.com/send/?phone=554136790618&text=Olá! Gostaria de saber mais sobre os planos do Life Personal Estúdio.&type=phone_number&app_absent=0", "_blank");
+    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o plano ${planName}.`);
+    window.open(`https://api.whatsapp.com/send/?phone=554136790618&text=${message}&type=phone_number&app_absent=0`, "_blank");
   };
   return <>
       <section className="py-20 bg-gradient-subtle">
@@ -114,7 +115,7 @@ const PlansSection = () => {
                       </Button>
                     </Link>
                     
-                    <Button onClick={handleWhatsApp} className={`w-full font-semibold text-sm sm:text-base ${plan.popular || plan.bestValue ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
+                    <Button onClick={() => handleWhatsApp(plan.name)} className={`w-full font-semibold text-sm sm:text-base ${plan.popular || plan.bestValue ? 'btn-premium bg-gradient-gold text-primary shadow-gold hover:shadow-xl' : 'bg-primary hover:bg-primary/90'}`}>
                       <span className="sm:hidden">Comece agora</span>
                       <span className="hidden sm:inline">Comece sua transformação</span>
                     </Button>
