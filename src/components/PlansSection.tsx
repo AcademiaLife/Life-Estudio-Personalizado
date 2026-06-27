@@ -29,7 +29,7 @@ const PlansSection = () => {
       "Acesso livre nos demais dias para cárdio, aulas ou treinos extras",
       "Monitoramento cardíaco durante o treino",
       "Aulas coletivas, como pilates, metabolic e mais",
-      "Nutricionista",
+      "Cadeira de massagem",
       "Avaliação física",
       "Avaliação de movimento",
       "Ficha de bebidas quente (Chocolate, capuccino, mocaccino)",
