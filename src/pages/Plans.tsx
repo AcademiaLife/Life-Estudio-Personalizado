@@ -24,7 +24,7 @@ const Plans = () => {
     color: "border-border",
     description: "Experiência completa",
     paymentInfo: "1 entrada de R$ 599 + 11x de R$ 599",
-    features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio, aulas ou treinos extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais", "Nutricionista", "Avaliação física", "Avaliação de movimento", "Ficha de bebidas quente (Chocolate, capuccino, mocaccino)", "Pré treino e pós treino", "Acesso a sala recovery"],
+    features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio, aulas ou treinos extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais", "Cadeira de massagem", "Avaliação física", "Avaliação de movimento", "Ficha de bebidas quente (Chocolate, capuccino, mocaccino)", "Pré treino e pós treino", "Acesso a sala recovery"],
     popular: false,
     bestValue: true
   }];
