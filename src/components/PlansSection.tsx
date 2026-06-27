@@ -21,20 +21,6 @@ const PlansSection = () => {
     popular: false,
     color: "border-border"
   }, {
-    name: "Meta Slim",
-    price: "499",
-    description: "Equilíbrio perfeito",
-    benefits: [
-      "Personal 3x1 (1 professor para até 3 alunos, 3x na semana)",
-      "Acesso livre nos demais dias para cárdio e extras",
-      "Monitoramento cardíaco durante o treino",
-      "Aulas coletivas, como pilates, metabolic e mais",
-      "Nutricionista",
-      "Avaliação física"
-    ],
-    popular: true,
-    color: "border-accent shadow-gold"
-  }, {
     name: "Meta Full",
     price: "599",
     description: "Experiência completa",

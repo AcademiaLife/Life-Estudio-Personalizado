@@ -19,15 +19,6 @@ const Plans = () => {
     popular: false,
     bestValue: false
   }, {
-    name: "Meta Slim",
-    price: "499",
-    color: "border-accent shadow-gold",
-    description: "Equilíbrio perfeito",
-    paymentInfo: "1 entrada de R$ 499 + 11x de R$ 499",
-    features: ["Personal 3x1 (1 professor para até 3 alunos, 3x na semana)", "Acesso livre nos demais dias para cárdio e extras", "Monitoramento cardíaco durante o treino", "Aulas coletivas, como pilates, metabolic e mais", "Nutricionista", "Avaliação física"],
-    popular: true,
-    bestValue: false
-  }, {
     name: "Meta Full",
     price: "599",
     color: "border-border",
