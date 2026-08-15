@@ -78,8 +78,9 @@ const Plans = () => {
     service: "Personal Trainer 3x/semana",
     separate: "R$ 600+"
   }, {
-    service: "Nutricionista",
-    separate: "R$ 200"
+    service: "Nutricionista parceira (pago à parte)",
+    separate: "Consultar valores"
+
   }, {
     service: "Avaliação Física",
     separate: "R$ 50"
