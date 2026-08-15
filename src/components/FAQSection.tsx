@@ -6,7 +6,8 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Qual a diferença entre estúdio e academia tradicional?",
-      answer: "Nosso estúdio oferece atendimento 100% personalizado com personal trainer, nutricionista e avaliações inclusas. Diferente das academias tradicionais, você tem acompanhamento individual e um plano completo de transformação."
+      answer: "Nosso estúdio oferece atendimento 100% personalizado com personal trainer e avaliações inclusas. Também temos nutricionista parceira, com atendimento pago à parte (consulte valores). Diferente das academias tradicionais, você tem acompanhamento individual e um plano completo de transformação."
+
     },
     {
       question: "Preciso ter experiência anterior para treinar aqui?",
