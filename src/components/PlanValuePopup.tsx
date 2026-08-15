@@ -22,7 +22,7 @@ const PlanValuePopup = ({ open, onOpenChange }: PlanValuePopupProps) => {
 
   const services = [
     "Personal trainer dedicado",
-    "Nutricionista especializada", 
+    "Nutricionista parceira (pago à parte)", 
     "Avaliações físicas completas",
     "Monitoramento cardíaco",
     "App exclusivo de acompanhamento",
