@@ -31,7 +31,8 @@ const FAQSection = () => {
     },
     {
       question: "O que está incluso no acompanhamento nutricional?",
-      answer: "Consulta inicial, plano alimentar personalizado, ajustes mensais, orientação para suplementação (se necessário) e suporte contínuo via WhatsApp para dúvidas do dia a dia."
+      answer: "O acompanhamento é feito por nutricionista parceira e é pago à parte, não está incluso nos planos. Inclui consulta inicial, plano alimentar personalizado, ajustes mensais e orientação para suplementação. Fale com a gente no WhatsApp para consultar valores."
+
     }
   ];
 
