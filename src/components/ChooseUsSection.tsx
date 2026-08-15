@@ -8,7 +8,8 @@ const ChooseUsSection = () => {
   }, {
     icon: Apple,
     title: "Nutrição Funcional",
-    description: "Orientação nutricional integrada ao treino para potencializar seus resultados."
+    description: "Nutricionista parceira integrada ao treino, com atendimento pago à parte (consulte valores)."
+
   }, {
     icon: Users,
     title: "Aulas Coletivas Exclusivas",
