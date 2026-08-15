@@ -23,7 +23,7 @@ const Services = () => {
     id: "nutricao-funcional",
     icon: Apple,
     title: "Nutrição Funcional",
-    description: "Orientação nutricional integrada ao treino, com nutricionista parceira. Serviço pago à parte (não incluso nos planos) — consulte valores.",
+    description: "Orientação nutricional integrada ao treino, com nutricionista parceira. Serviço pago à parte (não incluso nos planos), consulte valores.",
     features: ["Nutricionista parceira (pago à parte)", "Avaliação nutricional individual", "Plano alimentar personalizado", "Sinergia com seus objetivos físicos", "Consulte valores pelo WhatsApp"],
     process: "Compreendemos seus hábitos e preferências em uma avaliação nutricional completa, para criar um plano alimentar prático e eficaz. O atendimento é realizado por nutricionista parceira, com valores cobrados separadamente do seu plano.",
     duration: "Consultorias semanais ou mensais.",
