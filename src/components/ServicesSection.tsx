@@ -24,7 +24,8 @@ const ServicesSection = () => {
     {
       icon: Apple,
       title: "Nutrição Funcional",
-      description: "Orientação nutricional integrada ao treino para potencializar resultados."
+      description: "Nutricionista parceira, com atendimento pago à parte. Consulte valores."
+
     },
     {
       icon: Users,

@@ -23,12 +23,13 @@ const Services = () => {
     id: "nutricao-funcional",
     icon: Apple,
     title: "Nutrição Funcional",
-    description: "Orientação nutricional integrada ao treino para potencializar resultados e melhorar a saúde.",
-    features: ["Avaliação nutricional individual", "Plano alimentar personalizado", "Acompanhamento com nutricionista parceiro", "Sinergia com seus objetivos físicos"],
-    process: "Compreendemos seus hábitos e preferências em uma avaliação nutricional completa, para criar um plano alimentar prático e eficaz. Ajustamos regularmente para que você alcance seus objetivos com tranquilidade e compromisso.",
+    description: "Orientação nutricional integrada ao treino, com nutricionista parceira. Serviço pago à parte (não incluso nos planos) — consulte valores.",
+    features: ["Nutricionista parceira (pago à parte)", "Avaliação nutricional individual", "Plano alimentar personalizado", "Sinergia com seus objetivos físicos", "Consulte valores pelo WhatsApp"],
+    process: "Compreendemos seus hábitos e preferências em uma avaliação nutricional completa, para criar um plano alimentar prático e eficaz. O atendimento é realizado por nutricionista parceira, com valores cobrados separadamente do seu plano.",
     duration: "Consultorias semanais ou mensais.",
     ideal: "Quem quer transformar hábitos alimentares com suporte real e resultados consistentes.",
-    differentials: ["Plano personalizado e funcional", "Apoio direto de profissionais dedicados", "Integração com seu treino para maior performance"]
+    differentials: ["Plano personalizado e funcional", "Nutricionista parceira do estúdio (valor à parte)", "Integração com seu treino para maior performance"]
+
   }, {
     id: "aulas-coletivas",
     icon: Users,
