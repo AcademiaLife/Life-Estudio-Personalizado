@@ -141,7 +141,7 @@ Mensagem: ${formData.message}`;
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">Telefone *</Label>
-                      <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="(11) 99999-9999" required className="transition-all duration-300 focus:shadow-gold" />
+                      <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="(41) 99999-9999" required className="transition-all duration-300 focus:shadow-gold" />
                     </div>
                   </div>
                   

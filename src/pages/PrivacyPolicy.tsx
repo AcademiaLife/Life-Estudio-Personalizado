@@ -185,7 +185,7 @@ const PrivacyPolicy = () => {
           <p>Para exercer qualquer um desses direitos, entre em contato conosco através de:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>E-mail:</strong> privacidade@lifepersonalestudio.com.br</li>
-            <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+            <li><strong>WhatsApp:</strong> (41) 3679-0618</li>
             <li><strong>Presencialmente:</strong> Em nosso estúdio</li>
           </ul>
 
@@ -259,7 +259,7 @@ const PrivacyPolicy = () => {
           
           <div className="bg-muted/50 p-4 rounded-lg space-y-2">
             <p><strong>E-mail:</strong> privacidade@lifepersonalestudio.com.br</p>
-            <p><strong>Telefone:</strong> (11) 99999-9999</p>
+            <p><strong>Telefone:</strong> (41) 3679-0618</p>
             <p><strong>Endereço:</strong> R. Pedro Pasa, 1158 - Jardim Paulista, Campina Grande do Sul - PR, 83430-282</p>
           </div>
 
