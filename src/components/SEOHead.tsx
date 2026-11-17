@@ -83,8 +83,8 @@ const SEOHead = ({
       ]
     },
     "sameAs": [
-      "https://www.instagram.com/lifepersonalestudio",
-      "https://www.facebook.com/lifepersonalestudio"
+      "https://www.instagram.com/lifeestudiopersonalizado",
+      "https://www.facebook.com/academialifenaweb/"
     ]
   };
 

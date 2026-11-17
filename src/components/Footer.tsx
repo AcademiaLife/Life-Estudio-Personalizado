@@ -21,7 +21,7 @@ const Footer = () => {
               <Button size="icon" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.instagram.com/lifeestudiopersonalizado", "_blank")}>
                 <Instagram className="h-5 w-5" />
               </Button>
-              <Button size="icon" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.facebook.com/academialifenaweb?mibextid=wwXIfr&rdid=jNh4ZcsIXIcubgKN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uMXmvJEP%2F%3Fmibextid%3DwwXIfr", "_blank")}>
+              <Button size="icon" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.facebook.com/academialifenaweb/", "_blank")}>
                 <Facebook className="h-5 w-5" />
               </Button>
               <Button size="icon" variant="outline" className="border-green-400 text-green-400 hover:bg-green-400 hover:text-primary transition-all" onClick={handleWhatsApp}>
@@ -113,7 +113,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-gray-400 text-sm">© 2025 Life Personal Estúdio. Todos os direitos reservados.</p>
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Life Personal Estúdio. Todos os direitos reservados.</p>
           <div className="flex flex-col items-center space-y-2">
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>Feito com</span>

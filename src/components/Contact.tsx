@@ -102,7 +102,7 @@ Mensagem: ${formData.message}`;
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="(11) 99999-9999"
+                    placeholder="(41) 99999-9999"
                     required
                     className="transition-all duration-300 focus:shadow-gold"
                   />
@@ -183,7 +183,7 @@ Mensagem: ${formData.message}`;
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary">Telefone</h4>
-                    <p className="text-muted-foreground">(11) 99999-9999</p>
+                    <p className="text-muted-foreground">(41) 3679-0618</p>
                   </div>
                 </div>
               </Card>
@@ -195,7 +195,7 @@ Mensagem: ${formData.message}`;
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary">E-mail</h4>
-                    <p className="text-muted-foreground">contato@lifepersonalestudio.com.br</p>
+                    <p className="text-muted-foreground">academia-life@hotmail.com</p>
                   </div>
                 </div>
               </Card>
@@ -248,7 +248,7 @@ Mensagem: ${formData.message}`;
                   size="icon" 
                   variant="outline"
                   className="hover:bg-accent hover:text-primary transition-all"
-                  onClick={() => window.open("https://www.facebook.com/academialifenaweb?mibextid=wwXIfr&rdid=jNh4ZcsIXIcubgKN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uMXmvJEP%2F%3Fmibextid%3DwwXIfr", "_blank")}
+                  onClick={() => window.open("https://www.facebook.com/academialifenaweb/", "_blank")}
                 >
                   <Facebook className="h-5 w-5" />
                 </Button>

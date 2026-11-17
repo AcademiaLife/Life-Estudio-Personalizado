@@ -141,7 +141,7 @@ Mensagem: ${formData.message}`;
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">Telefone *</Label>
-                      <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="(11) 99999-9999" required className="transition-all duration-300 focus:shadow-gold" />
+                      <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="(41) 99999-9999" required className="transition-all duration-300 focus:shadow-gold" />
                     </div>
                   </div>
                   
@@ -250,7 +250,7 @@ Mensagem: ${formData.message}`;
                   <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.instagram.com/lifeestudiopersonalizado", "_blank")}>
                     <Instagram className="h-5 w-5" />
                   </Button>
-                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.facebook.com/academialifenaweb?mibextid=wwXIfr&rdid=jNh4ZcsIXIcubgKN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uMXmvJEP%2F%3Fmibextid%3DwwXIfr", "_blank")}>
+                  <Button size="icon" variant="outline" className="hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.facebook.com/academialifenaweb/", "_blank")}>
                     <Facebook className="h-5 w-5" />
                   </Button>
                 </div>

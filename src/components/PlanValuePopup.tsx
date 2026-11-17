@@ -47,9 +47,9 @@ const PlanValuePopup = ({ open, onOpenChange }: PlanValuePopupProps) => {
               <p className="text-lg text-muted-foreground mb-2">Contratando separadamente, você pagaria:</p>
               <p className="font-h2 text-destructive line-through">R$ 1.550/mês</p>
               <p className="text-lg text-muted-foreground mb-4">Com nossos planos:</p>
-              <p className="font-h2 text-accent">A partir de R$ 399/mês</p>
+              <p className="font-h2 text-accent">A partir de R$ 439/mês</p>
               <div className="inline-block bg-gradient-gold text-primary px-4 py-2 rounded-full font-semibold text-sm mt-2">
-                Economia de até 74%
+                Economia de até 71%
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const PlanValuePopup = ({ open, onOpenChange }: PlanValuePopupProps) => {
           {/* Texto explicativo */}
           <div className="bg-background p-6 rounded-xl border">
             <DialogDescription className="text-muted-foreground leading-relaxed">
-              Imagine pagar mais de R$ 1.550 por mês contratando cada serviço separadamente. Com nossos planos a partir de R$ 399/mês, 
+              Imagine pagar mais de R$ 1.550 por mês contratando cada serviço separadamente. Com nossos planos a partir de R$ 439/mês, 
               você tem todos esses serviços premium inclusos em um único pacote. Aqui, você não só economiza, mas também tem acesso a 
               serviços de alta qualidade, pensados para se adaptar ao seu ritmo, às suas necessidades e aos seus objetivos.
               <br /><br />
