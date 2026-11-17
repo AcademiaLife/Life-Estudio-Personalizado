@@ -21,7 +21,7 @@ const Footer = () => {
               <Button size="icon" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.instagram.com/lifeestudiopersonalizado", "_blank")}>
                 <Instagram className="h-5 w-5" />
               </Button>
-              <Button size="icon" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.facebook.com/academialifenaweb?mibextid=wwXIfr&rdid=jNh4ZcsIXIcubgKN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uMXmvJEP%2F%3Fmibextid%3DwwXIfr", "_blank")}>
+              <Button size="icon" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary transition-all" onClick={() => window.open("https://www.facebook.com/academialifenaweb/", "_blank")}>
                 <Facebook className="h-5 w-5" />
               </Button>
               <Button size="icon" variant="outline" className="border-green-400 text-green-400 hover:bg-green-400 hover:text-primary transition-all" onClick={handleWhatsApp}>

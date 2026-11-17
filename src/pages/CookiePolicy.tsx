@@ -336,7 +336,7 @@ const CookiePolicy = () => {
           </p>
           
           <div className="bg-muted/50 p-4 rounded-lg space-y-2">
-            <p><strong>E-mail:</strong> privacidade@lifepersonalestudio.com.br</p>
+            <p><strong>E-mail:</strong> academia-life@hotmail.com</p>
             <p><strong>WhatsApp:</strong> (41) 3679-0618</p>
             <p><strong>Endereço:</strong> R. Pedro Pasa, 1158 - Jardim Paulista, Campina Grande do Sul - PR, 83430-282</p>
           </div>
