@@ -121,7 +121,7 @@ const Footer = () => {
               <span>para sua transformação</span>
             </div>
             <a 
-              href="https://www.instagram.com/luisdantas.studio" 
+              href="https://luisdantas.studio"
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-500 text-xs hover:text-accent transition-colors"
